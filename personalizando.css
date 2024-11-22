@@ -1,0 +1,25 @@
+.centralizar{
+        margin-top: 15%;
+        text-align: center;
+    button{
+        width: 120px;
+        height: 45px;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background-color: #aa58dd;
+        border: 2px solid rgb(0, 0, 0);
+        cursor: pointer;
+        
+        transition: background-color 200ms;
+    }
+    button:hover{
+        border: 2px solid black;
+        background-color: rgba(255, 255, 255, 0.555);
+       
+    }
+
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+

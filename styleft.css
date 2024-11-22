@@ -1,0 +1,136 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+main {
+    height: 80vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 3.5rem;
+    gap: 2rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start; 
+}
+
+.footer-link1 {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.footer-link1:hover {
+    background-color: var(--color-neutral-30);
+}
+
+#instagram {
+    background: linear-gradient(#7f47c9, #ff2992, #ff9807);
+}
+
+#discord {
+    background: linear-gradient(#2C2F33, #404ef0);
+}
+
+#twitter {
+    background: black;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer_subscribe h3 {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#email {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-neutral-30);
+    width: 250px;
+}
+
+button {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background-color: var(--color-neutral-30);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #ff9807;
+}
+
+#footer_copyrigh {
+    background-color: var(--color-neutral-0);
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--color-neutral-40);
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    #footer_social_media {
+        justify-content: center;
+        margin-bottom: 2rem; /* Dá mais espaço entre as redes sociais e a inscrição */
+    }
+
+    #footer_subscribe {
+        margin-top: 1rem;
+        align-items: center;
+    }
+}
