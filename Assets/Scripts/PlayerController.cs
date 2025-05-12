@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic; // Necessário para List<Collider2D>
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,15 +14,24 @@ public class PlayerController : MonoBehaviour
     public float _dashCooldown = 0.5f;
 
     private Vector2 _playerDirection;
-    private Vector2 _lastMoveDirection;
+    private Vector2 _lastMoveDirection; // Última direção de input válida
+    private Vector2 _dashAttackDirection; // Direção do dash/ataque (sempre horizontal)
     private bool _isAttack = false;
     private bool _isRunning = false;
-    private bool _isHorizontalMove = true;
+    private bool _isHorizontalMove = true; // True se o movimento atual ou a intenção é horizontal
     private bool _isDashing = false;
     private float _dashTimer = 0f;
     private float _dashCooldownTimer = 0f;
 
-    // Variáveis para controle de bot
+    [Header("Configurações de Ataque/Dash com Dano")]
+    public float danoDoDash = 25f;
+    public float raioDeteccaoDash = 0.7f;
+    public LayerMask camadaDoInimigo;
+    public Transform pontoDeAtaqueDash;
+    private List<Collider2D> _inimigosAtingidosNoDash;
+    private int _playerLayer;
+    private int _enemyLayerValue = -1;
+
     public bool isActive = true;
     public float followDistance = 2f;
     public float shootingRange = 5f;
@@ -35,7 +44,39 @@ public class PlayerController : MonoBehaviour
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
         _playerInitialSpeed = _playerSpeed;
-        _lastMoveDirection = Vector2.right; // Direção padrão inicial
+        _lastMoveDirection = Vector2.right;
+        _dashAttackDirection = Vector2.right; // Padrão inicial
+        _inimigosAtingidosNoDash = new List<Collider2D>();
+
+        _playerLayer = gameObject.layer;
+        if (camadaDoInimigo.value != 0)
+        {
+            int layerValue = camadaDoInimigo.value;
+            int layerNumber = 0;
+            while ((layerValue & 1) == 0 && layerNumber < 31)
+            {
+                layerValue >>= 1;
+                layerNumber++;
+            }
+            if ((layerValue & 1) == 1)
+            {
+                _enemyLayerValue = layerNumber;
+            }
+            else
+            {
+                Debug.LogError("Camada do Inimigo não configurada corretamente ou está vazia!", this);
+            }
+        }
+        else
+        {
+            Debug.LogError("Camada do Inimigo (camadaDoInimigo) não está configurada no Inspector!", this);
+        }
+
+        if (pontoDeAtaqueDash == null)
+        {
+            pontoDeAtaqueDash = transform;
+            Debug.LogWarning("PontoDeAtaqueDash não configurado, usando o transform do Player.", this);
+        }
     }
 
     void Update()
@@ -52,51 +93,60 @@ public class PlayerController : MonoBehaviour
 
     void PlayerInputUpdate()
     {
-        // Atualiza timers
         if (_dashCooldownTimer > 0)
         {
             _dashCooldownTimer -= Time.deltaTime;
         }
 
-        // Captura input apenas se não estiver em dash
-        if (!_isDashing)
+        if (!_isDashing) // Captura input de direção apenas se não estiver em dash
         {
             _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-            // Guarda a última direção de movimento válida
-            if (_playerDirection.sqrMagnitude > 0)
+            if (_playerDirection.sqrMagnitude > 0.01f) // Se houve input significativo
             {
                 _lastMoveDirection = _playerDirection.normalized;
+                // Determina se o movimento pretendido é mais horizontal
+                _isHorizontalMove = Mathf.Abs(_playerDirection.x) > Mathf.Abs(_playerDirection.y);
+            }
+            else
+            {
+                // Se não há input, considera que a intenção de movimento horizontal depende da última direção horizontal
+                // ou assume horizontal se estava parado e _lastMoveDirection já é horizontal.
+                // Para o dash, _isHorizontalMove será verificado no HandleAttackInput com base na _playerDirection atual.
+                // Se parado, _playerDirection é (0,0), então _isHorizontalMove pode não ser o esperado.
+                // Vamos recalcular _isHorizontalMove baseado em _lastMoveDirection se não houver input atual.
+                if (Mathf.Abs(_lastMoveDirection.x) > Mathf.Abs(_lastMoveDirection.y))
+                {
+                    _isHorizontalMove = true;
+                }
+                else
+                {
+                    _isHorizontalMove = false;
+                }
             }
         }
 
+        // A animação de movimento normal só atualiza se não estiver atacando/dando dash
         if (!_isAttack && !_isDashing)
         {
             UpdateMovementAnimation();
         }
 
-        if (_isHorizontalMove && !_isDashing)
+        // Flip é feito baseado na última direção de movimento, apenas se não estiver em dash
+        if (!_isDashing)
         {
-            Flip();
+            FlipBasedOnLastMoveDirection();
         }
 
         PlayerRun();
-        OnAttack();
-
-        if (_isAttack)
-        {
-            _playerAnimator.SetInteger("Movimento", 2);
-        }
+        HandleAttackInput();
     }
 
     void BotBehaviorUpdate()
     {
-        // Seguir o personagem ativo
         GameObject activePlayer = FindActivePlayer();
         if (activePlayer != null && activePlayer != gameObject)
         {
             float distance = Vector2.Distance(transform.position, activePlayer.transform.position);
-
             if (distance > followDistance)
             {
                 _playerDirection = (activePlayer.transform.position - transform.position).normalized;
@@ -108,12 +158,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Atirar em inimigos próximos
         GameObject nearestEnemy = FindNearestEnemy();
         if (nearestEnemy != null)
         {
             float distanceToEnemy = Vector2.Distance(transform.position, nearestEnemy.transform.position);
-
             if (distanceToEnemy <= shootingRange && Time.time >= nextFireTime)
             {
                 ShootAt(nearestEnemy.transform.position);
@@ -121,15 +169,13 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Atualizar animações do bot
         if (!_isAttack && !_isDashing)
         {
             UpdateMovementAnimation();
         }
-
-        if (_isHorizontalMove && !_isDashing)
+        if (!_isDashing)
         {
-            Flip();
+            FlipBasedOnLastMoveDirection();
         }
     }
 
@@ -137,10 +183,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_isDashing)
         {
-            // Movimento durante o dash
-            _playerRigidbody2D.linearVelocity = _lastMoveDirection * _dashSpeed;
-
-            // Atualiza timer do dash
+            _playerRigidbody2D.linearVelocity = _dashAttackDirection * _dashSpeed;
             _dashTimer -= Time.fixedDeltaTime;
             if (_dashTimer <= 0)
             {
@@ -149,12 +192,14 @@ public class PlayerController : MonoBehaviour
         }
         else if (!_isAttack)
         {
-            // Movimento normal ou do bot
             _playerRigidbody2D.linearVelocity = _playerDirection.normalized * _playerSpeed;
+        }
+        else if (_isAttack && !_isDashing)
+        {
+            _playerRigidbody2D.linearVelocity = Vector2.zero;
         }
     }
 
-    // Métodos auxiliares para o comportamento do bot
     GameObject FindActivePlayer()
     {
         PlayerController[] players = FindObjectsOfType<PlayerController>();
@@ -173,7 +218,6 @@ public class PlayerController : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject nearest = null;
         float minDistance = Mathf.Infinity;
-
         foreach (GameObject enemy in enemies)
         {
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
@@ -183,7 +227,6 @@ public class PlayerController : MonoBehaviour
                 nearest = enemy;
             }
         }
-
         return nearest;
     }
 
@@ -191,56 +234,46 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
         Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, angle));
     }
 
     void UpdateMovementAnimation()
     {
-        if (_playerDirection.sqrMagnitude > 0)
+        // _isHorizontalMove é atualizado em PlayerInputUpdate com base no input.
+        // Aqui, usamos o _playerDirection para as animações de walk/run.
+        if (_playerDirection.sqrMagnitude > 0.01f) // Se há input de movimento
         {
-            _isHorizontalMove = Mathf.Abs(_playerDirection.x) > Mathf.Abs(_playerDirection.y);
-
+            bool currentMoveIsHorizontal = Mathf.Abs(_playerDirection.x) > Mathf.Abs(_playerDirection.y);
             if (_isRunning)
             {
-                if (_isHorizontalMove)
-                {
-                    _playerAnimator.SetInteger("Movimento", 3); // Run horizontal
-                }
-                else
-                {
-                    _playerAnimator.SetInteger("Movimento", _playerDirection.y > 0 ? 6 : 7); // 6 = runup, 7 = rundown
-                }
+                _playerAnimator.SetInteger("Movimento", currentMoveIsHorizontal ? 3 : (_playerDirection.y > 0 ? 6 : 7));
             }
             else
             {
-                if (_isHorizontalMove)
-                {
-                    _playerAnimator.SetInteger("Movimento", 1); // Walk horizontal
-                }
-                else
-                {
-                    _playerAnimator.SetInteger("Movimento", _playerDirection.y > 0 ? 4 : 5); // 4 = walkup, 5 = walkdown
-                }
+                _playerAnimator.SetInteger("Movimento", currentMoveIsHorizontal ? 1 : (_playerDirection.y > 0 ? 4 : 5));
             }
         }
-        else
+        else // Sem input de movimento, animação de Idle
         {
-            _playerAnimator.SetInteger("Movimento", 0); // Idle
-            _isHorizontalMove = true;
+            _playerAnimator.SetInteger("Movimento", 0);
         }
     }
 
-    void Flip()
+    // Renomeado para ser mais específico
+    void FlipBasedOnLastMoveDirection()
     {
-        if (_playerDirection.x > 0)
+        if (Mathf.Abs(_lastMoveDirection.x) > 0.01f) // Apenas flipa se houver uma direção horizontal em _lastMoveDirection
         {
-            transform.eulerAngles = new Vector2(0f, 0f); // Direita
+            if (_lastMoveDirection.x > 0.01f)
+            {
+                transform.eulerAngles = new Vector2(0f, 0f);
+            }
+            else if (_lastMoveDirection.x < -0.01f)
+            {
+                transform.eulerAngles = new Vector2(0f, 180f);
+            }
         }
-        else if (_playerDirection.x < 0)
-        {
-            transform.eulerAngles = new Vector2(0f, 180f); // Esquerda
-        }
+        // Se _lastMoveDirection.x é (próximo de) zero, não flipa, mantém a orientação atual.
     }
 
     void PlayerRun()
@@ -257,12 +290,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnAttack()
+    void HandleAttackInput()
     {
+        // Verifica se o input atual (_playerDirection) é predominantemente horizontal OU se não há input (parado)
+        // Se parado, o dash será na direção que o player está olhando (_lastMoveDirection ou flip)
+        bool canDashHorizontally = false;
+        if (_playerDirection.sqrMagnitude > 0.01f) // Se há input
+        {
+            canDashHorizontally = Mathf.Abs(_playerDirection.x) > Mathf.Abs(_playerDirection.y);
+        }
+        else // Se parado, permite dash horizontal baseado na direção que está olhando
+        {
+            canDashHorizontally = true;
+        }
+
         if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetMouseButtonDown(0)) &&
             !_isDashing &&
             _dashCooldownTimer <= 0 &&
-            _isHorizontalMove) // <-- Nova condição adicionada
+            canDashHorizontally) // Condição para dash/ataque horizontal
         {
             StartDash();
         }
@@ -274,7 +319,43 @@ public class PlayerController : MonoBehaviour
         _isDashing = true;
         _dashTimer = _dashDuration;
         _dashCooldownTimer = _dashCooldown;
-        _playerAnimator.SetTrigger("Dash"); // Adicione um trigger de dash no seu Animator se quiser uma anima��o espec�fica
+
+        // Determina a direção do dash (sempre horizontal)
+        if (Mathf.Abs(_lastMoveDirection.x) > 0.01f) // Se _lastMoveDirection tem componente horizontal
+        {
+            _dashAttackDirection = new Vector2(Mathf.Sign(_lastMoveDirection.x), 0f).normalized;
+        }
+        else // Se _lastMoveDirection é vertical ou zero, usa a direção do flip atual do personagem
+        {
+            _dashAttackDirection = (transform.eulerAngles.y == 0f) ? Vector2.right : Vector2.left;
+        }
+
+        // Ativa a animação de ataque/dash (Movimento = 2, conforme script original do usuário)
+        _playerAnimator.SetInteger("Movimento", 2);
+
+        _inimigosAtingidosNoDash.Clear();
+
+        if (_enemyLayerValue != -1)
+        {
+            Physics2D.IgnoreLayerCollision(_playerLayer, _enemyLayerValue, true);
+        }
+
+        Vector2 attackPoint = (pontoDeAtaqueDash != null) ? (Vector2)pontoDeAtaqueDash.position : (Vector2)transform.position;
+        // Para o OverlapCircle, a direção do dash é importante para o posicionamento do ponto de ataque se ele for um offset
+        // Se pontoDeAtaqueDash é o próprio transform, a direção do dash não afeta o centro do círculo aqui.
+        // Se o pontoDeAtaqueDash for um filho à frente do player, ele já estará na direção correta devido ao Flip.
+        Collider2D[] inimigosDetectados = Physics2D.OverlapCircleAll(attackPoint, raioDeteccaoDash, camadaDoInimigo);
+
+        foreach (Collider2D inimigoCollider in inimigosDetectados)
+        {
+            Inimigo inimigo = inimigoCollider.GetComponent<Inimigo>();
+            if (inimigo != null && !_inimigosAtingidosNoDash.Contains(inimigoCollider))
+            {
+                Debug.Log("PlayerController: Atacando " + inimigo.name + " com dash.");
+                inimigo.ReceberDano(danoDoDash);
+                _inimigosAtingidosNoDash.Add(inimigoCollider);
+            }
+        }
     }
 
     void EndDash()
@@ -282,6 +363,12 @@ public class PlayerController : MonoBehaviour
         _isDashing = false;
         _isAttack = false;
         _playerRigidbody2D.linearVelocity = Vector2.zero;
+
+        if (_enemyLayerValue != -1)
+        {
+            Physics2D.IgnoreLayerCollision(_playerLayer, _enemyLayerValue, false);
+        }
+        // A animação será atualizada por UpdateMovementAnimation() no próximo Update se não houver novo dash/ataque
     }
-    
 }
+
