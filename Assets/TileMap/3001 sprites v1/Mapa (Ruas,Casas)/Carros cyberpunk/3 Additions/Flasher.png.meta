@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flasher_0: -1038576260145519625
+      Flasher_1: -1834321438961539042
+      Flasher_2: 448923826670302303
+      Flasher_3: 6050787806547688406
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

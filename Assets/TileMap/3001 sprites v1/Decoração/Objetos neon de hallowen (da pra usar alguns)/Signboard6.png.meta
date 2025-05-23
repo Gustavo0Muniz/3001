@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Signboard6_0: -3179432025953392194
+      Signboard6_1: 8544660249657800413
+      Signboard6_2: 3366886961702068142
+      Signboard6_3: -8703174081599880277
+      Signboard6_4: -5616872919286533264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

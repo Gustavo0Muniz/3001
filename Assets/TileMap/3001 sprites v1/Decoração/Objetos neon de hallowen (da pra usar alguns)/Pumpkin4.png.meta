@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pumpkin4_0: -6157629625818805681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
