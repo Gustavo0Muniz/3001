@@ -31,7 +31,7 @@ public class BossController : MonoBehaviour
     private float _dashCooldownTimer = 0f;
     private Vector2 _dashDirection = Vector2.right;
     private List<Collider2D> _playersHitThisDash = new List<Collider2D>();
-    // <<< ADICIONADO: Constantes para o estado do dash no Animator >>>
+   
     private const int DASH_STATE_NONE = 0;
     private const int DASH_STATE_HORIZONTAL = 1;
     private const int DASH_STATE_DOWN = 2;
@@ -43,7 +43,7 @@ public class BossController : MonoBehaviour
     public float invincibilityDuration = 0.5f;
     public GameObject deathEffectPrefab;
     public bool isDead = false;
-    // public BossHealthBar healthBar;
+   
 
     [Header("Outros (IA)")]
     public Transform playerTarget;
@@ -105,9 +105,7 @@ public class BossController : MonoBehaviour
     {
         if (isDead) return;
 
-        // --- L�GICA DA IA ENTRARIA AQUI ---
-        // A IA definiria _targetDirection, _isMoving, _isRunning 
-        // e chamaria TryStartDash(Vector2 direction) com a dire��o desejada (ex: Vector2.down)
+       
         if (playerTarget != null && !_isDashing)
         {
             _targetDirection = (playerTarget.position - transform.position).normalized;
@@ -119,10 +117,10 @@ public class BossController : MonoBehaviour
             _isMoving = false;
             _isRunning = false;
         }
-        // --- FIM DA L�GICA DA IA (Exemplo) ---
+       
 
         HandleCooldowns();
-        UpdateAnimation(); // <<< ATEN��O: UpdateAnimation agora N�O controla mais a anima��o de dash >>>
+        UpdateAnimation();
         FlipBasedOnTargetDirection();
     }
 
@@ -166,10 +164,10 @@ public class BossController : MonoBehaviour
         }
     }
 
-    // <<< MODIFICADO: N�o controla mais anima��o de dash, apenas movimento >>>
+    
     void UpdateAnimation()
     {
-        // Anima��es de Dash s�o controladas em StartDash/EndDash via par�metro "DashState"
+        
         if (_isDashing) return;
 
         if (_isMoving)
@@ -189,11 +187,11 @@ public class BossController : MonoBehaviour
             _animator.SetInteger("Movimento", 0); // Idle
         }
     }
-    // --- FIM DA MODIFICA��O ---
+ 
 
     void FlipBasedOnTargetDirection()
     {
-        if (_isDashing) return; // N�o vira durante o dash
+        if (_isDashing) return; 
 
         float horizontalDirection = _targetDirection.x;
         if (!_isMoving && Mathf.Abs(_lastMoveDirection.x) > 0.01f)
@@ -207,20 +205,18 @@ public class BossController : MonoBehaviour
         }
     }
 
-    // <<< MODIFICADO: Aceita dire��o do dash como par�metro >>>
-    // A IA deve chamar esta fun��o com a dire��o desejada (ex: Vector2.down ou Vector2.left/right)
+    
     public bool TryStartDash(Vector2 direction)
     {
         if (!_isDashing && _dashCooldownTimer <= 0)
         {
-            // Normaliza a dire��o para garantir consist�ncia
+         
             Vector2 normalizedDirection = direction.normalized;
 
-            // Decide se � dash horizontal ou para baixo (prioriza baixo se houver componente Y)
             bool isDashDown = Mathf.Abs(normalizedDirection.y) > Mathf.Abs(normalizedDirection.x) && normalizedDirection.y < -0.1f;
-            bool isDashHorizontal = !isDashDown; // Assume horizontal se n�o for para baixo
+            bool isDashHorizontal = !isDashDown; // Assume horizontal se n for para baixo
 
-            // Define a dire��o real do dash
+         
             if (isDashDown)
             {
                 _dashDirection = Vector2.down;
@@ -228,7 +224,7 @@ public class BossController : MonoBehaviour
             }
             else // Dash Horizontal
             {
-                // Usa a dire��o que o boss est� virado para o dash horizontal
+                
                 _dashDirection = (transform.eulerAngles.y == 0f) ? Vector2.right : Vector2.left;
                 StartDash(DASH_STATE_HORIZONTAL); // Inicia com estado Dash Horizontal
             }
@@ -236,9 +232,7 @@ public class BossController : MonoBehaviour
         }
         return false;
     }
-    // --- FIM DA MODIFICA��O ---
-
-    // <<< MODIFICADO: Aceita o estado do dash para o Animator >>>
+  
     void StartDash(int dashState)
     {
         _isDashing = true;
@@ -246,9 +240,9 @@ public class BossController : MonoBehaviour
         _dashCooldownTimer = dashCooldown;
         _playersHitThisDash.Clear();
 
-        // Define o estado da anima��o de Dash
+    
         _animator.SetInteger("DashState", dashState);
-        // Garante que o par�metro de movimento n�o interfira
+        
         _animator.SetInteger("Movimento", 0);
 
         if (_playerLayerValue != -1)
@@ -257,7 +251,7 @@ public class BossController : MonoBehaviour
         }
         DetectAndDamagePlayer();
     }
-    // --- FIM DA MODIFICA��O ---
+
 
     void DetectAndDamagePlayer()
     {
@@ -285,9 +279,9 @@ public class BossController : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(_bossLayer, _playerLayerValue, false);
         }
-        // <<< ADICIONADO: Reseta o estado do dash no Animator >>>
+   
         _animator.SetInteger("DashState", DASH_STATE_NONE);
-        // For�a atualiza��o da anima��o de movimento/idle
+      
         UpdateAnimation();
     }
 
@@ -296,7 +290,7 @@ public class BossController : MonoBehaviour
         if (isInvincible || isDead) return;
         currentHealth -= damageAmount;
         Debug.Log(gameObject.name + " tomou " + damageAmount + " de dano. Vida restante: " + currentHealth);
-        // UpdateHealthUI();
+        
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -305,8 +299,7 @@ public class BossController : MonoBehaviour
         else
         {
             StartCoroutine(InvincibilityCoroutine());
-            // <<< REMOVIDO: Trigger de Hit n�o � mais chamado >>>
-            // _animator.SetTrigger("Hit"); 
+       
         }
     }
 
@@ -326,7 +319,7 @@ public class BossController : MonoBehaviour
         _isMoving = false;
         _isDashing = false;
         this.enabled = false;
-        _animator.SetTrigger("Die"); // Mant�m o trigger de morte
+        _animator.SetTrigger("Die"); 
         Collider2D[] colliders = GetComponents<Collider2D>();
         foreach (Collider2D col in colliders) col.enabled = false;
         if (deathEffectPrefab != null)
@@ -336,13 +329,13 @@ public class BossController : MonoBehaviour
         GameEventManager eventManager = FindObjectOfType<GameEventManager>();
         if (eventManager != null)
         {
-            // eventManager.HandleBossDefeated(); 
+            
         }
         else
         {
             Debug.LogWarning("N�o foi poss�vel encontrar GameEventManager para notificar morte do Boss.");
         }
-        // Destroy(gameObject, 3f);
+       
     }
 
     public void FindPlayer()
@@ -360,14 +353,6 @@ public class BossController : MonoBehaviour
         }
     }
 
-    /*
-    void UpdateHealthUI()
-    {
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealth(currentHealth, maxHealth);
-        }
-    }
-    */
+  
 }
 

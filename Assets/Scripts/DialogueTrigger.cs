@@ -196,7 +196,7 @@ public class DialogueTrigger : MonoBehaviour
         OnDialogueEnd?.Invoke(this);
         dialogueActive = false;
         dialogueIndex = 0;
-        // TODO: Adicionar lógica para notificar outros sistemas que o diálogo terminou (ex: iniciar horda)
+        // Adicionar lógica para notificar outros sistemas que o diálogo terminou 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -231,7 +231,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    // Método público para iniciar o diálogo externamente (útil para controle por eventos)
+    // Método público para iniciar o diálogo externamente
     public void TriggerDialogue()
     {
         if (!dialogueActive)

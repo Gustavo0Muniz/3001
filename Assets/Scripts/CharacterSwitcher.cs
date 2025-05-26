@@ -4,11 +4,18 @@ using Unity.Cinemachine;
 // Este script gerencia a troca entre personagens jogáveis,
 // ativando/desativando os scripts de controle do jogador (PlayerController, HenryController, etc.)
 // e o AllyController conforme necessário.
+// <<< MODIFICADO: Adicionado gerenciamento de UI de corações >>>
 public class CharacterSwitcher : MonoBehaviour
 {
     [Header("Personagens")]
     [Tooltip("Lista dos GameObjects dos personagens que podem ser controlados ou agir como aliados")]
     public GameObject[] characters;
+
+    // <<< ADICIONADO: Array paralelo para as UIs de Corações >>>
+    [Header("UI de Corações")]
+    [Tooltip("Lista dos GameObjects das UIs de corações. A ordem DEVE corresponder à lista 'characters' acima! Ex: characters[0] usa characterUIs[0]")]
+    public GameObject[] characterUIs;
+
     private int currentCharacterIndex = 0;
 
     [Header("Câmera")]
@@ -38,33 +45,42 @@ public class CharacterSwitcher : MonoBehaviour
             }
         }
 
-        // Validação da Lista de Personagens
+        // Validação da Lista de Personagens e UIs
         if (characters == null || characters.Length == 0)
         {
             Debug.LogError("CharacterSwitcher: Nenhum personagem atribuído à lista 'characters'!", this);
             this.enabled = false;
             return;
         }
+        // <<< ADICIONADO: Validação do array de UIs >>>
+        if (characterUIs == null || characterUIs.Length != characters.Length)
+        {
+            Debug.LogError("CharacterSwitcher: O array 'characterUIs' está nulo ou tem tamanho diferente do array 'characters'! Verifique as referências no Inspector.", this);
+            this.enabled = false;
+            return;
+        }
 
-        // Inicialização: Define o primeiro personagem como ativo
-        // e os outros como aliados (se tiverem AllyController)
+        // Inicialização: Define o primeiro personagem e sua UI como ativos
+        // e os outros como aliados (se tiverem AllyController) e suas UIs inativas
         for (int i = 0; i < characters.Length; i++)
         {
             if (characters[i] != null)
             {
-                // Tenta encontrar qualquer script de controle de jogador
                 MonoBehaviour playerControlScript = GetPlayerControlScript(characters[i]);
                 AllyController ac = characters[i].GetComponent<AllyController>();
+                bool isActiveCharacter = (i == currentCharacterIndex);
 
-                if (i == currentCharacterIndex) // Personagem inicial ativo
+                SetPlayerControlActive(playerControlScript, isActiveCharacter);
+                if (ac != null) ac.enabled = !isActiveCharacter;
+
+                // <<< MODIFICADO: Ativa/Desativa a UI correspondente >>>
+                if (characterUIs[i] != null)
                 {
-                    SetPlayerControlActive(playerControlScript, true);
-                    if (ac != null) ac.enabled = false;
+                    characterUIs[i].SetActive(isActiveCharacter);
                 }
-                else // Outros personagens começam como aliados
+                else
                 {
-                    SetPlayerControlActive(playerControlScript, false);
-                    if (ac != null) ac.enabled = true;
+                    Debug.LogWarning("CharacterSwitcher: UI não configurada para o personagem no índice " + i + " (" + characters[i].name + ") no array 'characterUIs'.", this);
                 }
             }
         }
@@ -87,7 +103,21 @@ public class CharacterSwitcher : MonoBehaviour
     void SwitchToNextCharacter()
     {
         int nextIndex = (currentCharacterIndex + 1) % characters.Length;
-        SwitchToCharacter(nextIndex);
+        // Pula personagens nulos se houver
+        int attempts = 0;
+        while (characters[nextIndex] == null && attempts < characters.Length)
+        {
+            nextIndex = (nextIndex + 1) % characters.Length;
+            attempts++;
+        }
+        if (characters[nextIndex] != null) // Só troca se encontrar um válido
+        {
+            SwitchToCharacter(nextIndex);
+        }
+        else
+        {
+            Debug.LogWarning("CharacterSwitcher: Não foi possível encontrar um próximo personagem válido para trocar.", this);
+        }
     }
 
     public void SwitchToCharacter(int newIndex)
@@ -102,7 +132,7 @@ public class CharacterSwitcher : MonoBehaviour
             return;
         }
 
-        // --- Desativa o Personagem Atual --- 
+        // --- Desativa o Personagem e UI Atual --- 
         if (characters[currentCharacterIndex] != null)
         {
             MonoBehaviour currentPC = GetPlayerControlScript(characters[currentCharacterIndex]);
@@ -110,9 +140,15 @@ public class CharacterSwitcher : MonoBehaviour
 
             SetPlayerControlActive(currentPC, false); // Desativa controle do jogador
             if (currentAC != null) currentAC.enabled = true;  // Ativa controle de IA (se existir)
+
+            // <<< ADICIONADO: Desativa a UI atual >>>
+            if (characterUIs[currentCharacterIndex] != null)
+            {
+                characterUIs[currentCharacterIndex].SetActive(false);
+            }
         }
 
-        // --- Ativa o Novo Personagem --- 
+        // --- Ativa o Novo Personagem e UI --- 
         currentCharacterIndex = newIndex;
         GameObject newChar = characters[currentCharacterIndex];
 
@@ -121,6 +157,12 @@ public class CharacterSwitcher : MonoBehaviour
 
         SetPlayerControlActive(newPC, true);   // Ativa controle do jogador
         if (newAC != null) newAC.enabled = false;  // Desativa controle de IA (se existir)
+
+        // <<< ADICIONADO: Ativa a nova UI >>>
+        if (characterUIs[currentCharacterIndex] != null)
+        {
+            characterUIs[currentCharacterIndex].SetActive(true);
+        }
 
         UpdateCameraTarget(newChar.transform);
 
@@ -131,21 +173,10 @@ public class CharacterSwitcher : MonoBehaviour
     MonoBehaviour GetPlayerControlScript(GameObject character)
     {
         if (character == null) return null;
-
-        // Tenta encontrar HenryController primeiro
         HenryController hc = character.GetComponent<HenryController>();
         if (hc != null) return hc;
-
-        // Se não encontrar, tenta encontrar PlayerController
         PlayerController pc = character.GetComponent<PlayerController>();
         if (pc != null) return pc;
-
-        // Adicione aqui outras verificações se tiver mais scripts de controle
-        // Ex: DracoController dc = character.GetComponent<DracoController>();
-        // if (dc != null) return dc;
-
-        // Se nenhum for encontrado
-        // Debug.LogWarning("CharacterSwitcher: Nenhum script de controle de jogador (HenryController, PlayerController) encontrado em " + character.name, this);
         return null;
     }
 
