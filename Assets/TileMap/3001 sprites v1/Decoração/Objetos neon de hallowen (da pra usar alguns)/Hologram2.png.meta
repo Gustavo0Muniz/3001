@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hologram2_0: 2512444405970952401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 public class Inimigo : MonoBehaviour
 {
     public float vidaMaxima = 100f;
@@ -14,98 +16,160 @@ public class Inimigo : MonoBehaviour
     private Rigidbody2D inimigoRB2D;
     [SerializeField] private Image barHealth;
     public DetectionController _detectionArea;
+    public UnityEvent<Inimigo> OnDeath;
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
     private GameObject player;
+
+    [Header("Animaï¿½ï¿½o Direcional")]
+    [SerializeField] private string animatorDirectionParamName = "MovementDirection"; // Nome do parï¿½metro Inteiro no Animator
+    // Convenï¿½ï¿½o sugerida para os valores do parï¿½metro:
+    // 0 = Idle
+    // 1 = Andando Horizontalmente
+    // 2 = Andando para Cima
+    // 3 = Andando para Baixo
+
+    void Awake()
+    {
+        inimigoRB2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        vidaAtual = vidaMaxima;
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Start()
     {
-        vidaAtual = vidaMaxima;
         if (barHealth != null)
         {
             editBarHealth(vidaAtual, vidaMaxima);
         }
         else
         {
-            Debug.LogError("Referência para barHealth não configurada no Inimigo: " + gameObject.name);
+            Debug.LogError("Referï¿½ncia para barHealth nï¿½o configurada no Inimigo: " + gameObject.name);
         }
-    
-
-    player = GameObject.FindGameObjectWithTag("Player");
-        inimigoRB2D = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-
-
-    }
-public void ReceberDano(float quantidadeDano)
-{
-    vidaAtual -= quantidadeDano;
-    vidaAtual = Mathf.Clamp(vidaAtual, 0, vidaMaxima); // Garante que a vida não seja menor que 0 ou maior que a máxima
-
-    if (barHealth != null)
-    {
-        editBarHealth(vidaAtual, vidaMaxima);
-    }
-
-    Debug.Log(gameObject.name + " recebeu " + quantidadeDano + " de dano. Vida atual: " + vidaAtual);
-
-    if (vidaAtual <= 0)
-    {
-        Morrer();
-    }
-}
-public void editBarHealth(float vidaAtual, float vidaMaxima)
-{
-    if (barHealth != null)
-    {
-        barHealth.fillAmount = vidaAtual / vidaMaxima;
-    }
-}
-
-void Morrer()
-{
-    // Adicione aqui a lógica de morte do inimigo
-    // Ex: animação de morte, desabilitar o objeto, instanciar loot, etc.
-    Debug.Log(gameObject.name + " morreu.");
-    Destroy(gameObject); // Exemplo: Destruir o objeto do inimigo
-}
-
-
-void Update()
-    {
-        inimigoDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        
-
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
-        if (distance < 4)
+        if (player == null)
         {
-            timer += Time.deltaTime;
-            if (timer > 2)
+            Debug.LogWarning("Inimigo nï¿½o encontrou objeto com tag 'Player' no Start.");
+        }
+    }
+
+    public void ReceberDano(float quantidadeDano)
+    {
+        vidaAtual -= quantidadeDano;
+        vidaAtual = Mathf.Clamp(vidaAtual, 0, vidaMaxima);
+        if (barHealth != null) editBarHealth(vidaAtual, vidaMaxima);
+        Debug.Log(gameObject.name + " recebeu " + quantidadeDano + " de dano. Vida atual: " + vidaAtual);
+        if (vidaAtual <= 0) Morrer();
+    }
+
+    public void editBarHealth(float vidaAtual, float vidaMaxima)
+    {
+        if (barHealth != null) barHealth.fillAmount = vidaAtual / vidaMaxima;
+    }
+
+    void Morrer()
+    {
+        Debug.Log(gameObject.name + " morreu.");
+        OnDeath?.Invoke(this);
+        // Considerar adicionar animaï¿½ï¿½o de morte aqui, usando um Trigger no Animator
+        // _animator.SetTrigger("Die");
+        Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        // Lï¿½gica de tiro (mantida)
+        if (player != null)
+        {
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < 4) // Usar variï¿½vel pï¿½blica
             {
-                timer = 0;
-                shoot();
+                timer += Time.deltaTime;
+                if (timer > 2) // Usar variï¿½vel pï¿½blica
+                {
+                    timer = 0;
+                    shoot();
+                }
             }
         }
+
+        // Atualizar o estado da animaï¿½ï¿½o direcional
+        UpdateAnimationState();
     }
-    
+
     private void FixedUpdate()
     {
-        if(_detectionArea.detectedObjs.Count > 0)
+        Vector2 currentVelocity = Vector2.zero; // Guarda a velocidade para calcular a direï¿½ï¿½o
+        if (_detectionArea != null && _detectionArea.detectedObjs.Count > 0)
         {
-            inimigoDirection = (_detectionArea.detectedObjs[0].transform.position - transform.position).normalized;
+            Transform target = _detectionArea.detectedObjs[0].transform;
+            inimigoDirection = (target.position - transform.position).normalized;
+            currentVelocity = inimigoDirection * velocidadeDoInimigo;
 
-            inimigoRB2D.MovePosition(inimigoRB2D.position + inimigoDirection * velocidadeDoInimigo * Time.fixedDeltaTime);
+            inimigoRB2D.linearVelocity = currentVelocity; // Usar velocity pode ser melhor para fï¿½sica contï¿½nua
+            // inimigoRB2D.MovePosition(inimigoRB2D.position + inimigoDirection * velocidadeDoInimigo * Time.fixedDeltaTime); // Alternativa
+
+            // Flip baseado apenas na componente X da direï¿½ï¿½o
+            if (inimigoDirection.x > 0.01f)
+            {
+                _spriteRenderer.flipX = false;
+            }
+            else if (inimigoDirection.x < -0.01f)
+            {
+                _spriteRenderer.flipX = true;
+            }
         }
-        if (inimigoDirection.x > 0)
+        else
         {
-            _spriteRenderer.flipX = false;
-        }
-        else if (inimigoDirection.x < 0)
-        {
-            _spriteRenderer.flipX = true;
+            inimigoRB2D.linearVelocity = Vector2.zero; // Para o inimigo
+            inimigoDirection = Vector2.zero; // Reseta a direï¿½ï¿½o para cï¿½lculo da animaï¿½ï¿½o
         }
     }
+
+    void UpdateAnimationState()
+    {
+        if (_animator == null) return;
+
+        int directionState = 0; // 0: Idle por padrï¿½o
+
+        // Verifica se hï¿½ movimento significativo
+        if (inimigoDirection.sqrMagnitude > 0.01f)
+        {
+            // Compara a magnitude do movimento horizontal e vertical
+            if (Mathf.Abs(inimigoDirection.x) > Mathf.Abs(inimigoDirection.y))
+            {
+                // Movimento predominantemente horizontal
+                directionState = 1; // 1: Andando Horizontalmente
+            }
+            else
+            {
+                // Movimento predominantemente vertical
+                if (inimigoDirection.y > 0)
+                {
+                    directionState = 2; // 2: Andando para Cima
+                }
+                else
+                {
+                    directionState = 3; // 3: Andando para Baixo
+                }
+            }
+        }
+
+        // Define o parï¿½metro inteiro no Animator
+        _animator.SetInteger(animatorDirectionParamName, directionState);
+    }
+
     void shoot()
     {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        if (bullet != null && bulletPos != null)
+        {
+            Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("Tentativa de atirar sem prefab de bala ou posiï¿½ï¿½o definida em: " + gameObject.name);
+        }
     }
 }
+

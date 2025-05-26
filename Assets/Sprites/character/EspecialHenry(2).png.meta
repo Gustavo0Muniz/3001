@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: 59d7356edf418a5488caf8f48a1aa220
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3178668466834446180
+    second: EspecialHenry(2)_0
+  - first:
+      213: 1813514631000154559
+    second: EspecialHenry(2)_1
+  - first:
+      213: 8239159877706960055
+    second: EspecialHenry(2)_2
+  - first:
+      213: -5163269008635634645
+    second: EspecialHenry(2)_3
+  - first:
+      213: 7875041101824339260
+    second: EspecialHenry(2)_4
+  - first:
+      213: -4073508709764421779
+    second: EspecialHenry(2)_5
+  - first:
+      213: -3137911469938813165
+    second: EspecialHenry(2)_6
+  - first:
+      213: 9150517525541033050
+    second: EspecialHenry(2)_7
+  - first:
+      213: 6744665821577004531
+    second: EspecialHenry(2)_8
+  - first:
+      213: 4886139544448035631
+    second: EspecialHenry(2)_9
+  - first:
+      213: 2292947299383486939
+    second: EspecialHenry(2)_10
+  - first:
+      213: -6033480833029400149
+    second: EspecialHenry(2)_11
+  - first:
+      213: -3180554524190230420
+    second: EspecialHenry(2)_12
+  - first:
+      213: 5126216085859542348
+    second: EspecialHenry(2)_13
+  - first:
+      213: -1061113930430648553
+    second: EspecialHenry(2)_14
+  - first:
+      213: 2814259804183820903
+    second: EspecialHenry(2)_15
+  - first:
+      213: -3226121493340906400
+    second: EspecialHenry(2)_16
+  - first:
+      213: 5490403534156662432
+    second: EspecialHenry(2)_17
+  - first:
+      213: -3532444380598602097
+    second: EspecialHenry(2)_18
+  - first:
+      213: 8955434228953423965
+    second: EspecialHenry(2)_19
+  - first:
+      213: 4436582339635107812
+    second: EspecialHenry(2)_20
+  - first:
+      213: -8737835090445627217
+    second: EspecialHenry(2)_21
+  - first:
+      213: -302447431742651618
+    second: EspecialHenry(2)_22
+  - first:
+      213: -753120823036122136
+    second: EspecialHenry(2)_23
+  - first:
+      213: -6335778995220953270
+    second: EspecialHenry(2)_24
+  - first:
+      213: -1861027449527821968
+    second: EspecialHenry(2)_25
+  - first:
+      213: -6882500301882315045
+    second: EspecialHenry(2)_26
+  - first:
+      213: 674699392643557049
+    second: EspecialHenry(2)_27
+  - first:
+      213: -3991002825810116046
+    second: EspecialHenry(2)_28
+  - first:
+      213: -8112106688480436744
+    second: EspecialHenry(2)_29
+  - first:
+      213: -5525934992314851966
+    second: EspecialHenry(2)_30
+  - first:
+      213: -8370854435818988608
+    second: EspecialHenry(2)_31
+  - first:
+      213: 9133954825353473984
+    second: EspecialHenry(2)_32
+  - first:
+      213: -9175567042172406614
+    second: EspecialHenry(2)_33
+  - first:
+      213: 6156199744623392954
+    second: EspecialHenry(2)_34
+  - first:
+      213: -8216510701968064586
+    second: EspecialHenry(2)_35
+  - first:
+      213: -9077592354047675206
+    second: EspecialHenry(2)_36
+  - first:
+      213: -6061260729400989563
+    second: EspecialHenry(2)_37
+  - first:
+      213: -928290224743589726
+    second: EspecialHenry(2)_38
+  - first:
+      213: 9220439624563878497
+    second: EspecialHenry(2)_39
+  - first:
+      213: -6843181847178602312
+    second: EspecialHenry(2)_40
+  - first:
+      213: -9181903311301850066
+    second: EspecialHenry(2)_41
+  - first:
+      213: -5407888615630090982
+    second: EspecialHenry(2)_42
+  - first:
+      213: 6430678212441360439
+    second: EspecialHenry(2)_43
+  - first:
+      213: -3951472806445608351
+    second: EspecialHenry(2)_44
+  - first:
+      213: -725024136291978694
+    second: EspecialHenry(2)_45
+  - first:
+      213: 1211236438570490662
+    second: EspecialHenry(2)_46
+  - first:
+      213: -4623225278131066810
+    second: EspecialHenry(2)_47
+  - first:
+      213: 8223597882957914136
+    second: EspecialHenry(2)_48
+  - first:
+      213: 7549172223004142889
+    second: EspecialHenry(2)_49
+  - first:
+      213: 6513687095255641557
+    second: EspecialHenry(2)_50
+  - first:
+      213: 6827666769266105759
+    second: EspecialHenry(2)_51
+  - first:
+      213: -4437824991507536554
+    second: EspecialHenry(2)_52
+  - first:
+      213: 7518759462482714348
+    second: EspecialHenry(2)_53
+  - first:
+      213: -5680453908835058327
+    second: EspecialHenry(2)_54
+  - first:
+      213: -2291812219747263000
+    second: EspecialHenry(2)_55
+  - first:
+      213: -4096216578470684859
+    second: EspecialHenry(2)_56
+  - first:
+      213: -7346311368063159017
+    second: EspecialHenry(2)_57
+  - first:
+      213: 1504524497219174905
+    second: EspecialHenry(2)_58
+  - first:
+      213: 2309169514148936951
+    second: EspecialHenry(2)_59
+  - first:
+      213: -7217340355454847976
+    second: EspecialHenry(2)_60
+  - first:
+      213: 3084142719285485531
+    second: EspecialHenry(2)_61
+  - first:
+      213: 6301183520291658572
+    second: EspecialHenry(2)_62
+  - first:
+      213: 3371625527440477393
+    second: EspecialHenry(2)_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EspecialHenry(2)_0
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3735
+        width: 122
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46717681126ec1c20800000000000000
+      internalID: 3178668466834446180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_1
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 3735
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1ecbfc2f5ea2910800000000000000
+      internalID: 1813514631000154559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_2
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 3735
+        width: 138
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bccf5e7140675270800000000000000
+      internalID: 8239159877706960055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_3
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 3723
+        width: 138
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c5d7c51326858b0800000000000000
+      internalID: -5163269008635634645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_4
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 3715
+        width: 142
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d27d98824c94d60800000000000000
+      internalID: 7875041101824339260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_5
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 3743
+        width: 150
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67280d296df777c0800000000000000
+      internalID: -4073508709764421779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_6
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 3743
+        width: 150
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3175ca9b426e374d0800000000000000
+      internalID: -3137911469938813165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_7
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 3743
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a541cdc353b2dfe70800000000000000
+      internalID: 9150517525541033050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_8
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 3807
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5c0d774ddd99d50800000000000000
+      internalID: 6744665821577004531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_9
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 3799
+        width: 14
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b60dd170e0fc340800000000000000
+      internalID: 4886139544448035631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_10
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 3791
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9a1749b6f22df10800000000000000
+      internalID: 2292947299383486939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_11
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 3759
+        width: 22
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9972c2625c44ca0800000000000000
+      internalID: -6033480833029400149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_12
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3739
+        width: 22
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6831e4f2866cd3d0800000000000000
+      internalID: -3180554524190230420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_13
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 3703
+        width: 158
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c452d87ce5af32740800000000000000
+      internalID: 5126216085859542348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_14
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 3703
+        width: 150
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f6676908a2641f0800000000000000
+      internalID: -1061113930430648553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_15
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 3703
+        width: 86
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a790e91624e0720800000000000000
+      internalID: 2814259804183820903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_16
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 3703
+        width: 90
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c992338938a33d0800000000000000
+      internalID: -3226121493340906400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_17
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 3667
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a605f6cce4d13c40800000000000000
+      internalID: 5490403534156662432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_18
+      rect:
+        serializedVersion: 2
+        x: 2831
+        y: 3503
+        width: 22
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8678913d8c3afec0800000000000000
+      internalID: -3532444380598602097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_19
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 3519
+        width: 22
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50a42abbf7184c70800000000000000
+      internalID: 8955434228953423965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_20
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 3555
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7d8b2c128e19d30800000000000000
+      internalID: 4436582339635107812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_21
+      rect:
+        serializedVersion: 2
+        x: 2947
+        y: 3563
+        width: 14
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa09b00c749fcb680800000000000000
+      internalID: -8737835090445627217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_22
+      rect:
+        serializedVersion: 2
+        x: 2963
+        y: 3567
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1300cbc9ad7dcbf0800000000000000
+      internalID: -302447431742651618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3223
+        width: 122
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb6bf50a906c85f0800000000000000
+      internalID: -753120823036122136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_24
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 3219
+        width: 146
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47497e729ac218a0800000000000000
+      internalID: -6335778995220953270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_25
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 3219
+        width: 130
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07994a1156d4c26e0800000000000000
+      internalID: -1861027449527821968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_26
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 3219
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde29c3c0727c70a0800000000000000
+      internalID: -6882500301882315045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_27
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 3215
+        width: 150
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6e0bcd5830d5900800000000000000
+      internalID: 674699392643557049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_28
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 3211
+        width: 154
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232020e331c1d98c0800000000000000
+      internalID: -3991002825810116046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_29
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 3307
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd9d0552f10c6f80800000000000000
+      internalID: -8112106688480436744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_30
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 3207
+        width: 154
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d1c23f66fef43b0800000000000000
+      internalID: -5525934992314851966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_31
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 3275
+        width: 142
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb9186cd30c4db80800000000000000
+      internalID: -8370854435818988608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_32
+      rect:
+        serializedVersion: 2
+        x: 3731
+        y: 3279
+        width: 146
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfa8a7158352ce70800000000000000
+      internalID: 9133954825353473984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_33
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2711
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4388ea366d9a080800000000000000
+      internalID: -9175567042172406614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_34
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 2747
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8b0a00d073f6550800000000000000
+      internalID: 6156199744623392954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_35
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 2739
+        width: 146
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf7ffbac0719fd80800000000000000
+      internalID: -8216510701968064586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_36
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 2711
+        width: 162
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4bf2169d9e50280800000000000000
+      internalID: -9077592354047675206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_37
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 2719
+        width: 178
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58867050b7312eba0800000000000000
+      internalID: -6061260729400989563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_38
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 2723
+        width: 182
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8d0b975fc0e13f0800000000000000
+      internalID: -928290224743589726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_39
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 2719
+        width: 174
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ae01f8cf495ff70800000000000000
+      internalID: 9220439624563878497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_40
+      rect:
+        serializedVersion: 2
+        x: 2803
+        y: 2747
+        width: 114
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b89481ed522801a0800000000000000
+      internalID: -6843181847178602312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_41
+      rect:
+        serializedVersion: 2
+        x: 2999
+        y: 2755
+        width: 190
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ccedf0693539080800000000000000
+      internalID: -9181903311301850066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_42
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 2739
+        width: 234
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d4d70d4f153f4b0800000000000000
+      internalID: -5407888615630090982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_43
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 2711
+        width: 242
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738496553cb5e3950800000000000000
+      internalID: 6430678212441360439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_44
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 2667
+        width: 138
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16291381b6c8929c0800000000000000
+      internalID: -3951472806445608351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_45
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 2675
+        width: 154
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a327bbea36230f5f0800000000000000
+      internalID: -725024136291978694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_46
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 2419
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bd00c9f1d2fc010800000000000000
+      internalID: 1211236438570490662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_47
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 2291
+        width: 174
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648246cba1107dfb0800000000000000
+      internalID: -4623225278131066810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_48
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 2299
+        width: 182
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8106c5d34b6102270800000000000000
+      internalID: 8223597882957914136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_49
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 2295
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d686cb32c04c860800000000000000
+      internalID: 7549172223004142889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_50
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 2287
+        width: 162
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd22c2f6e3456a50800000000000000
+      internalID: 6513687095255641557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_51
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2315
+        width: 142
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d58da80ceb0ce50800000000000000
+      internalID: 6827666769266105759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_52
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 2323
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655a7ddceada962c0800000000000000
+      internalID: -4437824991507536554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_53
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 2287
+        width: 114
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee93e025eff75860800000000000000
+      internalID: 7518759462482714348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_54
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2251
+        width: 154
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d38e82449fa21b0800000000000000
+      internalID: -5680453908835058327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_55
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2243
+        width: 138
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed901ebde8d130e0800000000000000
+      internalID: -2291812219747263000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_56
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1655
+        width: 122
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547503d79b05727c0800000000000000
+      internalID: -4096216578470684859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_57
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1671
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7157e21bbb8ac0a90800000000000000
+      internalID: -7346311368063159017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_58
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1671
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f14f941f0521e410800000000000000
+      internalID: 1504524497219174905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_59
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1683
+        width: 122
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc32094071db0020800000000000000
+      internalID: 2309169514148936951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_60
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 1675
+        width: 118
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814b5029f2bd6db90800000000000000
+      internalID: -7217340355454847976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_61
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1683
+        width: 122
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf5e9376731dca20800000000000000
+      internalID: 3084142719285485531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_62
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1663
+        width: 62
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b978fc60d427750800000000000000
+      internalID: 6301183520291658572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EspecialHenry(2)_63
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1667
+        width: 66
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc8ab6bd8b6ace20800000000000000
+      internalID: 3371625527440477393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EspecialHenry(2)_0: 3178668466834446180
+      EspecialHenry(2)_1: 1813514631000154559
+      EspecialHenry(2)_10: 2292947299383486939
+      EspecialHenry(2)_11: -6033480833029400149
+      EspecialHenry(2)_12: -3180554524190230420
+      EspecialHenry(2)_13: 5126216085859542348
+      EspecialHenry(2)_14: -1061113930430648553
+      EspecialHenry(2)_15: 2814259804183820903
+      EspecialHenry(2)_16: -3226121493340906400
+      EspecialHenry(2)_17: 5490403534156662432
+      EspecialHenry(2)_18: -3532444380598602097
+      EspecialHenry(2)_19: 8955434228953423965
+      EspecialHenry(2)_2: 8239159877706960055
+      EspecialHenry(2)_20: 4436582339635107812
+      EspecialHenry(2)_21: -8737835090445627217
+      EspecialHenry(2)_22: -302447431742651618
+      EspecialHenry(2)_23: -753120823036122136
+      EspecialHenry(2)_24: -6335778995220953270
+      EspecialHenry(2)_25: -1861027449527821968
+      EspecialHenry(2)_26: -6882500301882315045
+      EspecialHenry(2)_27: 674699392643557049
+      EspecialHenry(2)_28: -3991002825810116046
+      EspecialHenry(2)_29: -8112106688480436744
+      EspecialHenry(2)_3: -5163269008635634645
+      EspecialHenry(2)_30: -5525934992314851966
+      EspecialHenry(2)_31: -8370854435818988608
+      EspecialHenry(2)_32: 9133954825353473984
+      EspecialHenry(2)_33: -9175567042172406614
+      EspecialHenry(2)_34: 6156199744623392954
+      EspecialHenry(2)_35: -8216510701968064586
+      EspecialHenry(2)_36: -9077592354047675206
+      EspecialHenry(2)_37: -6061260729400989563
+      EspecialHenry(2)_38: -928290224743589726
+      EspecialHenry(2)_39: 9220439624563878497
+      EspecialHenry(2)_4: 7875041101824339260
+      EspecialHenry(2)_40: -6843181847178602312
+      EspecialHenry(2)_41: -9181903311301850066
+      EspecialHenry(2)_42: -5407888615630090982
+      EspecialHenry(2)_43: 6430678212441360439
+      EspecialHenry(2)_44: -3951472806445608351
+      EspecialHenry(2)_45: -725024136291978694
+      EspecialHenry(2)_46: 1211236438570490662
+      EspecialHenry(2)_47: -4623225278131066810
+      EspecialHenry(2)_48: 8223597882957914136
+      EspecialHenry(2)_49: 7549172223004142889
+      EspecialHenry(2)_5: -4073508709764421779
+      EspecialHenry(2)_50: 6513687095255641557
+      EspecialHenry(2)_51: 6827666769266105759
+      EspecialHenry(2)_52: -4437824991507536554
+      EspecialHenry(2)_53: 7518759462482714348
+      EspecialHenry(2)_54: -5680453908835058327
+      EspecialHenry(2)_55: -2291812219747263000
+      EspecialHenry(2)_56: -4096216578470684859
+      EspecialHenry(2)_57: -7346311368063159017
+      EspecialHenry(2)_58: 1504524497219174905
+      EspecialHenry(2)_59: 2309169514148936951
+      EspecialHenry(2)_6: -3137911469938813165
+      EspecialHenry(2)_60: -7217340355454847976
+      EspecialHenry(2)_61: 3084142719285485531
+      EspecialHenry(2)_62: 6301183520291658572
+      EspecialHenry(2)_63: 3371625527440477393
+      EspecialHenry(2)_7: 9150517525541033050
+      EspecialHenry(2)_8: 6744665821577004531
+      EspecialHenry(2)_9: 4886139544448035631
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
