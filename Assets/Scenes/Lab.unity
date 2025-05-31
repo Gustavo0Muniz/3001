@@ -4922,7 +4922,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.99, y: -2.5, z: -10}
+  m_LocalPosition: {x: 36.749466, y: -2.5021, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5060,6 +5060,10 @@ MonoBehaviour:
   - {fileID: 656346340}
   - {fileID: 1480066517}
   - {fileID: 953493654}
+  characterUIs:
+  - {fileID: 1990102720}
+  - {fileID: 37825223}
+  - {fileID: 472045710}
   cineCamera: {fileID: 108304176}
   switchingEnabled: 1
 --- !u!4 &557462870

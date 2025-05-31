@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events; // Adicionado para usar UnityEvent
 using System.Collections;
 using System.Collections.Generic; // Necessário para List
-using UnityEngine.Events;
+
 // Estrutura para definir um personagem que pode falar
 [System.Serializable]
 public struct SpeakerProfile
@@ -46,6 +47,10 @@ public class DialogueTrigger : MonoBehaviour
     [Tooltip("O diálogo deve terminar automaticamente ao sair do trigger?")]
     public bool endOnExit = true;
 
+    [Header("Eventos")] // Nova seção para eventos
+    [Tooltip("Evento disparado quando o diálogo termina.")]
+    public UnityEvent OnDialogueEnd; // Evento público que aparecerá no Inspector
+
     private int dialogueIndex;
     private bool readyToSpeak;
     private bool dialogueActive;
@@ -65,6 +70,10 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (debugMode) Debug.LogError("DialoguePanel não atribuído no Inspector!", this);
         }
+
+        // Inicializa o evento se for nulo (boa prática)
+        if (OnDialogueEnd == null)
+            OnDialogueEnd = new UnityEvent();
     }
 
     void Update()
@@ -186,6 +195,8 @@ public class DialogueTrigger : MonoBehaviour
 
     void EndDialogue()
     {
+        if (!dialogueActive) return; // Evita chamar EndDialogue múltiplas vezes
+
         if (debugMode) Debug.Log("Fim do diálogo");
         if (typingCoroutine != null)
         {
@@ -193,10 +204,12 @@ public class DialogueTrigger : MonoBehaviour
             typingCoroutine = null;
         }
         dialoguePanel.SetActive(false);
-        OnDialogueEnd?.Invoke(this);
         dialogueActive = false;
         dialogueIndex = 0;
-        // Adicionar lógica para notificar outros sistemas que o diálogo terminou 
+
+        // Dispara o evento OnDialogueEnd
+        if (debugMode) Debug.Log("Disparando evento OnDialogueEnd");
+        OnDialogueEnd?.Invoke(); // O '?' evita erro se nada estiver conectado no Inspector
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -231,7 +244,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    // Método público para iniciar o diálogo externamente
+    // Método público para iniciar o diálogo externamente (útil para controle por eventos)
     public void TriggerDialogue()
     {
         if (!dialogueActive)
@@ -240,5 +253,5 @@ public class DialogueTrigger : MonoBehaviour
             StartDialogueSequence();
         }
     }
-    public UnityEvent<DialogueTrigger> OnDialogueEnd;
 }
+

@@ -123,7 +123,6 @@ public class HenryController : MonoBehaviour
         UpdateFirePointPosition();
     }
 
-    // ... (FixedUpdate, HandleInput, HandleRunInput, HandleShootInput, HandleSpecialAbilityInput, ApplyMovement, UpdateAnimation, FlipBasedOnLastMoveDirection, Shoot, UseSoundWave, DetermineShootDirection, CalculateProjectileRotation, UpdateFirePointPosition - SEM ALTERAÇÕES) ...
 
     void FixedUpdate()
     {
@@ -335,10 +334,6 @@ public class HenryController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // REMOVIDO: OnCollisionEnter2D e OnTriggerEnter2D - Dano é aplicado por quem colide
-    // void OnCollisionEnter2D(Collision2D collision) { ... }
-    // void OnTriggerEnter2D(Collider2D other) { ... }
-
-    // --- FIM DA MODIFICAÇÃO ---
+  
 }
 

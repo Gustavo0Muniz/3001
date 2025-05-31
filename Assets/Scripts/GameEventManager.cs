@@ -1,226 +1,355 @@
-// GameEventManager.cs (v2 - Corrigido: StartBossFight agora é public)
+// GameEventManager.cs (v16 - Simple External Trigger)
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public enum GamePhase { Phase1_Start, Phase1_Horde1, Phase1_PostHorde1, Phase1_GoToArea, Phase2_StartHorde, Phase2_AkunDialogue, Phase2_PostHorde, Phase3_BuildingHorde, /*Phase3_PostHorde,*/ Phase3_BossDialogue, BossFight, Complete }
-
 public class GameEventManager : MonoBehaviour
 {
-    [Header("Estado Atual")]
-    public GamePhase currentPhase = GamePhase.Phase1_Start;
-
     [Header("Referências Principais")]
     public CharacterSwitcher characterSwitcher;
+    public GameObject akunCharacter;
+    public GameObject henryCharacter;
+    public BossController bossController;
+    public ObjectiveArrow objectiveArrow;
+    public Transform periferiaTarget;
+    public Transform bossTransform;
+    public GameObject periferiaBarrier;
+
+    [Header("Diálogos")]
     public DialogueTrigger initialDialogue;
     public DialogueTrigger postHorde1Dialogue;
-    public DialogueTrigger bossDialogue;
-    public ObjectiveArrow objectiveArrow;
-
-    [Header("Controle de Hordas")]
-    public Transform[] horde1SpawnPoints;
-    public Transform[] horde2SpawnPoints;
-    public GameObject robotPrefab;
-    public int horde1Size = 5;
-    public int horde2Size = 8;
-    private List<GameObject> currentHordeEnemies = new List<GameObject>();
-    private int enemiesRemaining = 0;
-
-    [Header("Gatilhos e Objetivos")]
-    public Collider2D phase2TriggerArea;
-    public Collider2D buildingEntranceTrigger;
-    public Transform bossTarget;
-    public string dracoCharacterName = "Draco";
-    public string phase3SceneName = "Lab";
-
-    [Header("Interação com Akun (Pós-Horda 2)")]
-    public GameObject akunCharacter;
-    public Transform akunSpawnPoint;
     public DialogueTrigger akunDialogueTrigger;
-    public UnityEvent onAkunAppears;
+    public DialogueTrigger finalAwarenessDialogue;
 
-    [Header("Eventos de Fase (Opcional - Para lógica extra)")]
-    public UnityEvent onPhase1Start;
+    [Header("Horda 1")]
+    public GameObject robotPrefab;
+    public Transform[] horde1SpawnPoints;
+    public int horde1Size = 5;
+    private List<GameObject> currentHorde1Enemies = new List<GameObject>();
+    private int enemiesRemainingInHorde1 = 0;
+
+    [Header("Combate Periferia")]
+    public Transform[] periferiaRobotSpawnPoints;
+    public int periferiaRobotCount = 3;
+    public Collider2D periferiaTriggerArea;
+    private List<GameObject> currentPeriferiaEnemies = new List<GameObject>();
+    private int enemiesRemainingInPeriferia = 0;
+
+    [Header("Spawn de Coleta")]
+    public Transform[] generalRobotSpawnPoints;
+    public int robotsPerCollection = 1;
+
+    [Header("UI Mensagem Desbloqueio/Aviso")]
+    public GameObject unlockMessagePanel;
+    public Text unlockMessageText;
+    private Coroutine hideMessageCoroutine;
+
+    [Header("Configuração Final")]
+    [Tooltip("Nome exato da cena de Menu para carregar ao completar o jogo.")]
+    public string menuSceneName = "MainMenu";
+    [Tooltip("O GameObject que contém o script FinalDialogueTrigger.cs. Ele deve começar desativado.")]
+    public GameObject finalDialogueTriggerObject; // Referência ao GameObject do trigger
+
+    [Header("Eventos (Opcional)")]
+    public UnityEvent onGameStart;
     public UnityEvent onHorde1Start;
     public UnityEvent onHorde1Defeated;
-    public UnityEvent onSwitchToDracoTriggered;
-    public UnityEvent onPhase2Start;
-    public UnityEvent onHorde2Defeated;
-    public UnityEvent onPhase3Start;
-    public UnityEvent onBossDialogueStart;
-    public UnityEvent onBossFightStart;
+    public UnityEvent onAkunPathUnlocked;
+    public UnityEvent onPeriferiaCombatStart;
+    public UnityEvent onPeriferiaCombatEnd;
+    public UnityEvent onRecyclingFull;
+    public UnityEvent onFinalDialogueStart;
+    public UnityEvent onGameComplete;
 
-    private bool phase2AreaReached = false;
+    private bool akunPathUnlocked = false;
+    private bool recyclingIsFull = false;
+    private bool finalDialogueStarted = false; // Flag para evitar chamadas múltiplas
+    private bool periferiaAreaReached = false;
+    private List<GameObject> activeCollectionRobots = new List<GameObject>();
 
     void Start()
     {
-        InitializePhase(currentPhase);
-        if (currentPhase == GamePhase.Phase3_BuildingHorde)
-        {
-            Debug.Log("GameEventManager (Cena Lab): Iniciando Fase 3 - Pulando Horda e indo direto para diálogo do Boss.");
-            StartBossDialogue();
-        }
-        if (akunCharacter != null && akunCharacter.scene.IsValid() && akunCharacter.activeSelf)
-        {
-            akunCharacter.SetActive(false);
-        }
+        InitializeGame();
     }
 
-    void InitializePhase(GamePhase phase)
+    void InitializeGame()
     {
-        currentPhase = phase;
-        Debug.Log("GameEventManager: Iniciando Fase: " + phase);
-        switch (phase)
+        Debug.Log("GameEventManager: Iniciando Jogo.");
+
+        if (characterSwitcher != null) characterSwitcher.SetSwitchingEnabled(false);
+        else Debug.LogError("CharacterSwitcher não configurado!");
+
+        if (akunCharacter != null) akunCharacter.SetActive(false);
+        else Debug.LogError("Referência ao GameObject de Akun não definida!");
+        if (henryCharacter != null) henryCharacter.SetActive(true);
+        else Debug.LogError("Personagem inicial (Henry/Outro) não configurado!", this);
+
+        if (bossController == null) Debug.LogError("BossController não configurado!");
+
+        if (bossTransform == null) Debug.LogWarning("BossTransform não configurado para a seta!");
+        if (periferiaTarget == null) Debug.LogError("PeriferiaTarget (Trigger da Periferia) não configurado para a seta!");
+        if (objectiveArrow != null) objectiveArrow.SetArrowActive(false); else Debug.LogWarning("ObjectiveArrow não configurada!");
+        if (unlockMessagePanel != null) unlockMessagePanel.SetActive(false); else Debug.LogWarning("Painel de Mensagem de Desbloqueio/Aviso não configurado!");
+        if (periferiaBarrier != null) periferiaBarrier.SetActive(true); else Debug.LogError("Referência para PeriferiaBarrier não configurada no Inspector!");
+
+        if (finalDialogueTriggerObject == null)
         {
-            case GamePhase.Phase1_Start:
-                if (characterSwitcher != null) characterSwitcher.SetSwitchingEnabled(false);
-                if (initialDialogue != null) initialDialogue.TriggerDialogue();
-                onPhase1Start?.Invoke();
-                break;
+            Debug.LogError("GameEventManager: Final Dialogue Trigger Object não foi atribuído no Inspector! O diálogo final não funcionará.", this);
         }
+        else
+        {
+            finalDialogueTriggerObject.SetActive(false); // Garante que começa desativado
+        }
+
+        if (initialDialogue != null) initialDialogue.TriggerDialogue(); else Debug.LogError("InitialDialogue não configurado!");
+
+        if (EnvironmentalManager.Instance != null)
+        {
+            EnvironmentalManager.Instance.OnTrashCollected.AddListener(HandleTrashCollected_SpawnRobots);
+            EnvironmentalManager.Instance.OnRecyclingHalfFull.AddListener(TriggerAkunPathUnlock);
+            EnvironmentalManager.Instance.OnRecyclingFull.AddListener(HandleRecyclingFull);
+        }
+        else { Debug.LogError("GameEventManager: EnvironmentalManager não encontrado!", this); }
+
+        onGameStart?.Invoke();
     }
 
     public void HandleDialogueEnd(DialogueTrigger dialogue)
     {
-        Debug.Log("GameEventManager: Diálogo terminado: " + (dialogue != null ? dialogue.gameObject.name : "NULO") + " na fase: " + currentPhase);
-        if (dialogue == initialDialogue && currentPhase == GamePhase.Phase1_Start)
+        Debug.Log("GameEventManager: Diálogo terminado: " + (dialogue != null ? dialogue.gameObject.name : "NULO"));
+
+        if (dialogue == initialDialogue) { StartHorde1(); }
+        else if (dialogue == postHorde1Dialogue)
         {
-            StartHorde1();
+            Debug.Log("Retornando para coleta geral.");
+            DeactivateObjectiveArrow();
         }
-        else if (dialogue == postHorde1Dialogue && currentPhase == GamePhase.Phase1_PostHorde1)
+        else if (dialogue == akunDialogueTrigger)
         {
-            if (phase2TriggerArea != null) ActivateObjectiveArrow(phase2TriggerArea.transform);
-            else Debug.LogError("Phase 2 Trigger Area não configurada!");
-            if (characterSwitcher != null)
-            {
-                characterSwitcher.SwitchToCharacterByName(dracoCharacterName);
-                characterSwitcher.SetSwitchingEnabled(true);
-                onSwitchToDracoTriggered?.Invoke();
-            }
-            else Debug.LogError("CharacterSwitcher não configurado!");
-            currentPhase = GamePhase.Phase1_GoToArea;
-            Debug.Log("Fase alterada para " + currentPhase);
+            Debug.Log("Diálogo com Akun terminado. Coleta final para encher reciclagem.");
+            DeactivateObjectiveArrow();
         }
-        else if (dialogue == akunDialogueTrigger && currentPhase == GamePhase.Phase2_AkunDialogue)
+        else if (dialogue == finalAwarenessDialogue)
         {
-            currentPhase = GamePhase.Phase2_PostHorde;
-            Debug.Log("Fase alterada para " + currentPhase + ". Ativando seta para entrada do prédio.");
-            if (buildingEntranceTrigger != null) ActivateObjectiveArrow(buildingEntranceTrigger.transform);
-            else Debug.LogWarning("Gatilho de entrada da Fase 3 não configurado para a seta.");
-        }
-        else if (dialogue == bossDialogue && currentPhase == GamePhase.Phase3_BossDialogue)
-        {
-            // <<< CHAMADA AINDA ACONTECE AQUI INTERNAMENTE, MAS A FUNÇÃO AGORA É PÚBLICA >>>
-            StartBossFight();
+            CompleteGame();
         }
     }
 
+    // --- Lógica da Horda 1 ---
     void StartHorde1()
     {
         Debug.Log("Iniciando Horda 1");
-        currentPhase = GamePhase.Phase1_Horde1;
-        SpawnHorde(horde1SpawnPoints, horde1Size);
+        // currentPhase = GamePhase.Horde1; // Removido
+        SpawnHorde1();
         onHorde1Start?.Invoke();
     }
 
-    void SpawnHorde(Transform[] spawnPoints, int count)
+    void SpawnHorde1()
     {
-        currentHordeEnemies.Clear();
-        enemiesRemaining = count;
-        if (robotPrefab == null) { Debug.LogError("Prefab do robô não configurado!"); enemiesRemaining = 0; CheckHordeDefeated(); return; }
-        if (spawnPoints == null || spawnPoints.Length == 0) { Debug.LogError("Pontos de spawn não configurados!"); enemiesRemaining = 0; CheckHordeDefeated(); return; }
-        Debug.Log("Spawning " + count + " inimigos para a fase " + currentPhase);
-        for (int i = 0; i < count; i++)
+        currentHorde1Enemies.Clear();
+        enemiesRemainingInHorde1 = horde1Size;
+        if (robotPrefab == null) { Debug.LogError("Prefab do robô não configurado para horda 1!"); enemiesRemainingInHorde1 = 0; CheckHorde1Defeated(); return; }
+        if (horde1SpawnPoints == null || horde1SpawnPoints.Length == 0) { Debug.LogError("Pontos de spawn da horda 1 não configurados!"); enemiesRemainingInHorde1 = 0; CheckHorde1Defeated(); return; }
+        Debug.Log("Spawning " + horde1Size + " inimigos para a Horda 1");
+        for (int i = 0; i < horde1Size; i++)
         {
-            Transform spawnPoint = spawnPoints[i % spawnPoints.Length];
+            Transform spawnPoint = horde1SpawnPoints[i % horde1SpawnPoints.Length];
             GameObject enemy = Instantiate(robotPrefab, spawnPoint.position, spawnPoint.rotation);
-            currentHordeEnemies.Add(enemy);
+            currentHorde1Enemies.Add(enemy);
             Inimigo enemyScript = enemy.GetComponent<Inimigo>();
-            if (enemyScript != null) enemyScript.OnDeath.AddListener(HandleEnemyDeath);
-            else Debug.LogWarning("Inimigo spawnado não possui script 'Inimigo'!", enemy);
+            if (enemyScript != null) { enemyScript.OnDeath.AddListener(HandleHorde1EnemyDeath); }
+            else Debug.LogWarning("Inimigo da Horda 1 spawnado não possui script 'Inimigo' com evento OnDeath!", enemy);
         }
     }
 
-    public void HandleEnemyDeath(Inimigo enemy)
+    public void HandleHorde1EnemyDeath(Inimigo enemy)
     {
-        if (enemy != null) enemy.OnDeath.RemoveListener(HandleEnemyDeath);
-        enemiesRemaining--;
-        Debug.Log("Inimigo derrotado. Restantes: " + enemiesRemaining);
-        if (enemiesRemaining <= 0)
+        if (enemy != null) { enemy.OnDeath.RemoveListener(HandleHorde1EnemyDeath); currentHorde1Enemies.Remove(enemy.gameObject); }
+        enemiesRemainingInHorde1--;
+        Debug.Log("Inimigo da HORDA 1 derrotado. Restantes: " + enemiesRemainingInHorde1);
+        if (enemiesRemainingInHorde1 <= 0) { enemiesRemainingInHorde1 = 0; CheckHorde1Defeated(); }
+    }
+
+    void CheckHorde1Defeated()
+    {
+        if (enemiesRemainingInHorde1 > 0) return;
+        Debug.Log("Horda 1 derrotada!");
+        currentHorde1Enemies.Clear();
+        // currentPhase = GamePhase.PostHorde1; // Removido
+        Debug.Log("Disparando diálogo pós-Horda 1.");
+        if (postHorde1Dialogue != null) postHorde1Dialogue.TriggerDialogue();
+        else Debug.LogError("Referência para postHorde1Dialogue é NULA!");
+        onHorde1Defeated?.Invoke();
+    }
+
+    // --- Lógica de Coleta e Akun/Periferia ---
+    private void HandleTrashCollected_SpawnRobots()
+    {
+        // Não spawna robôs durante combates ou fases finais
+        // Simplificado para não depender de GamePhase
+        if (enemiesRemainingInHorde1 > 0 || enemiesRemainingInPeriferia > 0 || finalDialogueStarted || recyclingIsFull)
         {
-            enemiesRemaining = 0;
-            CheckHordeDefeated();
+            return;
+        }
+        if (robotPrefab == null || generalRobotSpawnPoints == null || generalRobotSpawnPoints.Length == 0) { Debug.LogWarning("GameEventManager: Prefab/Spawns de robô geral não configurados!", this); return; }
+        Debug.Log("Lixo coletado! Spawning " + robotsPerCollection + " robôs de coleta.");
+        for (int i = 0; i < robotsPerCollection; i++)
+        {
+            Transform spawnPoint = generalRobotSpawnPoints[Random.Range(0, generalRobotSpawnPoints.Length)];
+            if (spawnPoint != null) { GameObject robot = Instantiate(robotPrefab, spawnPoint.position, spawnPoint.rotation); activeCollectionRobots.Add(robot); }
         }
     }
 
-    void CheckHordeDefeated()
+    private void TriggerAkunPathUnlock()
     {
-        if (enemiesRemaining > 0) return;
-        Debug.Log("Horda derrotada! Verificando fase atual: " + currentPhase);
-        currentHordeEnemies.Clear();
-        if (currentPhase == GamePhase.Phase1_Horde1)
+        if (akunPathUnlocked) return;
+        akunPathUnlocked = true;
+        Debug.Log("Atingiu 50% de reciclagem! Liberando caminho para Periferia...");
+
+        if (periferiaBarrier != null) periferiaBarrier.SetActive(false);
+        else Debug.LogWarning("Tentativa de desativar PeriferiaBarrier, mas a referência não está configurada!");
+
+        ShowUnlockMessage("Caminho para a Periferia liberado!", 10f);
+
+        if (characterSwitcher != null) characterSwitcher.SetSwitchingEnabled(true);
+
+        // currentPhase = GamePhase.GoToPeriferia; // Removido
+        Debug.Log("Ativando seta para Periferia.");
+        ActivateObjectiveArrow(periferiaTarget);
+
+        onAkunPathUnlocked?.Invoke();
+    }
+
+    public void TriggerPeriferiaCombat()
+    {
+        // if (currentPhase != GamePhase.GoToPeriferia || periferiaAreaReached) return; // Removido
+        if (!akunPathUnlocked || periferiaAreaReached) return; // Só ativa se o caminho foi liberado e ainda não chegou
+        periferiaAreaReached = true;
+        Debug.Log("Jogador entrou na área da Periferia. Iniciando combate.");
+        // currentPhase = GamePhase.PeriferiaCombat; // Removido
+        DeactivateObjectiveArrow();
+        SpawnPeriferiaRobots();
+        onPeriferiaCombatStart?.Invoke();
+    }
+
+    void SpawnPeriferiaRobots()
+    {
+        currentPeriferiaEnemies.Clear();
+        enemiesRemainingInPeriferia = periferiaRobotCount;
+        if (robotPrefab == null) { Debug.LogError("Prefab do robô não configurado para Periferia!"); enemiesRemainingInPeriferia = 0; CheckPeriferiaDefeated(); return; }
+        if (periferiaRobotSpawnPoints == null || periferiaRobotSpawnPoints.Length == 0) { Debug.LogError("Pontos de spawn da Periferia não configurados!"); enemiesRemainingInPeriferia = 0; CheckPeriferiaDefeated(); return; }
+        Debug.Log("Spawning " + periferiaRobotCount + " inimigos na Periferia");
+        for (int i = 0; i < periferiaRobotCount; i++)
         {
-            currentPhase = GamePhase.Phase1_PostHorde1;
-            Debug.Log("Fase alterada para " + currentPhase + ". Disparando diálogo pós-Horda 1.");
-            if (postHorde1Dialogue != null) postHorde1Dialogue.TriggerDialogue();
-            else Debug.LogError("Referência para postHorde1Dialogue é NULA!");
-            onHorde1Defeated?.Invoke();
-        }
-        else if (currentPhase == GamePhase.Phase2_StartHorde)
-        {
-            currentPhase = GamePhase.Phase2_AkunDialogue;
-            Debug.Log("Horda 2 derrotada. Fase alterada para " + currentPhase + ". Preparando para Akun aparecer.");
-            onHorde2Defeated?.Invoke();
-            if (akunCharacter != null)
-            {
-                GameObject akunInstance = null;
-                if (!akunCharacter.scene.IsValid())
-                {
-                    akunInstance = Instantiate(akunCharacter, akunSpawnPoint.position, akunSpawnPoint.rotation);
-                    if (akunDialogueTrigger == null) akunDialogueTrigger = akunInstance.GetComponentInChildren<DialogueTrigger>();
-                }
-                else
-                {
-                    akunInstance = akunCharacter;
-                    if (akunSpawnPoint != null) { akunInstance.transform.position = akunSpawnPoint.position; akunInstance.transform.rotation = akunSpawnPoint.rotation; }
-                    else Debug.LogWarning("AkunSpawnPoint não definido.");
-                    akunInstance.SetActive(true);
-                }
-                onAkunAppears?.Invoke();
-                if (akunDialogueTrigger != null) akunDialogueTrigger.TriggerDialogue();
-                else Debug.LogError("Referência para akunDialogueTrigger é NULA!");
-            }
-            else Debug.LogError("Referência para akunCharacter é NULA!");
+            Transform spawnPoint = periferiaRobotSpawnPoints[i % periferiaRobotSpawnPoints.Length];
+            GameObject enemy = Instantiate(robotPrefab, spawnPoint.position, spawnPoint.rotation);
+            currentPeriferiaEnemies.Add(enemy);
+            Inimigo enemyScript = enemy.GetComponent<Inimigo>();
+            if (enemyScript != null) { enemyScript.OnDeath.AddListener(HandlePeriferiaEnemyDeath); }
+            else Debug.LogWarning("Inimigo da Periferia spawnado não possui script 'Inimigo' com evento OnDeath!", enemy);
         }
     }
 
-    void StartBossDialogue()
+    public void HandlePeriferiaEnemyDeath(Inimigo enemy)
     {
-        Debug.Log("Iniciando diálogo do Boss.");
-        if (bossDialogue != null)
+        if (enemy != null) { enemy.OnDeath.RemoveListener(HandlePeriferiaEnemyDeath); currentPeriferiaEnemies.Remove(enemy.gameObject); }
+        enemiesRemainingInPeriferia--;
+        Debug.Log("Inimigo da PERIFERIA derrotado. Restantes: " + enemiesRemainingInPeriferia);
+        if (enemiesRemainingInPeriferia <= 0) { enemiesRemainingInPeriferia = 0; CheckPeriferiaDefeated(); }
+    }
+
+    void CheckPeriferiaDefeated()
+    {
+        if (enemiesRemainingInPeriferia > 0) return;
+        Debug.Log("Combate na Periferia terminado!");
+        currentPeriferiaEnemies.Clear();
+
+        if (akunCharacter != null)
         {
-            currentPhase = GamePhase.Phase3_BossDialogue;
-            Debug.Log("Fase alterada para " + currentPhase);
-            bossDialogue.TriggerDialogue();
-            onBossDialogueStart?.Invoke();
+            akunCharacter.SetActive(true);
+            Debug.Log("Akun ativado após combate na Periferia.");
+        }
+        else { Debug.LogError("Tentativa de ativar Akun após combate, mas a referência não está configurada!"); }
+
+        // currentPhase = GamePhase.PostPeriferiaCombat; // Removido
+        Debug.Log("Disparando diálogo de Akun.");
+        if (akunDialogueTrigger != null) akunDialogueTrigger.TriggerDialogue();
+        else Debug.LogError("Referência para akunDialogueTrigger é NULA!");
+        onPeriferiaCombatEnd?.Invoke();
+    }
+
+    // --- Lógica do Fim de Jogo (Reciclagem Cheia) ---
+    private void HandleRecyclingFull()
+    {
+        if (recyclingIsFull) return;
+        recyclingIsFull = true;
+        Debug.Log("GameEventManager: Recebeu evento OnRecyclingFull. Parando o Boss e preparando diálogo final.");
+
+        if (bossController != null) { bossController.StopMovingPermanently(); }
+        else { Debug.LogError("BossController não encontrado para mandar parar!"); }
+
+        ShowApproachBossMessage();
+        ActivateObjectiveArrow(bossTransform); // Aponta para o Boss (ou para o trigger, se preferir)
+
+        if (finalDialogueTriggerObject != null)
+        {
+            finalDialogueTriggerObject.SetActive(true);
+            Debug.Log("GameObject do trigger final habilitado.");
+        }
+        else { Debug.LogError("GameObject do trigger final não configurado!"); }
+
+        onRecyclingFull?.Invoke();
+    }
+
+    public void ShowApproachBossMessage()
+    {
+        ShowUnlockMessage("O Boss parou! Aproxime-se para conversar.", 15f);
+    }
+
+    public void StartFinalDialogueSequence()
+    {
+        if (finalDialogueStarted) return;
+        finalDialogueStarted = true;
+
+        Debug.Log("GameEventManager: StartFinalDialogueSequence chamada. Iniciando diálogo final.");
+        DeactivateObjectiveArrow();
+
+        if (finalAwarenessDialogue != null)
+        {
+            finalAwarenessDialogue.TriggerDialogue();
+            onFinalDialogueStart?.Invoke();
         }
         else
         {
-            Debug.LogError("Referência para bossDialogue é NULA! Não é possível iniciar diálogo do chefe.");
+            Debug.LogError("Tentando iniciar diálogo final, mas finalAwarenessDialogue não está configurado!");
+            CompleteGame();
         }
     }
 
-    void ActivateObjectiveArrow(Transform targetTransform)
+    private void CompleteGame()
     {
-        if (objectiveArrow != null)
+        Debug.Log("Jogo completado! Carregando cena de menu: " + menuSceneName);
+        onGameComplete?.Invoke();
+        if (!string.IsNullOrEmpty(menuSceneName)) { SceneManager.LoadScene(menuSceneName); }
+        else { Debug.LogError("Nome da cena de menu não configurado no GameEventManager!"); }
+    }
+
+    // --- Funções Auxiliares ---
+    void ActivateObjectiveArrow(Transform target)
+    {
+        if (objectiveArrow != null && target != null)
         {
-            objectiveArrow.SetTarget(targetTransform);
+            objectiveArrow.target = target;
             objectiveArrow.SetArrowActive(true);
-            Debug.Log("Ativando seta para: " + (targetTransform != null ? targetTransform.name : "Nenhum"));
+            Debug.Log("Seta de objetivo ativada para: " + target.name);
         }
-        else Debug.LogError("Referência para ObjectiveArrow não configurada!");
+        else
+        {
+            Debug.LogWarning("Não foi possível ativar a seta: ObjectiveArrow ou Target nulo.");
+        }
     }
 
     void DeactivateObjectiveArrow()
@@ -228,72 +357,38 @@ public class GameEventManager : MonoBehaviour
         if (objectiveArrow != null)
         {
             objectiveArrow.SetArrowActive(false);
-            Debug.Log("Desativando seta de objetivo.");
+            Debug.Log("Seta de objetivo desativada.");
         }
     }
 
-    public void TriggerPhase2Start()
+    void ShowUnlockMessage(string message, float duration)
     {
-        if (currentPhase == GamePhase.Phase1_GoToArea && !phase2AreaReached)
+        if (unlockMessagePanel != null && unlockMessageText != null)
         {
-            phase2AreaReached = true;
-            Debug.Log("Iniciando Fase 2 - Horda");
-            currentPhase = GamePhase.Phase2_StartHorde;
-            DeactivateObjectiveArrow();
-            SpawnHorde(horde2SpawnPoints, horde2Size);
-            onPhase2Start?.Invoke();
-        }
-        else Debug.LogWarning("TriggerPhase2Start chamado, mas condições não atendidas (Fase: " + currentPhase + ", Area Reached: " + phase2AreaReached + ")");
-    }
-
-    public void TriggerPhase3Start()
-    {
-        if (currentPhase == GamePhase.Phase2_PostHorde)
-        {
-            Debug.Log("Jogador chegou à entrada do prédio (Fase 3). Iniciando transição para cena: " + phase3SceneName);
-            DeactivateObjectiveArrow();
-            onPhase3Start?.Invoke();
-            if (!string.IsNullOrEmpty(phase3SceneName))
-            {
-                SceneManager.LoadScene(phase3SceneName);
-            }
-            else
-            {
-                Debug.LogError("Nome da cena da Fase 3 (phase3SceneName) não definido! Não é possível carregar a cena.");
-            }
+            unlockMessageText.text = message;
+            unlockMessagePanel.SetActive(true);
+            if (hideMessageCoroutine != null) StopCoroutine(hideMessageCoroutine);
+            hideMessageCoroutine = StartCoroutine(HideMessageAfterDelay(duration));
         }
         else
         {
-            Debug.LogWarning("TriggerPhase3Start chamado, mas a fase atual não é Phase2_PostHorde (Fase: " + currentPhase + ")");
+            Debug.LogWarning("Painel/Texto de Mensagem de Desbloqueio/Aviso não configurado!");
         }
     }
 
-    // <<< MODIFICADO: Função agora é pública >>>
-    public void StartBossFight()
+    IEnumerator HideMessageAfterDelay(float delay)
     {
-        Debug.Log("Iniciando Luta contra o Chefe!");
-        // Só inicia a luta se estivermos vindo do diálogo
-        if (currentPhase != GamePhase.Phase3_BossDialogue)
-        {
-            Debug.LogWarning("StartBossFight chamada fora da fase Phase3_BossDialogue! Ignorando.");
-            return;
-        }
+        yield return new WaitForSeconds(delay);
+        if (unlockMessagePanel != null) unlockMessagePanel.SetActive(false);
+    }
 
-        currentPhase = GamePhase.BossFight;
-        Debug.Log("Fase alterada para " + currentPhase);
-        DeactivateObjectiveArrow();
-        onBossFightStart?.Invoke();
-
-        if (bossTarget != null)
+    void OnDestroy()
+    {
+        if (EnvironmentalManager.Instance != null)
         {
-            Debug.Log("Ativando GameObject do Boss: " + bossTarget.name);
-            bossTarget.gameObject.SetActive(true);
-            // Adicione aqui qualquer outra lógica de ativação do boss (scripts, etc)
-        }
-        else
-        {
-            Debug.LogError("Referência para bossTarget (GameObject do Boss?) não definida! Não é possível ativar o chefe.");
+            EnvironmentalManager.Instance.OnTrashCollected.RemoveListener(HandleTrashCollected_SpawnRobots);
+            EnvironmentalManager.Instance.OnRecyclingHalfFull.RemoveListener(TriggerAkunPathUnlock);
+            EnvironmentalManager.Instance.OnRecyclingFull.RemoveListener(HandleRecyclingFull);
         }
     }
 }
-

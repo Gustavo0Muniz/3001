@@ -1,358 +1,192 @@
-// BossController.cs (v3 - Remove Hit Trigger, Adiciona Dash Down com par�metro Int 'DashState')
+// BossController.cs (v5 - No Internal Trigger)
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class BossController : MonoBehaviour
 {
-    private Rigidbody2D _rb;
-    private Animator _animator;
+    [Header("Configurações Gerais")]
+    [SerializeField] private float moveSpeed = 2f;
 
-    [Header("Movimento (Controlado por IA)")]
-    public float moveSpeed = 5f;
-    public float runSpeed = 8f;
-    private float _currentSpeed;
-    private Vector2 _targetDirection = Vector2.zero;
-    private Vector2 _lastMoveDirection = Vector2.right;
-    private bool _isMoving = false;
-    private bool _isRunning = false;
+    [Header("Comportamento de Lixo")]
+    [SerializeField] private GameObject trashPrefab;
+    [SerializeField] private float trashSpawnInterval = 5f;
+    [SerializeField] private float trashSpawnRadius = 3f;
+    [SerializeField] private int maxTrashCount = 20;
 
-    [Header("Dash (Controlado por IA)")]
-    public float dashSpeed = 15f;
-    public float dashDuration = 0.3f;
-    public float dashCooldown = 2.0f;
-    public int damageOnDash = 10;
-    public float dashDetectionRadius = 1.0f;
-    public LayerMask playerLayerMask;
-    public Transform dashAttackPoint;
-    private bool _isDashing = false;
-    private float _dashTimer = 0f;
-    private float _dashCooldownTimer = 0f;
-    private Vector2 _dashDirection = Vector2.right;
-    private List<Collider2D> _playersHitThisDash = new List<Collider2D>();
-   
-    private const int DASH_STATE_NONE = 0;
-    private const int DASH_STATE_HORIZONTAL = 1;
-    private const int DASH_STATE_DOWN = 2;
+    [Header("Movimento")]
+    [SerializeField] private Transform[] waypoints;
+    [SerializeField] private float waypointStopTime = 2f;
+    [Tooltip("Se true, o boss para permanentemente ao chegar no último waypoint (além de parar quando a reciclagem encher).")]
+    [SerializeField] private bool stopAtLastWaypoint = false;
 
-    [Header("Vida e Dano")]
-    public float maxHealth = 500f;
-    public float currentHealth;
-    public bool isInvincible = false;
-    public float invincibilityDuration = 0.5f;
-    public GameObject deathEffectPrefab;
-    public bool isDead = false;
-   
+    [Header("Animação")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [Tooltip("Nome do trigger a ser acionado no Animator quando o Boss parar (opcional).")]
+    [SerializeField] private string stoppedAnimationTrigger = "";
 
-    [Header("Outros (IA)")]
-    public Transform playerTarget;
+    // <<< REMOVIDO: Trigger de interação interno não é mais necessário >>>
+    // [Header("Interação Final")]
+    // [Tooltip("Collider usado para detectar a aproximação do jogador APÓS o boss parar (reciclagem cheia). Deve ser 'Is Trigger'.")]
+    // [SerializeField] private Collider2D interactionTrigger;
 
-    private int _bossLayer;
-    private int _playerLayerValue = -1;
+    [Header("Eventos")]
+    public UnityEvent OnBossStopped; // <<< RENOMEADO: Evento genérico de parada
 
-    void Awake()
+    // Variáveis privadas
+    private int currentWaypointIndex = 0;
+    private bool isMoving = true;
+    private bool hasStoppedPermanently = false;
+    private float lastTrashSpawnTime;
+    private int currentTrashCount = 0;
+    private Coroutine spawnTrashCoroutine;
+    private Coroutine waitAtWaypointCoroutine;
+    private Rigidbody2D rb2d;
+
+    private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
-        _currentSpeed = moveSpeed;
-        currentHealth = maxHealth;
-        _lastMoveDirection = (Random.value > 0.5f) ? Vector2.right : Vector2.left;
-
-        _bossLayer = gameObject.layer;
-        if (playerLayerMask.value != 0)
-        {
-            for (int i = 0; i < 32; i++)
-            {
-                if ((playerLayerMask.value & (1 << i)) != 0)
-                {
-                    _playerLayerValue = i;
-                    break;
-                }
-            }
-            if (_playerLayerValue == -1) Debug.LogError("BossController: LayerMask do Jogador (playerLayerMask) n�o configurada corretamente!", this);
-        }
-        else
-        {
-            Debug.LogError("BossController: LayerMask do Jogador (playerLayerMask) n�o est� configurada no Inspector!", this);
-        }
-
-        if (dashAttackPoint == null)
-        {
-            dashAttackPoint = transform;
-            Debug.LogWarning("BossController: Ponto de Ataque do Dash (dashAttackPoint) n�o configurado, usando o transform do Boss.", this);
-        }
-        FindPlayer();
+        rb2d = GetComponent<Rigidbody2D>();
+        if (animator == null) animator = GetComponent<Animator>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        // <<< REMOVIDO: Verificações do interactionTrigger >>>
     }
 
-    void OnEnable()
+    private void Start()
     {
-        isDead = false;
-        currentHealth = maxHealth;
-        isInvincible = false;
-        _isDashing = false;
-        _targetDirection = Vector2.zero;
-        if (_rb != null) _rb.linearVelocity = Vector2.zero;
-        if (_animator != null)
-        {
-            _animator.SetInteger("Movimento", 0);
-            _animator.SetInteger("DashState", DASH_STATE_NONE); // Garante que come�a sem dash
-        }
-        // UpdateHealthUI(); 
+        isMoving = true;
+        hasStoppedPermanently = false;
+
+        if (waypoints == null || waypoints.Length == 0) { Debug.LogError("BossController: Nenhum waypoint configurado!", this); isMoving = false; }
+        if (trashPrefab == null) { Debug.LogError("BossController: Prefab de lixo não configurado!", this); }
+
+        spawnTrashCoroutine = StartCoroutine(SpawnTrashRoutine());
     }
 
-    void Update()
+    private void Update()
     {
-        if (isDead) return;
-
-       
-        if (playerTarget != null && !_isDashing)
-        {
-            _targetDirection = (playerTarget.position - transform.position).normalized;
-            _isMoving = _targetDirection.sqrMagnitude > 0.01f;
-        }
-        else
-        {
-            _targetDirection = Vector2.zero;
-            _isMoving = false;
-            _isRunning = false;
-        }
-       
-
-        HandleCooldowns();
+        if (hasStoppedPermanently) return;
+        if (isMoving) { MoveTowardsWaypoint(); }
         UpdateAnimation();
-        FlipBasedOnTargetDirection();
     }
 
-    void FixedUpdate()
+    private void MoveTowardsWaypoint()
     {
-        if (isDead) return;
-        ApplyMovement();
-    }
+        if (waypoints.Length == 0 || !isMoving || hasStoppedPermanently) return;
 
-    void HandleCooldowns()
-    {
-        if (_dashCooldownTimer > 0)
+        Transform targetWaypoint = waypoints[currentWaypointIndex];
+        float distance = Vector2.Distance(transform.position, targetWaypoint.position);
+
+        if (distance > 0.1f)
         {
-            _dashCooldownTimer -= Time.deltaTime;
-        }
-    }
-
-    void ApplyMovement()
-    {
-        if (_isDashing)
-        {
-            _rb.linearVelocity = _dashDirection * dashSpeed;
-            _dashTimer -= Time.fixedDeltaTime;
-            if (_dashTimer <= 0)
+            Vector2 newPos = Vector2.MoveTowards(rb2d.position, targetWaypoint.position, moveSpeed * Time.fixedDeltaTime);
+            rb2d.MovePosition(newPos);
+            if (spriteRenderer != null && Mathf.Abs(targetWaypoint.position.x - transform.position.x) > 0.01f)
             {
-                EndDash();
+                spriteRenderer.flipX = (targetWaypoint.position.x - transform.position.x) < 0;
             }
         }
-        else if (_isMoving)
+        else // Reached waypoint
         {
-            _currentSpeed = _isRunning ? runSpeed : moveSpeed;
-            _rb.linearVelocity = _targetDirection * _currentSpeed;
-            if (_targetDirection.sqrMagnitude > 0.01f)
+            bool isLastWaypoint = (currentWaypointIndex == waypoints.Length - 1);
+            if (isLastWaypoint && stopAtLastWaypoint)
             {
-                _lastMoveDirection = _targetDirection;
-            }
-        }
-        else
-        {
-            _rb.linearVelocity = Vector2.zero;
-        }
-    }
-
-    
-    void UpdateAnimation()
-    {
-        
-        if (_isDashing) return;
-
-        if (_isMoving)
-        {
-            bool isHorizontal = Mathf.Abs(_targetDirection.x) >= Mathf.Abs(_targetDirection.y);
-            if (_isRunning)
-            {
-                _animator.SetInteger("Movimento", isHorizontal ? 3 : (_targetDirection.y > 0 ? 6 : 7));
+                Debug.Log("Boss reached the final waypoint. Stopping permanently (option enabled).");
+                StopMovingPermanently();
             }
             else
             {
-                _animator.SetInteger("Movimento", isHorizontal ? 1 : (_targetDirection.y > 0 ? 4 : 5));
+                if (waitAtWaypointCoroutine == null) { waitAtWaypointCoroutine = StartCoroutine(WaitAtWaypoint()); }
             }
         }
-        else
-        {
-            _animator.SetInteger("Movimento", 0); // Idle
-        }
-    }
- 
-
-    void FlipBasedOnTargetDirection()
-    {
-        if (_isDashing) return; 
-
-        float horizontalDirection = _targetDirection.x;
-        if (!_isMoving && Mathf.Abs(_lastMoveDirection.x) > 0.01f)
-        {
-            horizontalDirection = _lastMoveDirection.x;
-        }
-
-        if (Mathf.Abs(horizontalDirection) > 0.01f)
-        {
-            transform.eulerAngles = new Vector2(0f, horizontalDirection > 0 ? 0f : 180f);
-        }
     }
 
-    
-    public bool TryStartDash(Vector2 direction)
+    private IEnumerator WaitAtWaypoint()
     {
-        if (!_isDashing && _dashCooldownTimer <= 0)
+        isMoving = false;
+        rb2d.linearVelocity = Vector2.zero;
+        if (animator != null) animator.SetBool("IsMoving", false);
+        yield return new WaitForSeconds(waypointStopTime);
+        if (!hasStoppedPermanently)
         {
-         
-            Vector2 normalizedDirection = direction.normalized;
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+            isMoving = true;
+        }
+        waitAtWaypointCoroutine = null;
+    }
 
-            bool isDashDown = Mathf.Abs(normalizedDirection.y) > Mathf.Abs(normalizedDirection.x) && normalizedDirection.y < -0.1f;
-            bool isDashHorizontal = !isDashDown; // Assume horizontal se n for para baixo
-
-         
-            if (isDashDown)
+    private void UpdateAnimation()
+    {
+        if (animator == null || hasStoppedPermanently) return;
+        Vector2 moveDirection = Vector2.zero;
+        bool shouldBeMoving = isMoving && !hasStoppedPermanently;
+        if (shouldBeMoving && waypoints.Length > 0)
+        {
+            Transform targetWaypoint = waypoints[currentWaypointIndex];
+            if (Vector2.Distance(transform.position, targetWaypoint.position) > 0.1f)
             {
-                _dashDirection = Vector2.down;
-                StartDash(DASH_STATE_DOWN); // Inicia com estado Dash Down
+                moveDirection = (targetWaypoint.position - transform.position).normalized;
             }
-            else // Dash Horizontal
+        }
+        animator.SetFloat("MoveX", moveDirection.x);
+        animator.SetFloat("MoveY", moveDirection.y);
+        animator.SetBool("IsMoving", shouldBeMoving && moveDirection.sqrMagnitude > 0.01f);
+    }
+
+    private IEnumerator SpawnTrashRoutine()
+    {
+        while (!hasStoppedPermanently)
+        {
+            yield return new WaitForSeconds(trashSpawnInterval);
+            if (isMoving && currentTrashCount < maxTrashCount && !hasStoppedPermanently)
             {
-                
-                _dashDirection = (transform.eulerAngles.y == 0f) ? Vector2.right : Vector2.left;
-                StartDash(DASH_STATE_HORIZONTAL); // Inicia com estado Dash Horizontal
+                SpawnTrash();
             }
-            return true;
         }
-        return false;
-    }
-  
-    void StartDash(int dashState)
-    {
-        _isDashing = true;
-        _dashTimer = dashDuration;
-        _dashCooldownTimer = dashCooldown;
-        _playersHitThisDash.Clear();
-
-    
-        _animator.SetInteger("DashState", dashState);
-        
-        _animator.SetInteger("Movimento", 0);
-
-        if (_playerLayerValue != -1)
-        {
-            Physics2D.IgnoreLayerCollision(_bossLayer, _playerLayerValue, true);
-        }
-        DetectAndDamagePlayer();
     }
 
-
-    void DetectAndDamagePlayer()
+    private void SpawnTrash()
     {
-        Vector2 attackPoint = (dashAttackPoint != null) ? (Vector2)dashAttackPoint.position : (Vector2)transform.position;
-        Collider2D[] playersDetected = Physics2D.OverlapCircleAll(attackPoint, dashDetectionRadius, playerLayerMask);
+        if (trashPrefab == null || hasStoppedPermanently) return;
+        Vector2 randomOffset = Random.insideUnitCircle * trashSpawnRadius;
+        Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
+        GameObject trash = Instantiate(trashPrefab, spawnPosition, Quaternion.identity);
+        currentTrashCount++;
+    }
 
-        foreach (Collider2D playerCollider in playersDetected)
+    // <<< MODIFICADO: Função simplificada, não precisa mais do parâmetro bool >>>
+    public void StopMovingPermanently()
+    {
+        if (hasStoppedPermanently) return;
+        hasStoppedPermanently = true;
+        isMoving = false;
+        Debug.Log("Boss parando permanentemente.");
+
+        rb2d.linearVelocity = Vector2.zero;
+        rb2d.isKinematic = true;
+        if (waitAtWaypointCoroutine != null) StopCoroutine(waitAtWaypointCoroutine);
+        if (spawnTrashCoroutine != null) StopCoroutine(spawnTrashCoroutine);
+        waitAtWaypointCoroutine = null;
+        spawnTrashCoroutine = null;
+
+        if (animator != null)
         {
-            if (playerCollider == null || _playersHitThisDash.Contains(playerCollider)) continue;
-            HeartSystem_Universal playerHealth = playerCollider.GetComponent<HeartSystem_Universal>();
-            if (playerHealth != null)
+            animator.SetBool("IsMoving", false);
+            if (!string.IsNullOrEmpty(stoppedAnimationTrigger))
             {
-                Debug.Log("Boss atingiu jogador com dash!");
-                playerHealth.TakeDamage(damageOnDash);
-                _playersHitThisDash.Add(playerCollider);
+                animator.SetTrigger(stoppedAnimationTrigger);
             }
         }
+        OnBossStopped?.Invoke(); // Dispara evento genérico de parada
     }
 
-    void EndDash()
+    // <<< REMOVIDO: OnTriggerEnter2D não é mais necessário aqui >>>
+
+    private void OnDrawGizmosSelected()
     {
-        _isDashing = false;
-        _rb.linearVelocity = Vector2.zero;
-        if (_playerLayerValue != -1)
-        {
-            Physics2D.IgnoreLayerCollision(_bossLayer, _playerLayerValue, false);
-        }
-   
-        _animator.SetInteger("DashState", DASH_STATE_NONE);
-      
-        UpdateAnimation();
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, trashSpawnRadius);
     }
-
-    public void TakeDamage(float damageAmount)
-    {
-        if (isInvincible || isDead) return;
-        currentHealth -= damageAmount;
-        Debug.Log(gameObject.name + " tomou " + damageAmount + " de dano. Vida restante: " + currentHealth);
-        
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
-            Die();
-        }
-        else
-        {
-            StartCoroutine(InvincibilityCoroutine());
-       
-        }
-    }
-
-    IEnumerator InvincibilityCoroutine()
-    {
-        isInvincible = true;
-        yield return new WaitForSeconds(invincibilityDuration);
-        isInvincible = false;
-    }
-
-    void Die()
-    {
-        if (isDead) return;
-        isDead = true;
-        Debug.Log(gameObject.name + " morreu!");
-        _rb.linearVelocity = Vector2.zero;
-        _isMoving = false;
-        _isDashing = false;
-        this.enabled = false;
-        _animator.SetTrigger("Die"); 
-        Collider2D[] colliders = GetComponents<Collider2D>();
-        foreach (Collider2D col in colliders) col.enabled = false;
-        if (deathEffectPrefab != null)
-        {
-            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
-        }
-        GameEventManager eventManager = FindObjectOfType<GameEventManager>();
-        if (eventManager != null)
-        {
-            
-        }
-        else
-        {
-            Debug.LogWarning("N�o foi poss�vel encontrar GameEventManager para notificar morte do Boss.");
-        }
-       
-    }
-
-    public void FindPlayer()
-    {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            playerTarget = playerObj.transform;
-            Debug.Log("Boss encontrou o jogador: " + playerObj.name);
-        }
-        else
-        {
-            Debug.LogWarning("Boss n�o conseguiu encontrar o jogador com a tag 'Player'.");
-            playerTarget = null;
-        }
-    }
-
-  
 }
 
