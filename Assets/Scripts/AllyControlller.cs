@@ -7,7 +7,7 @@ public class AllyController : MonoBehaviour
     private Animator _allyAnimator;
 
     [Header("Configurações de IA")]
-    public string playerTag = "Player"; // Tag para identificar os jogadores a seguir
+    public string playerTag = "Player"; 
     public float moveSpeed = 3f;
     public float stopDistance = 2f;
     public float shootingRange = 5f;
@@ -20,9 +20,8 @@ public class AllyController : MonoBehaviour
     private Vector2 _lastMoveDirection = Vector2.right;
 
     private float timeSinceLastSearch = 0f;
-    private const float searchInterval = 1.0f; // Buscar a cada 1 segundo se sem alvo
+    private const float searchInterval = 1.0f; 
 
-    // Flags de log (mantidas para tiro)
     private bool loggedNoPrefab = false;
     private bool loggedNoEnemyFound = false;
     private bool loggedEnemyOutOfRange = false;
@@ -38,11 +37,10 @@ public class AllyController : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("AllyController Enabled: " + gameObject.name);
-        targetToFollow = null; // Garante que buscará um novo alvo ao ser ativado
-        FindTargetToFollow(); // Tenta encontrar imediatamente
+        targetToFollow = null;
+        FindTargetToFollow();
         _moveDirection = Vector2.zero;
         if (_allyRigidbody2D != null) _allyRigidbody2D.linearVelocity = Vector2.zero;
-        // Resetar logs
         loggedNoPrefab = false;
         loggedNoEnemyFound = false;
         loggedEnemyOutOfRange = false;
@@ -77,13 +75,13 @@ public class AllyController : MonoBehaviour
         if (targetToFollow != null)
         {
             CalculateMovement();
-            HandleShooting(); // A lógica de tiro continua independente do alvo seguido
+            HandleShooting();
             UpdateAnimation();
             FlipBasedOnMovement();
         }
         else
         {
-            // Garante estado Idle se não houver alvo
+          
             if (_allyAnimator != null) _allyAnimator.SetInteger("Movimento", 0);
             _moveDirection = Vector2.zero;
         }
@@ -111,8 +109,7 @@ public class AllyController : MonoBehaviour
     {
         if (targetToFollow != null)
         {
-            // Verifica apenas se o GameObject do alvo está inativo
-            // A verificação da tag é feita na busca, não precisamos revalidar a cada frame
+       
             if (!targetToFollow.gameObject.activeInHierarchy)
             {
                 Debug.LogWarning(gameObject.name + " perdeu o alvo: " + targetToFollow.name + ". Motivo: GameObject inativo.");
@@ -125,7 +122,7 @@ public class AllyController : MonoBehaviour
 
     void FindTargetToFollow()
     {
-        if (targetToFollow != null) return; // Já tem um alvo válido
+        if (targetToFollow != null) return; 
 
         Debug.Log(gameObject.name + ": Procurando por GameObject com tag '" + playerTag + "' ativo e mais próximo...");
         GameObject[] players = GameObject.FindGameObjectsWithTag(playerTag);
@@ -134,9 +131,9 @@ public class AllyController : MonoBehaviour
 
         foreach (GameObject playerObject in players)
         {
-            if (playerObject == this.gameObject) continue; // Ignora a si mesmo
+            if (playerObject == this.gameObject) continue; 
 
-            // Verifica apenas se o GameObject está ativo (a tag já foi filtrada por FindGameObjectsWithTag)
+         
             if (playerObject.activeInHierarchy)
             {
                 float distanceSqr = (playerObject.transform.position - transform.position).sqrMagnitude;
@@ -148,8 +145,7 @@ public class AllyController : MonoBehaviour
             }
             else
             {
-                // Log opcional para saber quem foi ignorado (embora FindGameObjectsWithTag geralmente só retorne ativos)
-                // Debug.Log("Ignorando GameObject inativo com tag '" + playerTag + "': " + playerObject.name);
+                
             }
         }
 
@@ -166,7 +162,7 @@ public class AllyController : MonoBehaviour
 
     void CalculateMovement()
     {
-        if (targetToFollow == null) // Checagem extra de segurança
+        if (targetToFollow == null) 
         {
             _moveDirection = Vector2.zero;
             return;
@@ -184,16 +180,14 @@ public class AllyController : MonoBehaviour
         }
     }
 
-    // --- Funções HandleShooting, FindNearestEnemy, ShootAt, UpdateAnimation, FlipBasedOnMovement --- 
-    // (Mantidas como estavam, pois a lógica de tiro é baseada na tag "Enemy", não no alvo seguido)
-
+    
     void HandleShooting()
     {
-        if (projectilePrefab == null) { if (!loggedNoPrefab) { /* Debug.Log(gameObject.name + ": Prefab de projétil não definido."); */ loggedNoPrefab = true; } return; }
+        if (projectilePrefab == null) { if (!loggedNoPrefab) {  loggedNoPrefab = true; } return; }
         loggedNoPrefab = false;
 
         GameObject nearestEnemy = FindNearestEnemy();
-        if (nearestEnemy == null) { if (!loggedNoEnemyFound) { /* Debug.Log(gameObject.name + ": Nenhum inimigo encontrado no alcance."); */ loggedNoEnemyFound = true; } return; }
+        if (nearestEnemy == null) { if (!loggedNoEnemyFound) { loggedNoEnemyFound = true; } return; }
         loggedNoEnemyFound = false;
 
         float enemyDistanceSqr = (nearestEnemy.transform.position - transform.position).sqrMagnitude;
@@ -201,10 +195,10 @@ public class AllyController : MonoBehaviour
         {
             if (!loggedEnemyOutOfRange)
             {
-                // Debug.Log(gameObject.name + ": Inimigo " + nearestEnemy.name + " fora de alcance.");
+
                 loggedEnemyOutOfRange = true;
             }
-            return; // Inimigo fora do alcance
+            return; 
         }
         loggedEnemyOutOfRange = false;
 
@@ -212,14 +206,14 @@ public class AllyController : MonoBehaviour
         {
             if (!loggedCooldown)
             {
-                // Debug.Log(gameObject.name + ": Aguardando cooldown para atirar.");
+              
                 loggedCooldown = true;
             }
-            return; // Em cooldown
+            return; 
         }
         loggedCooldown = false;
 
-        // Debug.Log(gameObject.name + ": ATIRANDO em " + nearestEnemy.name + "!");
+      
         ShootAt(nearestEnemy.transform.position);
         nextFireTime = Time.time + 1f / fireRate;
 
@@ -267,7 +261,7 @@ public class AllyController : MonoBehaviour
         }
         else
         {
-            _allyAnimator.SetInteger("Movimento", 0); // Idle
+            _allyAnimator.SetInteger("Movimento", 0); 
         }
     }
 

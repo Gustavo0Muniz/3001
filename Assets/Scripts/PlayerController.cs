@@ -1,15 +1,12 @@
-// PlayerController.cs (v2 - Adaptado para HeartSystem_Universal)
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections; // Para Coroutine
+using System.Collections; 
 
-// <<< MODIFICADO: Requer HeartSystem_Universal >>>
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(HeartSystem_Universal))]
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _playerRigidbody2D;
     private Animator _playerAnimator;
-    // <<< MODIFICADO: Referência para HeartSystem_Universal >>>
     private HeartSystem_Universal _heartSystem;
 
     [Header("Movimento")]
@@ -25,9 +22,7 @@ public class PlayerController : MonoBehaviour
     public float raioDeteccaoDash = 0.7f;
     public LayerMask camadaDoInimigo;
     public Transform pontoDeAtaqueDash;
-    public string deathAnimationStateName = "Player_die"; // Nome da animação de morte
-
-    // Variáveis internas de estado
+    public string deathAnimationStateName = "Player_die"; 
     private Vector2 _playerDirection;
     private Vector2 _lastMoveDirection = Vector2.right;
     private Vector2 _dashAttackDirection;
@@ -39,13 +34,12 @@ public class PlayerController : MonoBehaviour
     private List<Collider2D> _inimigosAtingidosNoDash = new List<Collider2D>();
     private int _playerLayer;
     private int _enemyLayerValue = -1;
-    private bool isDead = false; // Estado local para controle
+    private bool isDead = false;
 
     void Awake()
     {
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
-        // <<< MODIFICADO: Pega HeartSystem_Universal >>>
         _heartSystem = GetComponent<HeartSystem_Universal>();
 
         _playerInitialSpeed = _playerSpeed;
@@ -53,7 +47,6 @@ public class PlayerController : MonoBehaviour
         _dashAttackDirection = Vector2.right;
         isDead = false;
 
-        // <<< MODIFICADO: Mensagem de erro para HeartSystem_Universal >>>
         if (_heartSystem == null) Debug.LogError("HeartSystem_Universal não encontrado no GameObject!", this);
 
         _playerLayer = gameObject.layer;
@@ -92,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if (_playerAnimator != null)
         {
             _playerAnimator.SetInteger("Movimento", 0);
-            _playerAnimator.SetBool("IsDead", false); // Garante que não começa morto
+            _playerAnimator.SetBool("IsDead", false);
         }
         isDead = false;
         this.enabled = true;
@@ -117,7 +110,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Verifica se morreu NESTE frame
         if (!isDead && _heartSystem != null && _heartSystem.IsDead)
         {
             TriggerDeathSequence();
@@ -130,8 +122,7 @@ public class PlayerController : MonoBehaviour
         FlipBasedOnLastMoveDirection();
     }
 
-    // ... (FixedUpdate, HandleInput, HandleRunInput, HandleAttackInput, ApplyMovement, UpdateAnimation, FlipBasedOnLastMoveDirection, StartDash, DetectAndDamageEnemies, EndDash - SEM ALTERAÇÕES RELEVANTES PARA O HEARTSYSTEM) ...
-
+   
     void FixedUpdate()
     {
         if (isDead || !enabled) return;
@@ -227,18 +218,15 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D inimigoCollider in inimigosDetectados)
         {
             if (inimigoCollider == null || _inimigosAtingidosNoDash.Contains(inimigoCollider)) continue;
-            // Tenta aplicar dano ao HeartSystem do inimigo, se ele tiver um
             HeartSystem_Universal enemyHealth = inimigoCollider.GetComponent<HeartSystem_Universal>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage((int)danoDoDash); // Converte dano para int
+                enemyHealth.TakeDamage((int)danoDoDash);
                 _inimigosAtingidosNoDash.Add(inimigoCollider);
             }
             else
             {
-                // Fallback: Tentar pegar script Inimigo e chamar ReceberDano?
-                // Inimigo inimigo = inimigoCollider.GetComponent<Inimigo>();
-                // if (inimigo != null) { inimigo.ReceberDano(danoDoDash); _inimigosAtingidosNoDash.Add(inimigoCollider); }
+        
             }
         }
     }
@@ -252,7 +240,6 @@ public class PlayerController : MonoBehaviour
         UpdateAnimation();
     }
 
-    // --- ADICIONADO: Lógica de Morte (similar ao HenryController) ---
     void TriggerDeathSequence()
     {
         if (isDead) return;
@@ -301,6 +288,5 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Animação de morte concluída (ou tempo esgotado). Destruindo " + gameObject.name);
         Destroy(gameObject);
     }
-    // --- FIM DA ADIÇÃO ---
 }
 

@@ -1,8 +1,7 @@
-// AkunController.cs (v2 - Com Tiro Especial)
-// Combina movimento do PlayerController original com tiro do HenryController
+
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic; // Necessário para List, se usada no futuro
+using System.Collections.Generic; 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(HeartSystem_Universal))]
 public class AkunController : MonoBehaviour
@@ -17,28 +16,25 @@ public class AkunController : MonoBehaviour
     public float _playerRunSpeed;
 
     [Header("Tiro Normal")]
-    public GameObject projectilePrefab; // <<< Atribua o prefab do projétil normal de Akun
-    public Transform firePoint;         // <<< Atribua o ponto de onde o tiro sai (usado por ambos os tiros)
-    public float fireRate = 2f;         // <<< Cadência de tiro normal
-    public float projectileSpeed = 10f; // <<< Velocidade do projétil normal
+    public GameObject projectilePrefab; 
+    public Transform firePoint;         
+    public float fireRate = 2f;         
+    public float projectileSpeed = 10f; 
     private float _nextFireTime = 0f;
 
-    // <<< NOVO: Habilidade Especial >>>
     [Header("Habilidade Especial (Tiro Forte)")]
-    public GameObject specialProjectilePrefab; // <<< Atribua o prefab do projétil especial
-    public float specialProjectileSpeed = 15f; // <<< Velocidade do projétil especial
-    public float specialShotCooldown = 5f;    // <<< Tempo de recarga da habilidade especial
+    public GameObject specialProjectilePrefab;
+    public float specialProjectileSpeed = 15f;
+    public float specialShotCooldown = 5f;   
     private float _nextSpecialShotTime = 0f;
-    // <<< FIM NOVO >>>
 
     [Header("Animação Morte")]
     public string deathAnimationStateName = "Player_die";
     private bool isDead = false;
 
-    // Variáveis internas de estado
     private Vector2 _playerDirection;
     private Vector2 _lastMoveDirection = Vector2.right;
-    private Vector2 _lastShootDirection = Vector2.right; // Guarda a última direção de tiro (normal ou especial)
+    private Vector2 _lastShootDirection = Vector2.right;
     private bool _isRunning = false;
 
     void Awake()
@@ -54,7 +50,6 @@ public class AkunController : MonoBehaviour
 
         if (_heartSystem == null) Debug.LogError("HeartSystem_Universal não encontrado no GameObject de Akun!", this);
 
-        // Verificações para o sistema de tiro normal
         if (projectilePrefab == null) Debug.LogError("Projectile Prefab (Normal) de Akun não configurado!", this);
         if (firePoint == null)
         {
@@ -68,9 +63,8 @@ public class AkunController : MonoBehaviour
                 Debug.LogWarning("FirePoint de Akun não configurado, criando um padrão.", this);
             }
         }
-        // <<< NOVO: Verificação para tiro especial >>>
+
         if (specialProjectilePrefab == null) Debug.LogError("Special Projectile Prefab de Akun não configurado!", this);
-        // <<< FIM NOVO >>>
     }
 
     void OnEnable()
@@ -129,8 +123,8 @@ public class AkunController : MonoBehaviour
         if (_playerDirection.sqrMagnitude > 0.01f) _lastMoveDirection = _playerDirection.normalized;
 
         HandleRunInput();
-        HandleShootInput();         // Input do tiro normal
-        HandleSpecialShootInput(); // <<< NOVO: Input do tiro especial
+        HandleShootInput();         
+        HandleSpecialShootInput(); 
     }
 
     void HandleRunInput()
@@ -142,25 +136,25 @@ public class AkunController : MonoBehaviour
 
     void HandleShootInput()
     {
-        // Tiro normal com Botão Esquerdo (Mouse 0)
+     
         if (Input.GetKeyDown(KeyCode.N) && Time.time >= _nextFireTime)
         {
-            Shoot(false); // Chama Shoot indicando que NÃO é especial
+            Shoot(false); 
             _nextFireTime = Time.time + 1f / fireRate;
         }
     }
 
-    // <<< NOVO: Input para Habilidade Especial >>>
+   
     void HandleSpecialShootInput()
     {
-        // Tiro especial com Botão Direito (Mouse 1)
+    
         if (Input.GetKeyDown(KeyCode.M) && Time.time >= _nextFireTime)
         {
-            Shoot(true); // Chama Shoot indicando que É especial
+            Shoot(true); 
             _nextSpecialShotTime = Time.time + specialShotCooldown;
         }
     }
-    // <<< FIM NOVO >>>
+    
 
     void ApplyMovement()
     {
@@ -196,7 +190,7 @@ public class AkunController : MonoBehaviour
         }
     }
 
-    // --- Lógica de Tiro Unificada --- <<< MODIFICADO >>>
+
     void Shoot(bool isSpecial)
     {
         GameObject prefabToShoot = isSpecial ? specialProjectilePrefab : projectilePrefab;
@@ -222,9 +216,7 @@ public class AkunController : MonoBehaviour
         {
             Debug.LogWarning($"Prefab do Projétil {(isSpecial ? "especial" : "normal")} de Akun não tem Rigidbody2D!", projectile);
         }
-        // Adicionar lógica de dano ao projétil aqui ou no script do projétil
     }
-    // <<< FIM MODIFICADO >>>
 
     Vector2 DetermineShootDirection()
     {
@@ -276,7 +268,6 @@ public class AkunController : MonoBehaviour
         firePoint.localEulerAngles = Vector3.zero;
     }
 
-    // --- Lógica de Morte (sem alterações) ---
     void TriggerDeathSequence()
     {
         if (isDead) return;

@@ -1,12 +1,11 @@
-// SoundWave.cs (Modificado: Ignora paredes, a menos que stopOnWallHit seja true)
 using UnityEngine;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(CircleCollider2D))] // Ou outro collider
+[RequireComponent(typeof(Rigidbody2D), typeof(CircleCollider2D))] 
 public class SoundWave : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private CircleCollider2D circleCollider; // Ou o tipo de collider que você usar
+    private CircleCollider2D circleCollider; 
 
     private Vector2 direction;
     private float speed;
@@ -16,24 +15,23 @@ public class SoundWave : MonoBehaviour
 
     private float currentLifetime = 0f;
     private Vector3 initialScale;
-    private List<Collider2D> hitEnemies = new List<Collider2D>(); // Lista para evitar dano múltiplo no mesmo inimigo
+    private List<Collider2D> hitEnemies = new List<Collider2D>();
 
     public string enemyTag = "Enemy";
-    // public string wallTag = "Wall"; // Tag verificada apenas se stopOnWallHit for true
-    public GameObject hitEffectPrefab; // Efeito ao atingir algo (opcional)
-    public bool stopOnWallHit = false; // <<< ALTERADO PARA FALSE POR PADRÃO - A onda NÃO para ao bater na parede
-    public bool stopOnEnemyHit = false; // A onda para ao bater no primeiro inimigo?
+   
+    public GameObject hitEffectPrefab; 
+    public bool stopOnWallHit = false;
+    public bool stopOnEnemyHit = false; 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         initialScale = transform.localScale;
-        rb.gravityScale = 0; // Garante que não tenha gravidade
-        circleCollider.isTrigger = true; // Para detectar colisões sem física de impacto
+        rb.gravityScale = 0;
+        circleCollider.isTrigger = true; 
     }
 
-    // Método chamado pelo PlayerController para passar os parâmetros
     public void Initialize(Vector2 dir, float spd, float growth, float dmg, float life)
     {
         direction = dir.normalized;
@@ -51,19 +49,16 @@ public class SoundWave : MonoBehaviour
             Debug.LogError("Rigidbody2D não encontrado na Onda Sonora!", this.gameObject);
         }
 
-        // Destroi o objeto após o tempo máximo de vida
         Destroy(gameObject, maxLifetime);
     }
 
     void Update()
     {
-        // Crescimento da Onda
         transform.localScale += Vector3.one * growthRate * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica se colidiu com inimigo
         if (collision.CompareTag(enemyTag))
         {
             if (!hitEnemies.Contains(collision))
@@ -86,8 +81,7 @@ public class SoundWave : MonoBehaviour
                 }
             }
         }
-        // Verifica se colidiu com parede/obstáculo APENAS se stopOnWallHit for true
-        else if (stopOnWallHit && collision.CompareTag("Wall")) // <<< CONDIÇÃO ADICIONADA
+        else if (stopOnWallHit && collision.CompareTag("Wall")) 
         {
             HitTarget(collision.ClosestPoint(transform.position));
         }

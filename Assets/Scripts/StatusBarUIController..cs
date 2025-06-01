@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Controla a exibição de uma barra de status na UI (Lixo ou Reciclagem)
 public class StatusBarUIController : MonoBehaviour
 {
     [Header("Referências da UI")]
-    [SerializeField] private Image statusBarImage; // A imagem da barra (tipo Filled)
-    // [SerializeField] private Text statusText; // Opcional: Texto para mostrar valor (ex: 50/100)
+    [SerializeField] private Image statusBarImage; 
 
     [Header("Tipo de Barra")]
-    [SerializeField] private BarType barType = BarType.Recycling; // Define qual barra este script controla
+    [SerializeField] private BarType barType = BarType.Recycling; 
 
     private enum BarType { Trash, Recycling }
 
@@ -22,19 +20,16 @@ public class StatusBarUIController : MonoBehaviour
             return;
         }
 
-        // Encontra o EnvironmentalManager e se inscreve nos eventos corretos
         if (EnvironmentalManager.Instance != null)
         {
             if (barType == BarType.Trash)
             {
                 EnvironmentalManager.Instance.OnTrashUpdated.AddListener(UpdateBar);
-                // Atualiza o valor inicial
                 UpdateBar(EnvironmentalManager.Instance.GetCurrentTrash(), EnvironmentalManager.Instance.GetMaxTrash());
             }
-            else // Recycling
+            else 
             {
                 EnvironmentalManager.Instance.OnRecyclingUpdated.AddListener(UpdateBar);
-                // Atualiza o valor inicial
                 UpdateBar(EnvironmentalManager.Instance.GetCurrentRecycling(), EnvironmentalManager.Instance.GetMaxRecycling());
             }
         }
@@ -45,7 +40,6 @@ public class StatusBarUIController : MonoBehaviour
         }
     }
 
-    // Método chamado pelos eventos do EnvironmentalManager
     public void UpdateBar(float currentValue, float maxValue)
     {
         if (statusBarImage != null)
@@ -56,18 +50,14 @@ public class StatusBarUIController : MonoBehaviour
             }
             else
             {
-                statusBarImage.fillAmount = 0; // Evita divisão por zero
+                statusBarImage.fillAmount = 0; 
             }
 
-            // Atualiza o texto opcional
-            // if (statusText != null)
-            // {
-            //     statusText.text = $"{currentValue:F0}/{maxValue:F0}"; // Formata sem casas decimais
-            // }
+            
         }
     }
 
-    // Limpa a inscrição no evento ao destruir o objeto para evitar memory leaks
+    
     void OnDestroy()
     {
         if (EnvironmentalManager.Instance != null)
@@ -76,7 +66,7 @@ public class StatusBarUIController : MonoBehaviour
             {
                 EnvironmentalManager.Instance.OnTrashUpdated.RemoveListener(UpdateBar);
             }
-            else // Recycling
+            else
             {
                 EnvironmentalManager.Instance.OnRecyclingUpdated.RemoveListener(UpdateBar);
             }

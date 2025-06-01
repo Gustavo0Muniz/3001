@@ -22,12 +22,7 @@ public class Inimigo : MonoBehaviour
     private GameObject player;
 
     [Header("Anima��o Direcional")]
-    [SerializeField] private string animatorDirectionParamName = "MovementDirection"; // Nome do par�metro Inteiro no Animator
-    // Conven��o sugerida para os valores do par�metro:
-    // 0 = Idle
-    // 1 = Andando Horizontalmente
-    // 2 = Andando para Cima
-    // 3 = Andando para Baixo
+    [SerializeField] private string animatorDirectionParamName = "MovementDirection"; 
 
     void Awake()
     {
@@ -72,21 +67,19 @@ public class Inimigo : MonoBehaviour
     {
         Debug.Log(gameObject.name + " morreu.");
         OnDeath?.Invoke(this);
-        // Considerar adicionar anima��o de morte aqui, usando um Trigger no Animator
-        // _animator.SetTrigger("Die");
+      
         Destroy(gameObject);
     }
 
     void Update()
     {
-        // L�gica de tiro (mantida)
         if (player != null)
         {
             float distance = Vector2.Distance(transform.position, player.transform.position);
-            if (distance < 4) // Usar vari�vel p�blica
+            if (distance < 4) 
             {
                 timer += Time.deltaTime;
-                if (timer > 2) // Usar vari�vel p�blica
+                if (timer > 2)
                 {
                     timer = 0;
                     shoot();
@@ -94,23 +87,19 @@ public class Inimigo : MonoBehaviour
             }
         }
 
-        // Atualizar o estado da anima��o direcional
         UpdateAnimationState();
     }
 
     private void FixedUpdate()
     {
-        Vector2 currentVelocity = Vector2.zero; // Guarda a velocidade para calcular a dire��o
+        Vector2 currentVelocity = Vector2.zero; 
         if (_detectionArea != null && _detectionArea.detectedObjs.Count > 0)
         {
             Transform target = _detectionArea.detectedObjs[0].transform;
             inimigoDirection = (target.position - transform.position).normalized;
             currentVelocity = inimigoDirection * velocidadeDoInimigo;
 
-            inimigoRB2D.linearVelocity = currentVelocity; // Usar velocity pode ser melhor para f�sica cont�nua
-            // inimigoRB2D.MovePosition(inimigoRB2D.position + inimigoDirection * velocidadeDoInimigo * Time.fixedDeltaTime); // Alternativa
-
-            // Flip baseado apenas na componente X da dire��o
+            inimigoRB2D.linearVelocity = currentVelocity; 
             if (inimigoDirection.x > 0.01f)
             {
                 _spriteRenderer.flipX = false;
@@ -122,8 +111,8 @@ public class Inimigo : MonoBehaviour
         }
         else
         {
-            inimigoRB2D.linearVelocity = Vector2.zero; // Para o inimigo
-            inimigoDirection = Vector2.zero; // Reseta a dire��o para c�lculo da anima��o
+            inimigoRB2D.linearVelocity = Vector2.zero; 
+            inimigoDirection = Vector2.zero; 
         }
     }
 
@@ -131,32 +120,29 @@ public class Inimigo : MonoBehaviour
     {
         if (_animator == null) return;
 
-        int directionState = 0; // 0: Idle por padr�o
+        int directionState = 0; 
 
-        // Verifica se h� movimento significativo
+       
         if (inimigoDirection.sqrMagnitude > 0.01f)
         {
-            // Compara a magnitude do movimento horizontal e vertical
             if (Mathf.Abs(inimigoDirection.x) > Mathf.Abs(inimigoDirection.y))
             {
-                // Movimento predominantemente horizontal
-                directionState = 1; // 1: Andando Horizontalmente
+                directionState = 1; 
             }
             else
             {
-                // Movimento predominantemente vertical
                 if (inimigoDirection.y > 0)
                 {
-                    directionState = 2; // 2: Andando para Cima
+                    directionState = 2; 
                 }
                 else
                 {
-                    directionState = 3; // 3: Andando para Baixo
+                    directionState = 3; 
                 }
             }
         }
 
-        // Define o par�metro inteiro no Animator
+       
         _animator.SetInteger(animatorDirectionParamName, directionState);
     }
 

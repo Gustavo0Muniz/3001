@@ -1,4 +1,3 @@
-// Script para fazer o reflexo ondular suavemente
 using UnityEngine;
 
 public class SimpleReflectionWave : MonoBehaviour
@@ -13,14 +12,12 @@ public class SimpleReflectionWave : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Cria uma instância do material para não afetar outros objetos
         material = new Material(spriteRenderer.material);
         spriteRenderer.material = material;
     }
 
     void Update()
     {
-        // Aplica uma pequena distorção no eixo X baseada no tempo
         Vector2 offset = new Vector2(
             Mathf.Sin(Time.time * waveSpeed) * waveAmount,
             0

@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.Cinemachine; // Adicionado para acessar CinemachineBrain
+using Unity.Cinemachine; 
 
 public class ObjectiveArrow : MonoBehaviour
 {
@@ -24,25 +24,22 @@ public class ObjectiveArrow : MonoBehaviour
 
     void Start()
     {
-        // Tenta encontrar referências se não foram atribuídas
         if (arrowRectTransform == null)
         {
             arrowRectTransform = GetComponent<RectTransform>();
         }
         if (playerReference == null)
         {
-            // Se não houver referência do jogador, usaremos a posição da câmera como referência no Update
             Debug.LogWarning("PlayerReference não atribuído em ObjectiveArrow. A posição da câmera será usada para calcular a direção.", this);
         }
 
-        // --- Lógica de Detecção Automática da Câmera --- 
-        if (uiCamera == null) // Tenta detectar automaticamente apenas se não foi atribuída no Inspector
+        if (uiCamera == null) 
         {
-            uiCamera = Camera.main; // Tenta pegar a câmera com a tag "MainCamera"
+            uiCamera = Camera.main; 
 
-            if (uiCamera == null) // Se ainda não encontrou (sem tag MainCamera)
+            if (uiCamera == null) 
             {
-                // Tenta pegar a câmera do Cinemachine Brain ativo
+                
                 CinemachineBrain brain = FindObjectOfType<CinemachineBrain>();
                 if (brain != null && brain.OutputCamera != null)
                 {
@@ -51,7 +48,7 @@ public class ObjectiveArrow : MonoBehaviour
                 }
                 else
                 {
-                    // Última tentativa: pegar qualquer câmera na cena (pode não ser a ideal)
+                    
                     uiCamera = FindObjectOfType<Camera>();
                     if (uiCamera != null)
                     {
@@ -72,9 +69,7 @@ public class ObjectiveArrow : MonoBehaviour
         {
             Debug.Log("ObjectiveArrow: Usando câmera atribuída manualmente no Inspector: " + uiCamera.name, this);
         }
-        // --- Fim da Lógica de Detecção Automática --- 
-
-        // Começa com a seta desativada
+        
         SetArrowActive(false);
     }
 
@@ -89,8 +84,7 @@ public class ObjectiveArrow : MonoBehaviour
             return;
         }
 
-        // Define a referência de posição para cálculo de direção
-        // Usa a câmera se a referência do jogador não estiver definida
+      
         Vector3 referencePosition = (playerReference != null) ? playerReference.position : uiCamera.transform.position;
 
         Vector3 targetScreenPosition = uiCamera.WorldToScreenPoint(target.position);
@@ -119,7 +113,6 @@ public class ObjectiveArrow : MonoBehaviour
         if (cappedTargetScreenPosition.z < 0)
         {
             cappedTargetScreenPosition *= -1;
-            // Ajusta para o centro da tela se estiver atrás, para evitar que a seta aponte para o lado errado
             cappedTargetScreenPosition = (cappedTargetScreenPosition - new Vector3(Screen.width / 2, Screen.height / 2, 0)).normalized;
             cappedTargetScreenPosition = new Vector3(Screen.width / 2, Screen.height / 2, 0) + cappedTargetScreenPosition * Mathf.Max(Screen.width, Screen.height);
         }
@@ -129,17 +122,13 @@ public class ObjectiveArrow : MonoBehaviour
 
         arrowRectTransform.position = cappedTargetScreenPosition;
 
-        // Calcula a rotação baseada na direção do mundo
         Vector3 directionToTargetWorld = (target.position - referencePosition);
-        // Ignora a diferença de altura (Y) para a rotação da seta 2D, se necessário
-        // directionToTargetWorld.y = 0;
         directionToTargetWorld.Normalize();
 
-        // Converte a direção do mundo para a tela
-        // Uma forma simplificada é usar a direção do centro da tela para a posição da seta
+
         Vector3 centerScreen = new Vector3(Screen.width / 2, Screen.height / 2, 0);
         Vector3 directionOnScreen = (arrowRectTransform.position - centerScreen).normalized;
-        if (targetScreenPosition.z < 0) directionOnScreen *= -1; // Inverte se estiver atrás
+        if (targetScreenPosition.z < 0) directionOnScreen *= -1; 
 
         float angle = Mathf.Atan2(directionOnScreen.y, directionOnScreen.x) * Mathf.Rad2Deg;
         arrowRectTransform.localEulerAngles = new Vector3(0, 0, angle);
@@ -148,7 +137,6 @@ public class ObjectiveArrow : MonoBehaviour
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
-        // Debug.Log("Seta de objetivo apontando para: " + (newTarget != null ? newTarget.name : "Nenhum"));
     }
 
     public void SetArrowActive(bool active)
@@ -158,6 +146,5 @@ public class ObjectiveArrow : MonoBehaviour
         {
             arrowRectTransform.gameObject.SetActive(active);
         }
-        // Debug.Log("Seta de objetivo " + (active ? "ativada" : "desativada"));
     }
 }

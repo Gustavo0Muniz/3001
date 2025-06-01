@@ -1,4 +1,4 @@
-// BossController.cs (v5 - No Internal Trigger)
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
@@ -27,15 +27,10 @@ public class BossController : MonoBehaviour
     [Tooltip("Nome do trigger a ser acionado no Animator quando o Boss parar (opcional).")]
     [SerializeField] private string stoppedAnimationTrigger = "";
 
-    // <<< REMOVIDO: Trigger de interação interno não é mais necessário >>>
-    // [Header("Interação Final")]
-    // [Tooltip("Collider usado para detectar a aproximação do jogador APÓS o boss parar (reciclagem cheia). Deve ser 'Is Trigger'.")]
-    // [SerializeField] private Collider2D interactionTrigger;
-
+   
     [Header("Eventos")]
-    public UnityEvent OnBossStopped; // <<< RENOMEADO: Evento genérico de parada
+    public UnityEvent OnBossStopped; 
 
-    // Variáveis privadas
     private int currentWaypointIndex = 0;
     private bool isMoving = true;
     private bool hasStoppedPermanently = false;
@@ -50,7 +45,6 @@ public class BossController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         if (animator == null) animator = GetComponent<Animator>();
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-        // <<< REMOVIDO: Verificações do interactionTrigger >>>
     }
 
     private void Start()
@@ -87,7 +81,7 @@ public class BossController : MonoBehaviour
                 spriteRenderer.flipX = (targetWaypoint.position.x - transform.position.x) < 0;
             }
         }
-        else // Reached waypoint
+        else 
         {
             bool isLastWaypoint = (currentWaypointIndex == waypoints.Length - 1);
             if (isLastWaypoint && stopAtLastWaypoint)
@@ -155,7 +149,7 @@ public class BossController : MonoBehaviour
         currentTrashCount++;
     }
 
-    // <<< MODIFICADO: Função simplificada, não precisa mais do parâmetro bool >>>
+   
     public void StopMovingPermanently()
     {
         if (hasStoppedPermanently) return;
@@ -178,10 +172,10 @@ public class BossController : MonoBehaviour
                 animator.SetTrigger(stoppedAnimationTrigger);
             }
         }
-        OnBossStopped?.Invoke(); // Dispara evento genérico de parada
+        OnBossStopped?.Invoke();
     }
 
-    // <<< REMOVIDO: OnTriggerEnter2D não é mais necessário aqui >>>
+
 
     private void OnDrawGizmosSelected()
     {

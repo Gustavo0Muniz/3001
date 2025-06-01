@@ -1,4 +1,3 @@
-// GameEventManager.cs (v16 - Simple External Trigger)
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -51,7 +50,7 @@ public class GameEventManager : MonoBehaviour
     [Tooltip("Nome exato da cena de Menu para carregar ao completar o jogo.")]
     public string menuSceneName = "MainMenu";
     [Tooltip("O GameObject que contém o script FinalDialogueTrigger.cs. Ele deve começar desativado.")]
-    public GameObject finalDialogueTriggerObject; // Referência ao GameObject do trigger
+    public GameObject finalDialogueTriggerObject; 
 
     [Header("Eventos (Opcional)")]
     public UnityEvent onGameStart;
@@ -66,7 +65,7 @@ public class GameEventManager : MonoBehaviour
 
     private bool akunPathUnlocked = false;
     private bool recyclingIsFull = false;
-    private bool finalDialogueStarted = false; // Flag para evitar chamadas múltiplas
+    private bool finalDialogueStarted = false; 
     private bool periferiaAreaReached = false;
     private List<GameObject> activeCollectionRobots = new List<GameObject>();
 
@@ -101,7 +100,7 @@ public class GameEventManager : MonoBehaviour
         }
         else
         {
-            finalDialogueTriggerObject.SetActive(false); // Garante que começa desativado
+            finalDialogueTriggerObject.SetActive(false); 
         }
 
         if (initialDialogue != null) initialDialogue.TriggerDialogue(); else Debug.LogError("InitialDialogue não configurado!");
@@ -138,11 +137,11 @@ public class GameEventManager : MonoBehaviour
         }
     }
 
-    // --- Lógica da Horda 1 ---
+    
     void StartHorde1()
     {
         Debug.Log("Iniciando Horda 1");
-        // currentPhase = GamePhase.Horde1; // Removido
+        
         SpawnHorde1();
         onHorde1Start?.Invoke();
     }
@@ -178,18 +177,15 @@ public class GameEventManager : MonoBehaviour
         if (enemiesRemainingInHorde1 > 0) return;
         Debug.Log("Horda 1 derrotada!");
         currentHorde1Enemies.Clear();
-        // currentPhase = GamePhase.PostHorde1; // Removido
         Debug.Log("Disparando diálogo pós-Horda 1.");
         if (postHorde1Dialogue != null) postHorde1Dialogue.TriggerDialogue();
         else Debug.LogError("Referência para postHorde1Dialogue é NULA!");
         onHorde1Defeated?.Invoke();
     }
 
-    // --- Lógica de Coleta e Akun/Periferia ---
     private void HandleTrashCollected_SpawnRobots()
     {
-        // Não spawna robôs durante combates ou fases finais
-        // Simplificado para não depender de GamePhase
+        
         if (enemiesRemainingInHorde1 > 0 || enemiesRemainingInPeriferia > 0 || finalDialogueStarted || recyclingIsFull)
         {
             return;
@@ -216,7 +212,7 @@ public class GameEventManager : MonoBehaviour
 
         if (characterSwitcher != null) characterSwitcher.SetSwitchingEnabled(true);
 
-        // currentPhase = GamePhase.GoToPeriferia; // Removido
+        
         Debug.Log("Ativando seta para Periferia.");
         ActivateObjectiveArrow(periferiaTarget);
 
@@ -225,11 +221,11 @@ public class GameEventManager : MonoBehaviour
 
     public void TriggerPeriferiaCombat()
     {
-        // if (currentPhase != GamePhase.GoToPeriferia || periferiaAreaReached) return; // Removido
-        if (!akunPathUnlocked || periferiaAreaReached) return; // Só ativa se o caminho foi liberado e ainda não chegou
+
+        if (!akunPathUnlocked || periferiaAreaReached) return; 
         periferiaAreaReached = true;
         Debug.Log("Jogador entrou na área da Periferia. Iniciando combate.");
-        // currentPhase = GamePhase.PeriferiaCombat; // Removido
+    
         DeactivateObjectiveArrow();
         SpawnPeriferiaRobots();
         onPeriferiaCombatStart?.Invoke();
@@ -274,14 +270,12 @@ public class GameEventManager : MonoBehaviour
         }
         else { Debug.LogError("Tentativa de ativar Akun após combate, mas a referência não está configurada!"); }
 
-        // currentPhase = GamePhase.PostPeriferiaCombat; // Removido
         Debug.Log("Disparando diálogo de Akun.");
         if (akunDialogueTrigger != null) akunDialogueTrigger.TriggerDialogue();
         else Debug.LogError("Referência para akunDialogueTrigger é NULA!");
         onPeriferiaCombatEnd?.Invoke();
     }
 
-    // --- Lógica do Fim de Jogo (Reciclagem Cheia) ---
     private void HandleRecyclingFull()
     {
         if (recyclingIsFull) return;
@@ -292,7 +286,7 @@ public class GameEventManager : MonoBehaviour
         else { Debug.LogError("BossController não encontrado para mandar parar!"); }
 
         ShowApproachBossMessage();
-        ActivateObjectiveArrow(bossTransform); // Aponta para o Boss (ou para o trigger, se preferir)
+        ActivateObjectiveArrow(bossTransform); 
 
         if (finalDialogueTriggerObject != null)
         {
@@ -337,7 +331,7 @@ public class GameEventManager : MonoBehaviour
         else { Debug.LogError("Nome da cena de menu não configurado no GameEventManager!"); }
     }
 
-    // --- Funções Auxiliares ---
+
     void ActivateObjectiveArrow(Transform target)
     {
         if (objectiveArrow != null && target != null)

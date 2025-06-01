@@ -4,27 +4,27 @@ using System.Collections;
 public class TreePlanting : MonoBehaviour
 {
     [Header("Configurações de Plantio")]
-    [SerializeField] private GameObject treePrefab; // Prefab da árvore a ser plantada
-    [SerializeField] private float plantingCooldown = 2f; // Tempo mínimo entre plantios
-    [SerializeField] private float minDistanceBetweenTrees = 3f; // Distância mínima entre árvores
+    [SerializeField] private GameObject treePrefab; 
+    [SerializeField] private float plantingCooldown = 2f; 
+    [SerializeField] private float minDistanceBetweenTrees = 3f; 
 
     [Header("Animação de Crescimento")]
-    [SerializeField] private Sprite[] treeGrowthStages; // Sprites dos estágios de crescimento
-    [SerializeField] private float growthStageTime = 0.5f; // Tempo entre cada estágio
+    [SerializeField] private Sprite[] treeGrowthStages; 
+    [SerializeField] private float growthStageTime = 0.5f; 
 
     [Header("Efeitos")]
-    [SerializeField] private GameObject plantEffect; // Efeito opcional de partículas ao plantar
-    [SerializeField] private AudioClip plantSound; // Som opcional ao plantar
+    [SerializeField] private GameObject plantEffect; 
+    [SerializeField] private AudioClip plantSound; 
 
-    private float lastPlantTime = -10f; // Inicializado para permitir plantar imediatamente
+    private float lastPlantTime = -10f; 
     private Transform playerTransform;
-    private LayerMask treeLayer; // Layer para verificar colisões com outras árvores
+    private LayerMask treeLayer; 
 
     private void Start()
     {
         playerTransform = transform;
 
-        // Configura a layer para detecção de árvores
+   
         treeLayer = LayerMask.GetMask("Tree");
 
         if (treePrefab == null)
@@ -36,7 +36,6 @@ public class TreePlanting : MonoBehaviour
 
     private void Update()
     {
-        // Verifica se o jogador pressionou a tecla O para plantar
         if (Input.GetKeyDown(KeyCode.O) && CanPlant())
         {
             PlantTree();
@@ -45,11 +44,9 @@ public class TreePlanting : MonoBehaviour
 
     private bool CanPlant()
     {
-        // Verifica o cooldown
         if (Time.time - lastPlantTime < plantingCooldown)
             return false;
 
-        // Verifica se há espaço suficiente (não há outras árvores muito próximas)
         Collider2D[] nearbyTrees = Physics2D.OverlapCircleAll(playerTransform.position, minDistanceBetweenTrees, treeLayer);
         if (nearbyTrees.Length > 0)
         {
@@ -62,20 +59,16 @@ public class TreePlanting : MonoBehaviour
 
     private void PlantTree()
     {
-        // Atualiza o tempo do último plantio
         lastPlantTime = Time.time;
 
-        // Cria a árvore na posição do jogador
         Vector3 plantPosition = playerTransform.position;
         GameObject newTree = Instantiate(treePrefab, plantPosition, Quaternion.identity);
 
-        // Inicia a animação de crescimento se houver sprites configurados
         if (treeGrowthStages != null && treeGrowthStages.Length > 0)
         {
             StartCoroutine(AnimateTreeGrowth(newTree.GetComponent<SpriteRenderer>()));
         }
 
-        // Notifica o EnvironmentalManager sobre o plantio
         if (EnvironmentalManager.Instance != null)
         {
             EnvironmentalManager.Instance.PlantTree();
@@ -85,13 +78,11 @@ public class TreePlanting : MonoBehaviour
             Debug.LogError("TreePlanting: EnvironmentalManager não encontrado!", this);
         }
 
-        // Reproduz efeito de partículas, se configurado
         if (plantEffect != null)
         {
             Instantiate(plantEffect, plantPosition, Quaternion.identity);
         }
 
-        // Reproduz som, se configurado
         if (plantSound != null)
         {
             AudioSource.PlayClipAtPoint(plantSound, plantPosition);
@@ -103,16 +94,13 @@ public class TreePlanting : MonoBehaviour
         if (treeSprite == null)
             yield break;
 
-        // Começa com o primeiro estágio (menor)
         treeSprite.sprite = treeGrowthStages[0];
 
-        // Anima através de todos os estágios
         for (int i = 1; i < treeGrowthStages.Length; i++)
         {
             yield return new WaitForSeconds(growthStageTime);
             treeSprite.sprite = treeGrowthStages[i];
 
-            // Opcional: Ajusta a escala ou outras propriedades para cada estágio
             float growthFactor = (float)i / (treeGrowthStages.Length - 1);
             treeSprite.transform.localScale = Vector3.Lerp(
                 new Vector3(0.5f, 0.5f, 1f),
@@ -122,7 +110,6 @@ public class TreePlanting : MonoBehaviour
         }
     }
 
-    // Método para visualizar o raio de plantio no editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

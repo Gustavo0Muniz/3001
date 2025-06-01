@@ -1,4 +1,3 @@
-// CharacterSwitcher.cs (v2 - Handles Inactive Characters)
 using UnityEngine;
 using Unity.Cinemachine;
 
@@ -53,21 +52,19 @@ public class CharacterSwitcher : MonoBehaviour
             return;
         }
 
-        // Inicialização: Define o primeiro personagem ativo e sua UI como ativos
-        // Os outros são desativados ou configurados como aliados
-        // <<< MODIFICADO: A ativação inicial agora respeita o estado inicial do GameObject >>>
+
         bool foundFirstActive = false;
         for (int i = 0; i < characters.Length; i++)
         {
             if (characters[i] != null)
             {
-                bool shouldBeActive = characters[i].activeSelf && !foundFirstActive; // O primeiro ativo na lista será o inicial
+                bool shouldBeActive = characters[i].activeSelf && !foundFirstActive;
 
                 MonoBehaviour playerControlScript = GetPlayerControlScript(characters[i]);
                 AllyController ac = characters[i].GetComponent<AllyController>();
 
                 SetPlayerControlActive(playerControlScript, shouldBeActive);
-                if (ac != null) ac.enabled = !shouldBeActive && characters[i].activeSelf; // IA só ativa se o GO estiver ativo mas não for o player
+                if (ac != null) ac.enabled = !shouldBeActive && characters[i].activeSelf; 
 
                 if (characterUIs[i] != null)
                 {
@@ -85,7 +82,6 @@ public class CharacterSwitcher : MonoBehaviour
                     foundFirstActive = true;
                     Debug.Log("CharacterSwitcher: Personagem inicial definido como: " + characters[i].name);
                 }
-                // Garante que personagens inativos no início tenham seus controles desabilitados
                 else if (!characters[i].activeSelf)
                 {
                     SetPlayerControlActive(playerControlScript, false);
@@ -111,7 +107,7 @@ public class CharacterSwitcher : MonoBehaviour
 
     void SwitchToNextCharacter()
     {
-        if (characters.Length <= 1) return; // Não faz sentido trocar se só tem um
+        if (characters.Length <= 1) return; 
 
         int nextIndex = currentCharacterIndex;
         int attempts = 0;
@@ -119,10 +115,8 @@ public class CharacterSwitcher : MonoBehaviour
         {
             nextIndex = (nextIndex + 1) % characters.Length;
             attempts++;
-            // <<< MODIFICADO: Pula personagens nulos OU INATIVOS >>>
         } while ((characters[nextIndex] == null || !characters[nextIndex].activeSelf) && attempts < characters.Length);
 
-        // Só troca se encontrou um personagem válido e ativo que não seja o atual
         if (characters[nextIndex] != null && characters[nextIndex].activeSelf && nextIndex != currentCharacterIndex)
         {
             SwitchToCharacter(nextIndex);
@@ -139,21 +133,19 @@ public class CharacterSwitcher : MonoBehaviour
         {
             return;
         }
-        // <<< MODIFICADO: Verifica se o personagem alvo existe E ESTÁ ATIVO >>>
         if (characters[newIndex] == null || !characters[newIndex].activeSelf)
         {
             Debug.LogWarning("CharacterSwitcher: Tentando trocar para um personagem nulo ou inativo no índice " + newIndex, this);
             return;
         }
 
-        // --- Desativa o Personagem e UI Atual --- 
-        if (characters[currentCharacterIndex] != null && characters[currentCharacterIndex].activeSelf) // Só desativa se o atual for válido e ativo
+        if (characters[currentCharacterIndex] != null && characters[currentCharacterIndex].activeSelf) 
         {
             MonoBehaviour currentPC = GetPlayerControlScript(characters[currentCharacterIndex]);
             AllyController currentAC = characters[currentCharacterIndex].GetComponent<AllyController>();
 
             SetPlayerControlActive(currentPC, false);
-            if (currentAC != null) currentAC.enabled = true; // Ativa IA (se existir)
+            if (currentAC != null) currentAC.enabled = true;
 
             if (characterUIs[currentCharacterIndex] != null)
             {
@@ -161,15 +153,14 @@ public class CharacterSwitcher : MonoBehaviour
             }
         }
 
-        // --- Ativa o Novo Personagem e UI --- 
         currentCharacterIndex = newIndex;
-        GameObject newChar = characters[currentCharacterIndex]; // Já sabemos que é válido e ativo
+        GameObject newChar = characters[currentCharacterIndex]; 
 
         MonoBehaviour newPC = GetPlayerControlScript(newChar);
         AllyController newAC = newChar.GetComponent<AllyController>();
 
-        SetPlayerControlActive(newPC, true);   // Ativa controle do jogador
-        if (newAC != null) newAC.enabled = false;  // Desativa controle de IA (se existir)
+        SetPlayerControlActive(newPC, true);  
+        if (newAC != null) newAC.enabled = false; 
 
         if (characterUIs[currentCharacterIndex] != null)
         {
@@ -181,8 +172,7 @@ public class CharacterSwitcher : MonoBehaviour
         Debug.Log("CharacterSwitcher: Trocado para " + newChar.name);
     }
 
-    // Função auxiliar para encontrar o script de controle do jogador
-    // <<< MODIFICADO: Adicionado AkunController e DracoController >>>
+
     MonoBehaviour GetPlayerControlScript(GameObject character)
     {
         if (character == null) return null;
@@ -199,7 +189,6 @@ public class CharacterSwitcher : MonoBehaviour
         PlayerController pc = character.GetComponent<PlayerController>();
         if (pc != null) return pc;
 
-        // Adicione outros scripts de controle aqui se necessário
 
         return null;
     }
@@ -231,7 +220,6 @@ public class CharacterSwitcher : MonoBehaviour
     {
         for (int i = 0; i < characters.Length; i++)
         {
-            // <<< MODIFICADO: Verifica se o personagem existe, tem o nome E ESTÁ ATIVO >>>
             if (characters[i] != null && characters[i].name == characterName && characters[i].activeSelf)
             {
                 SwitchToCharacter(i);

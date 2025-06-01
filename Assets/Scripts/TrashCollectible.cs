@@ -4,14 +4,14 @@ using System.Collections;
 public class TrashCollectible : MonoBehaviour
 {
     [Header("Configurações Visuais")]
-    [SerializeField] private float glowRadius = 3f; // Raio em que o lixo começa a brilhar
-    [SerializeField] private float glowIntensity = 1.5f; // Intensidade máxima do brilho
-    [SerializeField] private Color glowColor = Color.yellow; // Cor do brilho
-    [SerializeField] private GameObject interactionPrompt; // Objeto com texto "Aperte E para coletar"
+    [SerializeField] private float glowRadius = 3f; 
+    [SerializeField] private float glowIntensity = 1.5f; 
+    [SerializeField] private Color glowColor = Color.yellow; 
+    [SerializeField] private GameObject interactionPrompt; 
 
     [Header("Efeitos")]
-    [SerializeField] private GameObject collectEffect; // Efeito opcional de partículas ao coletar
-    [SerializeField] private AudioClip collectSound; // Som opcional ao coletar
+    [SerializeField] private GameObject collectEffect;
+    [SerializeField] private AudioClip collectSound; 
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
@@ -32,7 +32,6 @@ public class TrashCollectible : MonoBehaviour
             Debug.LogWarning("TrashCollectible: SpriteRenderer não encontrado!", this);
         }
 
-        // Desativa o prompt de interação no início
         if (interactionPrompt != null)
         {
             interactionPrompt.SetActive(false);
@@ -41,13 +40,11 @@ public class TrashCollectible : MonoBehaviour
 
     private void Update()
     {
-        // Verifica se o jogador está no alcance e pressionou E
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             CollectTrash();
         }
 
-        // Atualiza o brilho baseado na distância do jogador
         UpdateGlow();
     }
 
@@ -58,17 +55,13 @@ public class TrashCollectible : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, playerTransform.position);
 
-        // Calcula a intensidade do brilho baseado na distância
         if (distance <= glowRadius)
         {
-            // Quanto mais perto, mais brilhante
             float glowFactor = 1f - (distance / glowRadius);
             float currentIntensity = 1f + (glowIntensity - 1f) * glowFactor;
 
-            // Aplica o brilho
             spriteRenderer.color = originalColor * currentIntensity;
 
-            // Mostra o prompt de interação quando estiver bem próximo
             if (interactionPrompt != null)
             {
                 interactionPrompt.SetActive(distance <= glowRadius * 0.5f);
@@ -76,7 +69,6 @@ public class TrashCollectible : MonoBehaviour
         }
         else
         {
-            // Restaura a cor original quando fora do alcance
             spriteRenderer.color = originalColor;
 
             if (interactionPrompt != null)
@@ -88,7 +80,6 @@ public class TrashCollectible : MonoBehaviour
 
     private void CollectTrash()
     {
-        // Notifica o EnvironmentalManager sobre a coleta
         if (EnvironmentalManager.Instance != null)
         {
             EnvironmentalManager.Instance.CollectTrash();
@@ -98,25 +89,21 @@ public class TrashCollectible : MonoBehaviour
             Debug.LogError("TrashCollectible: EnvironmentalManager não encontrado!", this);
         }
 
-        // Reproduz efeito de partículas, se configurado
         if (collectEffect != null)
         {
             Instantiate(collectEffect, transform.position, Quaternion.identity);
         }
 
-        // Reproduz som, se configurado
         if (collectSound != null)
         {
             AudioSource.PlayClipAtPoint(collectSound, transform.position);
         }
 
-        // Destrói o objeto de lixo
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica se o objeto que entrou no trigger é o jogador
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
@@ -126,18 +113,15 @@ public class TrashCollectible : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Verifica se o objeto que saiu do trigger é o jogador
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
 
-            // Restaura a cor original
             if (spriteRenderer != null)
             {
                 spriteRenderer.color = originalColor;
             }
 
-            // Esconde o prompt de interação
             if (interactionPrompt != null)
             {
                 interactionPrompt.SetActive(false);
@@ -145,7 +129,6 @@ public class TrashCollectible : MonoBehaviour
         }
     }
 
-    // Método para visualizar o raio de detecção no editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

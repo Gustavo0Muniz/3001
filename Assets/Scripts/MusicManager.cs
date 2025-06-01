@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
 
     [Header("Músicas")]
     public AudioClip musicHorde1;
-    public AudioClip musicPeriferiaCombat; // <<< NOVO: Música para combate na Periferia
+    public AudioClip musicPeriferiaCombat; 
     public AudioClip musicExploration;
     public AudioClip musicBossDefeat;
     public AudioClip musicGameComplete;
@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
     {
         float savedVolume = PlayerPrefs.GetFloat(MUSIC_VOLUME_KEY, 1.0f);
         audioSource.volume = savedVolume;
-        // Não precisa de Debug.Log aqui toda vez
+    
     }
 
     private void PlayMusic(AudioClip clipToPlay)
@@ -37,7 +37,7 @@ public class MusicManager : MonoBehaviour
                 return;
             }
             audioSource.clip = clipToPlay;
-            ApplySavedVolume(); // Garante que o volume está correto
+            ApplySavedVolume(); 
             audioSource.Play();
             Debug.Log("Tocando música: " + clipToPlay.name);
         }
@@ -48,14 +48,12 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    // --- Funções Públicas para chamar pelos Eventos ---
 
     public void PlayMusicHorde1()
     {
         PlayMusic(musicHorde1);
     }
 
-    // <<< NOVA FUNÇÃO >>>
     public void PlayMusicPeriferiaCombat()
     {
         PlayMusic(musicPeriferiaCombat);

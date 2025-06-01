@@ -18,13 +18,10 @@ public class NpcDialogue : MonoBehaviour
     public bool readyToSpeak;
     public bool startDialogue;
 
-    // Para depuração
     public bool debugMode = true;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Garantir que o painel de diálogo comece desativado
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false);
@@ -36,10 +33,8 @@ public class NpcDialogue : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Agora o botão Fire1 apenas avança para o próximo diálogo
         if (Input.GetButtonDown("Fire1") && startDialogue)
         {
             if (dialogueText.text == dialogueNpc[dialogueIndex])
@@ -75,7 +70,7 @@ public class NpcDialogue : MonoBehaviour
         foreach (char letter in dialogueNpc[dialogueIndex])
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f); // Velocidade um pouco mais rápida
+            yield return new WaitForSeconds(0.05f); 
         }
 
         if (debugMode) Debug.Log("Texto completo exibido");
@@ -115,12 +110,10 @@ public class NpcDialogue : MonoBehaviour
         startDialogue = true;
         dialogueIndex = 0;
 
-        // Ativar o painel de diálogo
         dialoguePanel.SetActive(true);
 
         if (debugMode) Debug.Log("Diálogo iniciado - Painel ativado");
 
-        // Iniciar a exibição do primeiro diálogo
         StartCoroutine(ShowDialogue());
     }
 
@@ -133,7 +126,6 @@ public class NpcDialogue : MonoBehaviour
             if (debugMode) Debug.Log("Player entrou na área de diálogo");
             readyToSpeak = true;
 
-            // Inicia o diálogo automaticamente quando o jogador entra na área
             if (!startDialogue)
             {
                 if (debugMode) Debug.Log("Iniciando diálogo automaticamente");
@@ -149,8 +141,6 @@ public class NpcDialogue : MonoBehaviour
             if (debugMode) Debug.Log("Player saiu da área de diálogo");
             readyToSpeak = false;
 
-            // Opcional: Encerrar o diálogo quando o jogador sair da área
-            // Comente as linhas abaixo se preferir que o diálogo continue mesmo quando o jogador sair da área
             if (startDialogue)
             {
                 if (debugMode) Debug.Log("Encerrando diálogo porque o player saiu da área");

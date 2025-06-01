@@ -1,15 +1,12 @@
-// HenryController.cs (v8 - Adaptado para HeartSystem_Universal)
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-// <<< MODIFICADO: Requer HeartSystem_Universal >>>
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(HeartSystem_Universal))]
 public class HenryController : MonoBehaviour
 {
     private Rigidbody2D _playerRigidbody2D;
     private Animator _playerAnimator;
-    // <<< MODIFICADO: Referência para HeartSystem_Universal >>>
     private HeartSystem_Universal _heartSystem;
 
     [Header("Movimento")]
@@ -37,7 +34,7 @@ public class HenryController : MonoBehaviour
 
     [Header("Animação Morte")]
     public string deathAnimationStateName = "Player_die";
-    private bool isDead = false; // Estado local para controlar ações
+    private bool isDead = false; 
 
     private Vector2 _playerDirection;
     private Vector2 _lastMoveDirection = Vector2.right;
@@ -47,7 +44,6 @@ public class HenryController : MonoBehaviour
     {
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
-        // <<< MODIFICADO: Pega HeartSystem_Universal >>>
         _heartSystem = GetComponent<HeartSystem_Universal>();
 
         _playerInitialSpeed = _playerSpeed;
@@ -56,9 +52,7 @@ public class HenryController : MonoBehaviour
 
         isDead = false;
 
-        // <<< MODIFICADO: Mensagem de erro para HeartSystem_Universal >>>
         if (_heartSystem == null) Debug.LogError("HeartSystem_Universal não encontrado no GameObject de Henry!", this);
-        // ... (outras verificações de Awake) ...
         if (projectilePrefab == null) Debug.LogError("Projectile Prefab não configurado!", this);
         if (firePoint == null)
         {
@@ -92,7 +86,6 @@ public class HenryController : MonoBehaviour
         Collider2D playerCollider = GetComponent<Collider2D>();
         if (playerCollider != null) playerCollider.enabled = true;
         if (_playerRigidbody2D != null) _playerRigidbody2D.simulated = true;
-        // Vida é resetada no OnEnable do HeartSystem_Universal se necessário
     }
 
     void OnDisable()
@@ -108,13 +101,11 @@ public class HenryController : MonoBehaviour
 
     void Update()
     {
-        // Verifica se morreu NESTE frame
         if (!isDead && _heartSystem != null && _heartSystem.IsDead)
         {
             TriggerDeathSequence();
         }
 
-        // Só processa input e movimento se não estiver morto
         if (isDead || !enabled) return;
 
         HandleInput();
@@ -273,29 +264,22 @@ public class HenryController : MonoBehaviour
     }
 
 
-    // --- MODIFICADO: Lógica de Dano e Morte --- 
 
-    // REMOVIDO: ApplyDamage - Dano é aplicado diretamente ao HeartSystem_Universal
-    // public void ApplyDamage(int damageAmount) { ... }
-
-    // Método chamado internamente quando HeartSystem_Universal.IsDead se torna true
     void TriggerDeathSequence()
     {
-        if (isDead) return; // Já está morrendo
+        if (isDead) return; 
 
         isDead = true;
         Debug.Log(gameObject.name + " iniciando sequência de morte (detectado por HenryController)!");
 
-        // 1. Para movimento e física
+    
         _playerRigidbody2D.linearVelocity = Vector2.zero;
         _playerRigidbody2D.simulated = false;
 
-        // 2. Desabilita controle e colisores
-        this.enabled = false; // Desabilita este script para parar inputs e updates
+        this.enabled = false; 
         Collider2D playerCollider = GetComponent<Collider2D>();
         if (playerCollider != null) playerCollider.enabled = false;
 
-        // 3. Toca animação de morte
         if (_playerAnimator != null)
         {
             _playerAnimator.SetBool("IsDead", true);
@@ -308,7 +292,6 @@ public class HenryController : MonoBehaviour
         }
     }
 
-    // Coroutine para destruir após animação (sem mudanças)
     IEnumerator DestroyAfterAnimation()
     {
         yield return new WaitForSeconds(0.1f);

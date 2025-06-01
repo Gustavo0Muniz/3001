@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events; // Adicionado para usar UnityEvent
+using UnityEngine.Events; 
 using System.Collections;
-using System.Collections.Generic; // Necessário para List
+using System.Collections.Generic; 
 
-// Estrutura para definir um personagem que pode falar
 [System.Serializable]
 public struct SpeakerProfile
 {
@@ -12,12 +11,11 @@ public struct SpeakerProfile
     public Sprite speakerSprite;
 }
 
-// Estrutura para definir uma linha de diálogo e quem a fala
 [System.Serializable]
 public struct DialogueLine
 {
-    public int speakerIndex; // Índice na lista 'speakers' que define quem está falando
-    [TextArea(3, 10)] // Permite editar textos maiores no Inspector
+    public int speakerIndex; 
+    [TextArea(3, 10)] 
     public string lineText;
 }
 
@@ -47,21 +45,21 @@ public class DialogueTrigger : MonoBehaviour
     [Tooltip("O diálogo deve terminar automaticamente ao sair do trigger?")]
     public bool endOnExit = true;
 
-    [Header("Eventos")] // Nova seção para eventos
+    [Header("Eventos")] 
     [Tooltip("Evento disparado quando o diálogo termina.")]
-    public UnityEvent OnDialogueEnd; // Evento público que aparecerá no Inspector
+    public UnityEvent OnDialogueEnd; 
 
     private int dialogueIndex;
     private bool readyToSpeak;
     private bool dialogueActive;
     private Coroutine typingCoroutine;
 
-    // Para depuração
+   
     public bool debugMode = true;
 
     void Start()
     {
-        // Garantir que o painel de diálogo comece desativado
+
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false);
@@ -71,29 +69,29 @@ public class DialogueTrigger : MonoBehaviour
             if (debugMode) Debug.LogError("DialoguePanel não atribuído no Inspector!", this);
         }
 
-        // Inicializa o evento se for nulo (boa prática)
+     
         if (OnDialogueEnd == null)
             OnDialogueEnd = new UnityEvent();
     }
 
     void Update()
     {
-        // Avança para o próximo diálogo ou termina se o texto já foi completamente exibido
-        if (dialogueActive && Input.GetButtonDown("Fire1")) // Usar Fire1 (geralmente clique esquerdo ou Ctrl)
+
+        if (dialogueActive && Input.GetButtonDown("Fire1")) 
         {
-            // Se o texto ainda está sendo "digitado", completa-o imediatamente
+            
             if (typingCoroutine != null)
             {
                 StopCoroutine(typingCoroutine);
                 typingCoroutine = null;
-                // Garante que o texto completo seja exibido
+          
                 if (dialogueIndex < dialogueLines.Length)
                 {
                     dialogueText.text = dialogueLines[dialogueIndex].lineText;
                     if (debugMode) Debug.Log("Texto completado imediatamente.");
                 }
             }
-            // Se o texto já está completo, avança para a próxima linha
+          
             else
             {
                 if (debugMode) Debug.Log("Avançando para o próximo diálogo");
@@ -126,16 +124,15 @@ public class DialogueTrigger : MonoBehaviour
         foreach (char letter in currentLine)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f); // Velocidade da "digitação"
+            yield return new WaitForSeconds(0.05f); 
         }
 
         if (debugMode) Debug.Log("Texto completo exibido");
-        typingCoroutine = null; // Marca que a digitação terminou
+        typingCoroutine = null; 
     }
 
     void StartDialogueSequence()
     {
-        // Validações
         if (dialogueLines == null || dialogueLines.Length == 0)
         {
             Debug.LogError("Array de 'dialogueLines' está vazio ou não foi configurado!", this);
@@ -167,7 +164,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             int speakerIdx = dialogueLines[dialogueIndex].speakerIndex;
 
-            // Valida o índice do falante
             if (speakerIdx >= 0 && speakerIdx < speakers.Count)
             {
                 SpeakerProfile currentSpeaker = speakers[speakerIdx];
@@ -175,18 +171,18 @@ public class DialogueTrigger : MonoBehaviour
                 if (currentSpeaker.speakerSprite != null)
                 {
                     speakerImage.sprite = currentSpeaker.speakerSprite;
-                    speakerImage.enabled = true; // Garante que a imagem esteja visível
+                    speakerImage.enabled = true;
                 }
                 else
                 {
-                    speakerImage.enabled = false; // Esconde a imagem se não houver sprite
+                    speakerImage.enabled = false;
                     if (debugMode) Debug.LogWarning("Sprite não configurado para o falante: " + currentSpeaker.speakerName);
                 }
             }
             else
             {
                 Debug.LogError("Índice de falante inválido na linha " + dialogueIndex + ": " + speakerIdx, this);
-                // Define um padrão para evitar erros
+              
                 speakerNameText.text = "???";
                 speakerImage.enabled = false;
             }
@@ -195,7 +191,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void EndDialogue()
     {
-        if (!dialogueActive) return; // Evita chamar EndDialogue múltiplas vezes
+        if (!dialogueActive) return; 
 
         if (debugMode) Debug.Log("Fim do diálogo");
         if (typingCoroutine != null)
@@ -207,9 +203,9 @@ public class DialogueTrigger : MonoBehaviour
         dialogueActive = false;
         dialogueIndex = 0;
 
-        // Dispara o evento OnDialogueEnd
+  
         if (debugMode) Debug.Log("Disparando evento OnDialogueEnd");
-        OnDialogueEnd?.Invoke(); // O '?' evita erro se nada estiver conectado no Inspector
+        OnDialogueEnd?.Invoke(); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -244,7 +240,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    // Método público para iniciar o diálogo externamente (útil para controle por eventos)
+
     public void TriggerDialogue()
     {
         if (!dialogueActive)

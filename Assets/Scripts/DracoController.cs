@@ -1,5 +1,4 @@
-// DracoController.cs (v2 - Com Tiro Especial)
-// Combina movimento do PlayerController original com tiro do HenryController
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,25 +16,22 @@ public class DracoController : MonoBehaviour
     public float _playerRunSpeed;
 
     [Header("Tiro Normal")]
-    public GameObject projectilePrefab; // <<< Atribua o prefab do projétil normal de Draco
-    public Transform firePoint;         // <<< Atribua o ponto de onde o tiro sai (usado por ambos os tiros)
-    public float fireRate = 1.5f;         // <<< Cadência de tiro normal (ex: mais lenta)
-    public float projectileSpeed = 12f; // <<< Velocidade do projétil normal (ex: mais rápido)
+    public GameObject projectilePrefab;
+    public Transform firePoint;        
+    public float fireRate = 1.5f;        
+    public float projectileSpeed = 12f; 
     private float _nextFireTime = 0f;
 
-    // <<< NOVO: Habilidade Especial >>>
     [Header("Habilidade Especial (Tiro Forte)")]
-    public GameObject specialProjectilePrefab; // <<< Atribua o prefab do projétil especial de Draco
-    public float specialProjectileSpeed = 18f; // <<< Velocidade do projétil especial de Draco
-    public float specialShotCooldown = 6f;    // <<< Tempo de recarga da habilidade especial de Draco
+    public GameObject specialProjectilePrefab; 
+    public float specialProjectileSpeed = 18f;
+    public float specialShotCooldown = 6f;    
     private float _nextSpecialShotTime = 0f;
-    // <<< FIM NOVO >>>
 
     [Header("Animação Morte")]
     public string deathAnimationStateName = "Player_die";
     private bool isDead = false;
 
-    // Variáveis internas de estado
     private Vector2 _playerDirection;
     private Vector2 _lastMoveDirection = Vector2.right;
     private Vector2 _lastShootDirection = Vector2.right;
@@ -54,7 +50,6 @@ public class DracoController : MonoBehaviour
 
         if (_heartSystem == null) Debug.LogError("HeartSystem_Universal não encontrado no GameObject de Draco!", this);
 
-        // Verificações para o sistema de tiro normal
         if (projectilePrefab == null) Debug.LogError("Projectile Prefab (Normal) de Draco não configurado!", this);
         if (firePoint == null)
         {
@@ -68,9 +63,7 @@ public class DracoController : MonoBehaviour
                 Debug.LogWarning("FirePoint de Draco não configurado, criando um padrão.", this);
             }
         }
-        // <<< NOVO: Verificação para tiro especial >>>
         if (specialProjectilePrefab == null) Debug.LogError("Special Projectile Prefab de Draco não configurado!", this);
-        // <<< FIM NOVO >>>
     }
 
     void OnEnable()
@@ -129,8 +122,8 @@ public class DracoController : MonoBehaviour
         if (_playerDirection.sqrMagnitude > 0.01f) _lastMoveDirection = _playerDirection.normalized;
 
         HandleRunInput();
-        HandleShootInput();         // Input do tiro normal
-        HandleSpecialShootInput(); // <<< NOVO: Input do tiro especial
+        HandleShootInput();        
+        HandleSpecialShootInput(); 
     }
 
     void HandleRunInput()
@@ -142,26 +135,22 @@ public class DracoController : MonoBehaviour
 
     void HandleShootInput()
     {
-        // Tiro normal com Botão Direito (Mouse 1) - Como definido anteriormente para Draco
         if (Input.GetKeyDown(KeyCode.P) && Time.time >= _nextFireTime)
 
         {
-            Shoot(false); // Chama Shoot indicando que NÃO é especial
+            Shoot(false); 
             _nextFireTime = Time.time + 1f / fireRate;
         }
     }
 
-    // <<< NOVO: Input para Habilidade Especial >>>
     void HandleSpecialShootInput()
     {
-        // Tiro especial com a tecla E (ou outra de sua escolha)
         if (Input.GetKeyDown(KeyCode.I) && Time.time >= _nextSpecialShotTime)
         {
-            Shoot(true); // Chama Shoot indicando que É especial
+            Shoot(true); 
             _nextSpecialShotTime = Time.time + specialShotCooldown;
         }
     }
-    // <<< FIM NOVO >>>
 
     void ApplyMovement()
     {
@@ -197,7 +186,6 @@ public class DracoController : MonoBehaviour
         }
     }
 
-    // --- Lógica de Tiro Unificada --- <<< MODIFICADO >>>
     void Shoot(bool isSpecial)
     {
         GameObject prefabToShoot = isSpecial ? specialProjectilePrefab : projectilePrefab;
@@ -224,7 +212,6 @@ public class DracoController : MonoBehaviour
             Debug.LogWarning($"Prefab do Projétil {(isSpecial ? "especial" : "normal")} de Draco não tem Rigidbody2D!", projectile);
         }
     }
-    // <<< FIM MODIFICADO >>>
 
     Vector2 DetermineShootDirection()
     {
@@ -276,7 +263,6 @@ public class DracoController : MonoBehaviour
         firePoint.localEulerAngles = Vector3.zero;
     }
 
-    // --- Lógica de Morte (sem alterações) ---
     void TriggerDeathSequence()
     {
         if (isDead) return;
