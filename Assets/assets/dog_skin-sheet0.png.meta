@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: e1aadb76a6393b04f845ce333cfc77bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2321842866171188432
+    second: dog_skin-sheet0_0
+  - first:
+      213: 8269528973415265769
+    second: dog_skin-sheet0_1
+  - first:
+      213: -1300899892972347044
+    second: dog_skin-sheet0_2
+  - first:
+      213: -7928097269780631816
+    second: dog_skin-sheet0_3
+  - first:
+      213: -7277956563808021086
+    second: dog_skin-sheet0_4
+  - first:
+      213: -7951041847462372071
+    second: dog_skin-sheet0_5
+  - first:
+      213: -7809617650583466757
+    second: dog_skin-sheet0_6
+  - first:
+      213: -356422343627563963
+    second: dog_skin-sheet0_7
+  - first:
+      213: -2490179154470881354
+    second: dog_skin-sheet0_8
+  - first:
+      213: -5330811433745892790
+    second: dog_skin-sheet0_9
+  - first:
+      213: -5456900934891597696
+    second: dog_skin-sheet0_10
+  - first:
+      213: 111031865854364452
+    second: dog_skin-sheet0_11
+  - first:
+      213: 1101797231920236767
+    second: dog_skin-sheet0_12
+  - first:
+      213: -2765251017046098769
+    second: dog_skin-sheet0_13
+  - first:
+      213: -5993471971147238691
+    second: dog_skin-sheet0_14
+  - first:
+      213: 3391509676697896700
+    second: dog_skin-sheet0_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dog_skin-sheet0_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 95
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4986ef8c7d83020800000000000000
+      internalID: 2321842866171188432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 95
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5b73899c443c270800000000000000
+      internalID: 8269528973415265769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 97
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c512a07907642fde0800000000000000
+      internalID: -1300899892972347044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 97
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe2bf9b98db9f190800000000000000
+      internalID: -7928097269780631816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 63
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a51083c0118ffa90800000000000000
+      internalID: -7277956563808021086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 63
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d5dbfe09938a190800000000000000
+      internalID: -7951041847462372071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_6
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 63
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc0a59bf1aae9390800000000000000
+      internalID: -7809617650583466757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_7
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 63
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c111254cbbd0bf0800000000000000
+      internalID: -356422343627563963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 31
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b73ea6a04b117dd0800000000000000
+      internalID: -2490179154470881354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_9
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 31
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a3cfeae372506b0800000000000000
+      internalID: -5330811433745892790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_10
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 31
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0801a49f2813544b0800000000000000
+      internalID: -5456900934891597696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_11
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 31
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b8ffac4e67a8100800000000000000
+      internalID: 111031865854364452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd84d1faebe5a4f00800000000000000
+      internalID: 1101797231920236767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: facfd26d9dadf99d0800000000000000
+      internalID: -2765251017046098769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2328c3ff8e2dca0800000000000000
+      internalID: -5993471971147238691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_skin-sheet0_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6c0ebf410111f20800000000000000
+      internalID: 3391509676697896700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dog_skin-sheet0_0: 2321842866171188432
+      dog_skin-sheet0_1: 8269528973415265769
+      dog_skin-sheet0_10: -5456900934891597696
+      dog_skin-sheet0_11: 111031865854364452
+      dog_skin-sheet0_12: 1101797231920236767
+      dog_skin-sheet0_13: -2765251017046098769
+      dog_skin-sheet0_14: -5993471971147238691
+      dog_skin-sheet0_15: 3391509676697896700
+      dog_skin-sheet0_2: -1300899892972347044
+      dog_skin-sheet0_3: -7928097269780631816
+      dog_skin-sheet0_4: -7277956563808021086
+      dog_skin-sheet0_5: -7951041847462372071
+      dog_skin-sheet0_6: -7809617650583466757
+      dog_skin-sheet0_7: -356422343627563963
+      dog_skin-sheet0_8: -2490179154470881354
+      dog_skin-sheet0_9: -5330811433745892790
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

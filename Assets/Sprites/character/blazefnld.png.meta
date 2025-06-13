@@ -1,0 +1,1911 @@
+fileFormatVersion: 2
+guid: 7184c0133928f584ea7f9e86669759d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6406351081691988080
+    second: blazefnld_0
+  - first:
+      213: -8421398059321275549
+    second: blazefnld_1
+  - first:
+      213: -4437259640754206698
+    second: blazefnld_2
+  - first:
+      213: -7129445617654872372
+    second: blazefnld_3
+  - first:
+      213: 2615695347991353919
+    second: blazefnld_4
+  - first:
+      213: 504335344582130666
+    second: blazefnld_5
+  - first:
+      213: 1849748158966384752
+    second: blazefnld_6
+  - first:
+      213: -7708428691492302923
+    second: blazefnld_7
+  - first:
+      213: 1463398440069911568
+    second: blazefnld_8
+  - first:
+      213: -3295044185839427381
+    second: blazefnld_9
+  - first:
+      213: 5883214071034277429
+    second: blazefnld_10
+  - first:
+      213: 1601299682904428123
+    second: blazefnld_11
+  - first:
+      213: 8765672416404619879
+    second: blazefnld_12
+  - first:
+      213: 8286058769507840554
+    second: blazefnld_13
+  - first:
+      213: 6927690386564932931
+    second: blazefnld_14
+  - first:
+      213: 7763339084137287194
+    second: blazefnld_15
+  - first:
+      213: 2090321040361976174
+    second: blazefnld_16
+  - first:
+      213: -8020000575842295372
+    second: blazefnld_17
+  - first:
+      213: 4088395355885919703
+    second: blazefnld_18
+  - first:
+      213: 4014754077302467354
+    second: blazefnld_19
+  - first:
+      213: 2145410045289318321
+    second: blazefnld_20
+  - first:
+      213: -2134286459489855186
+    second: blazefnld_21
+  - first:
+      213: -1806466833164595768
+    second: blazefnld_22
+  - first:
+      213: 3740975855363503416
+    second: blazefnld_23
+  - first:
+      213: 5467399100372717009
+    second: blazefnld_24
+  - first:
+      213: 491345281404856532
+    second: blazefnld_25
+  - first:
+      213: 4083163152752907004
+    second: blazefnld_26
+  - first:
+      213: 8286847214234768511
+    second: blazefnld_27
+  - first:
+      213: -9064264826383394287
+    second: blazefnld_28
+  - first:
+      213: 4257540450994197180
+    second: blazefnld_29
+  - first:
+      213: -6864697402241763427
+    second: blazefnld_30
+  - first:
+      213: 6289966171807364012
+    second: blazefnld_31
+  - first:
+      213: -3440965588727798454
+    second: blazefnld_32
+  - first:
+      213: 4715565134198946274
+    second: blazefnld_33
+  - first:
+      213: -6943876951891017016
+    second: blazefnld_34
+  - first:
+      213: 4965517442844899260
+    second: blazefnld_35
+  - first:
+      213: 344546762770934937
+    second: blazefnld_36
+  - first:
+      213: 6464001058271845297
+    second: blazefnld_37
+  - first:
+      213: 3547605176255194664
+    second: blazefnld_38
+  - first:
+      213: 4703341170592483344
+    second: blazefnld_39
+  - first:
+      213: 138021919012465201
+    second: blazefnld_40
+  - first:
+      213: 281931695179776318
+    second: blazefnld_41
+  - first:
+      213: -8366840024294785197
+    second: blazefnld_42
+  - first:
+      213: -2699257543462043864
+    second: blazefnld_43
+  - first:
+      213: -835600124652280508
+    second: blazefnld_44
+  - first:
+      213: -4433771594122295186
+    second: blazefnld_45
+  - first:
+      213: -588200721521450468
+    second: blazefnld_46
+  - first:
+      213: -2838060095909659154
+    second: blazefnld_47
+  - first:
+      213: -4840181607918150434
+    second: blazefnld_48
+  - first:
+      213: -3585443198787840128
+    second: blazefnld_49
+  - first:
+      213: -8188836819746821805
+    second: blazefnld_50
+  - first:
+      213: 1370865900096572942
+    second: blazefnld_51
+  - first:
+      213: 8805862312992089374
+    second: blazefnld_52
+  - first:
+      213: -4234084285645680448
+    second: blazefnld_53
+  - first:
+      213: -8742143457050432488
+    second: blazefnld_54
+  - first:
+      213: -2283325858319870744
+    second: blazefnld_55
+  - first:
+      213: -6026329148042466346
+    second: blazefnld_56
+  - first:
+      213: -8929495031032494232
+    second: blazefnld_57
+  - first:
+      213: 8708684733798205553
+    second: blazefnld_58
+  - first:
+      213: 3800241920045158828
+    second: blazefnld_59
+  - first:
+      213: 402598207330313255
+    second: blazefnld_60
+  - first:
+      213: -5698921910785345624
+    second: blazefnld_61
+  - first:
+      213: -3874260390542541002
+    second: blazefnld_62
+  - first:
+      213: 4534753624494968093
+    second: blazefnld_63
+  - first:
+      213: -567576708266498112
+    second: blazefnld_64
+  - first:
+      213: 7166490576196531267
+    second: blazefnld_65
+  - first:
+      213: 6282254981774955086
+    second: blazefnld_66
+  - first:
+      213: -2157248854614740768
+    second: blazefnld_67
+  - first:
+      213: 982566639245472002
+    second: blazefnld_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blazefnld_0
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3743
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f3f4d22a11817a0800000000000000
+      internalID: -6406351081691988080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_1
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 3727
+        width: 130
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bcdf1651f212b80800000000000000
+      internalID: -8421398059321275549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_2
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 3735
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6180ba8cddfab62c0800000000000000
+      internalID: -4437259640754206698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_3
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 3727
+        width: 114
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc64732fbfe1f0d90800000000000000
+      internalID: -7129445617654872372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_4
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 3743
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a9aa97f01dc4420800000000000000
+      internalID: 2615695347991353919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_5
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 3743
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebfd75e252cff600800000000000000
+      internalID: 504335344582130666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_6
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 3727
+        width: 130
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078cf137620aba910800000000000000
+      internalID: 1849748158966384752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_7
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 3759
+        width: 146
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf0c2332f8260590800000000000000
+      internalID: -7708428691492302923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_8
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3231
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0145a39b0290f4410800000000000000
+      internalID: 1463398440069911568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_9
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 3223
+        width: 130
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc023d755c6a542d0800000000000000
+      internalID: -3295044185839427381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_10
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 3231
+        width: 130
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ee399e60065a150800000000000000
+      internalID: 5883214071034277429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_11
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 3231
+        width: 130
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ec67ad395f83610800000000000000
+      internalID: 1601299682904428123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_12
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 3223
+        width: 130
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762cc35ce9ce5a970800000000000000
+      internalID: 8765672416404619879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_13
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 3231
+        width: 162
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a227688ac8efdf270800000000000000
+      internalID: 8286058769507840554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_14
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 3191
+        width: 162
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345671db3b9142060800000000000000
+      internalID: 6927690386564932931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_15
+      rect:
+        serializedVersion: 2
+        x: 3767
+        y: 3231
+        width: 138
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ec8ecd3cbecbb60800000000000000
+      internalID: 7763339084137287194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_16
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2807
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61fc4549ef420d10800000000000000
+      internalID: 2090321040361976174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_17
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 2807
+        width: 114
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1ed72d7fb33b090800000000000000
+      internalID: -8020000575842295372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_18
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 2807
+        width: 114
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dddfe83ae5ecb830800000000000000
+      internalID: 4088395355885919703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_19
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 2807
+        width: 114
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b2a2eef8547b730800000000000000
+      internalID: 4014754077302467354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_20
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 2807
+        width: 114
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7460fb11706cd10800000000000000
+      internalID: 2145410045289318321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_21
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 2807
+        width: 114
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e295e25e5cd7162e0800000000000000
+      internalID: -2134286459489855186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_22
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2799
+        width: 98
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd03be7cf32ee6e0800000000000000
+      internalID: -1806466833164595768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_23
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 2791
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835314c48bd9ae330800000000000000
+      internalID: 3740975855363503416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_24
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 2783
+        width: 210
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd8107a38a10eb40800000000000000
+      internalID: 5467399100372717009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_25
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 2775
+        width: 234
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d863302eeb91d600800000000000000
+      internalID: 491345281404856532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_26
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 2743
+        width: 234
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf21dcff04f4aa830800000000000000
+      internalID: 4083163152752907004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_27
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2207
+        width: 98
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f741660c2abc00370800000000000000
+      internalID: 8286847214234768511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_28
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2207
+        width: 146
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a99593a23453280800000000000000
+      internalID: -9064264826383394287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_29
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 2207
+        width: 170
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb29d569b72d51b30800000000000000
+      internalID: 4257540450994197180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_30
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 2207
+        width: 130
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9735d85512bbb0a0800000000000000
+      internalID: -6864697402241763427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_31
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 2207
+        width: 154
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca33dc758e27a4750800000000000000
+      internalID: 6289966171807364012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_32
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 2207
+        width: 146
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45698f270c3f30d0800000000000000
+      internalID: -3440965588727798454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_33
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 2167
+        width: 138
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e93523618d017140800000000000000
+      internalID: 4715565134198946274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_34
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 2215
+        width: 106
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c28386d3b462af90800000000000000
+      internalID: -6943876951891017016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_35
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1687
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7b6ca4ecf09e440800000000000000
+      internalID: 4965517442844899260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_36
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1687
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ce87b847318c400800000000000000
+      internalID: 344546762770934937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_37
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1687
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bbda0af6beb4b950800000000000000
+      internalID: 6464001058271845297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_38
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1687
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826270e9c10ab3130800000000000000
+      internalID: 3547605176255194664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_39
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1687
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01882a210ef954140800000000000000
+      internalID: 4703341170592483344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_40
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1687
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13aa4fd343a5ae100800000000000000
+      internalID: 138021919012465201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_41
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 1735
+        width: 146
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e314d1e026f99e300800000000000000
+      internalID: 281931695179776318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_42
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 1735
+        width: 146
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f736bc35303eb80800000000000000
+      internalID: -8366840024294785197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_43
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 1695
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fb6a4c09f4a8ad0800000000000000
+      internalID: -2699257543462043864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_44
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 1695
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44524d32d1a5764f0800000000000000
+      internalID: -835600124652280508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_45
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1175
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e688f1de9341872c0800000000000000
+      internalID: -4433771594122295186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_46
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1183
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12e5196f8a46d7f0800000000000000
+      internalID: -588200721521450468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_47
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1183
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedf714216f2d98d0800000000000000
+      internalID: -2838060095909659154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_48
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 1175
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcd8a3d87834dcb0800000000000000
+      internalID: -4840181607918150434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_49
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 1183
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08719ed3862fd3ec0800000000000000
+      internalID: -3585443198787840128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_50
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1183
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359e95b7c486b5e80800000000000000
+      internalID: -8188836819746821805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_51
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 1215
+        width: 146
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ec3f1e54b460310800000000000000
+      internalID: 1370865900096572942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_52
+      rect:
+        serializedVersion: 2
+        x: 3767
+        y: 1215
+        width: 146
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15a4e24e15b43a70800000000000000
+      internalID: 8805862312992089374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_53
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 1183
+        width: 74
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0960d76c28d35c0800000000000000
+      internalID: -4234084285645680448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_54
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 1183
+        width: 74
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ce00bf7daada680800000000000000
+      internalID: -8742143457050432488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_55
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 671
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4516cba3fff40e0800000000000000
+      internalID: -2283325858319870744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_56
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 671
+        width: 98
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dba857919d2e5ca0800000000000000
+      internalID: -6026329148042466346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_57
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 671
+        width: 130
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86741bb649f041480800000000000000
+      internalID: -8929495031032494232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_58
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 671
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178c8e2ff967bd870800000000000000
+      internalID: 8708684733798205553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_59
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 671
+        width: 106
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca117d844eb2db430800000000000000
+      internalID: 3800241920045158828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_60
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 671
+        width: 154
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724e12fbfe0569500800000000000000
+      internalID: 402598207330313255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_61
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 727
+        width: 162
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7f2f067bc59e0b0800000000000000
+      internalID: -5698921910785345624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_62
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 719
+        width: 146
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f785693bcdb3ac0800000000000000
+      internalID: -3874260390542541002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_63
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 671
+        width: 130
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d00f3356eaeee30800000000000000
+      internalID: 4534753624494968093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_64
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 671
+        width: 154
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c76df0bdff8f18f0800000000000000
+      internalID: -567576708266498112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_65
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 143
+        width: 186
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 344f068953d747360800000000000000
+      internalID: 7166490576196531267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_66
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 143
+        width: 178
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42df110f9d0f2750800000000000000
+      internalID: 6282254981774955086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_67
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 143
+        width: 194
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0f198a899ef02e0800000000000000
+      internalID: -2157248854614740768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blazefnld_68
+      rect:
+        serializedVersion: 2
+        x: 3727
+        y: 151
+        width: 186
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201306c0727c2ad00800000000000000
+      internalID: 982566639245472002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blazefnld_0: -6406351081691988080
+      blazefnld_1: -8421398059321275549
+      blazefnld_10: 5883214071034277429
+      blazefnld_11: 1601299682904428123
+      blazefnld_12: 8765672416404619879
+      blazefnld_13: 8286058769507840554
+      blazefnld_14: 6927690386564932931
+      blazefnld_15: 7763339084137287194
+      blazefnld_16: 2090321040361976174
+      blazefnld_17: -8020000575842295372
+      blazefnld_18: 4088395355885919703
+      blazefnld_19: 4014754077302467354
+      blazefnld_2: -4437259640754206698
+      blazefnld_20: 2145410045289318321
+      blazefnld_21: -2134286459489855186
+      blazefnld_22: -1806466833164595768
+      blazefnld_23: 3740975855363503416
+      blazefnld_24: 5467399100372717009
+      blazefnld_25: 491345281404856532
+      blazefnld_26: 4083163152752907004
+      blazefnld_27: 8286847214234768511
+      blazefnld_28: -9064264826383394287
+      blazefnld_29: 4257540450994197180
+      blazefnld_3: -7129445617654872372
+      blazefnld_30: -6864697402241763427
+      blazefnld_31: 6289966171807364012
+      blazefnld_32: -3440965588727798454
+      blazefnld_33: 4715565134198946274
+      blazefnld_34: -6943876951891017016
+      blazefnld_35: 4965517442844899260
+      blazefnld_36: 344546762770934937
+      blazefnld_37: 6464001058271845297
+      blazefnld_38: 3547605176255194664
+      blazefnld_39: 4703341170592483344
+      blazefnld_4: 2615695347991353919
+      blazefnld_40: 138021919012465201
+      blazefnld_41: 281931695179776318
+      blazefnld_42: -8366840024294785197
+      blazefnld_43: -2699257543462043864
+      blazefnld_44: -835600124652280508
+      blazefnld_45: -4433771594122295186
+      blazefnld_46: -588200721521450468
+      blazefnld_47: -2838060095909659154
+      blazefnld_48: -4840181607918150434
+      blazefnld_49: -3585443198787840128
+      blazefnld_5: 504335344582130666
+      blazefnld_50: -8188836819746821805
+      blazefnld_51: 1370865900096572942
+      blazefnld_52: 8805862312992089374
+      blazefnld_53: -4234084285645680448
+      blazefnld_54: -8742143457050432488
+      blazefnld_55: -2283325858319870744
+      blazefnld_56: -6026329148042466346
+      blazefnld_57: -8929495031032494232
+      blazefnld_58: 8708684733798205553
+      blazefnld_59: 3800241920045158828
+      blazefnld_6: 1849748158966384752
+      blazefnld_60: 402598207330313255
+      blazefnld_61: -5698921910785345624
+      blazefnld_62: -3874260390542541002
+      blazefnld_63: 4534753624494968093
+      blazefnld_64: -567576708266498112
+      blazefnld_65: 7166490576196531267
+      blazefnld_66: 6282254981774955086
+      blazefnld_67: -2157248854614740768
+      blazefnld_68: 982566639245472002
+      blazefnld_7: -7708428691492302923
+      blazefnld_8: 1463398440069911568
+      blazefnld_9: -3295044185839427381
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

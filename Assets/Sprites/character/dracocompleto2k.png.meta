@@ -1,0 +1,1573 @@
+fileFormatVersion: 2
+guid: 2309c497ca6fa6b4c96601b01cc18cd9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3293841439659875639
+    second: dracocompleto2k_0
+  - first:
+      213: -30055371979343541
+    second: dracocompleto2k_1
+  - first:
+      213: 4036311104521542739
+    second: dracocompleto2k_2
+  - first:
+      213: 8586339607119264482
+    second: dracocompleto2k_3
+  - first:
+      213: -5268959095099671085
+    second: dracocompleto2k_4
+  - first:
+      213: -6362780381235006332
+    second: dracocompleto2k_5
+  - first:
+      213: -626796993216162212
+    second: dracocompleto2k_6
+  - first:
+      213: -6907286638625668869
+    second: dracocompleto2k_7
+  - first:
+      213: -6939340887884000270
+    second: dracocompleto2k_8
+  - first:
+      213: -5577514954495514755
+    second: dracocompleto2k_9
+  - first:
+      213: 7019022743831944768
+    second: dracocompleto2k_10
+  - first:
+      213: 5211666346194784317
+    second: dracocompleto2k_11
+  - first:
+      213: 6114025630073643984
+    second: dracocompleto2k_12
+  - first:
+      213: -4936880135475607954
+    second: dracocompleto2k_13
+  - first:
+      213: 6590719813176577454
+    second: dracocompleto2k_14
+  - first:
+      213: -8018959337554059695
+    second: dracocompleto2k_15
+  - first:
+      213: 4370588754445716975
+    second: dracocompleto2k_16
+  - first:
+      213: -6197762493334769393
+    second: dracocompleto2k_17
+  - first:
+      213: 1433342394602714947
+    second: dracocompleto2k_18
+  - first:
+      213: -7138987377546600044
+    second: dracocompleto2k_19
+  - first:
+      213: -1583495759412869427
+    second: dracocompleto2k_20
+  - first:
+      213: 4634024121494040693
+    second: dracocompleto2k_21
+  - first:
+      213: 8013961728098745542
+    second: dracocompleto2k_22
+  - first:
+      213: -6971832877879936767
+    second: dracocompleto2k_23
+  - first:
+      213: -8532160227585094932
+    second: dracocompleto2k_24
+  - first:
+      213: -8537357984711402343
+    second: dracocompleto2k_25
+  - first:
+      213: 4479370385003587486
+    second: dracocompleto2k_26
+  - first:
+      213: -6305415521869697549
+    second: dracocompleto2k_27
+  - first:
+      213: 8763596905525091693
+    second: dracocompleto2k_28
+  - first:
+      213: 689152782412067593
+    second: dracocompleto2k_29
+  - first:
+      213: 5767962604448139045
+    second: dracocompleto2k_30
+  - first:
+      213: -5226056073063472107
+    second: dracocompleto2k_31
+  - first:
+      213: -6567847803218331287
+    second: dracocompleto2k_32
+  - first:
+      213: 1016054390682723280
+    second: dracocompleto2k_33
+  - first:
+      213: 2911468142055741802
+    second: dracocompleto2k_34
+  - first:
+      213: 8929097033633949668
+    second: dracocompleto2k_35
+  - first:
+      213: 55535615855178156
+    second: dracocompleto2k_36
+  - first:
+      213: 4645618450127558276
+    second: dracocompleto2k_37
+  - first:
+      213: 164465853810917387
+    second: dracocompleto2k_38
+  - first:
+      213: 3201887681579774991
+    second: dracocompleto2k_39
+  - first:
+      213: 1605494434353242474
+    second: dracocompleto2k_40
+  - first:
+      213: 2956347339541305450
+    second: dracocompleto2k_41
+  - first:
+      213: 4500878536038686085
+    second: dracocompleto2k_42
+  - first:
+      213: -8884780949823300244
+    second: dracocompleto2k_43
+  - first:
+      213: 5744277460355930553
+    second: dracocompleto2k_44
+  - first:
+      213: -9211321055298103533
+    second: dracocompleto2k_45
+  - first:
+      213: -8107598046929279796
+    second: dracocompleto2k_46
+  - first:
+      213: -1687767816739462300
+    second: dracocompleto2k_47
+  - first:
+      213: -4525365263825131762
+    second: dracocompleto2k_48
+  - first:
+      213: 6989663524561082578
+    second: dracocompleto2k_49
+  - first:
+      213: -1363216969517121529
+    second: dracocompleto2k_50
+  - first:
+      213: 3929111083436526117
+    second: dracocompleto2k_51
+  - first:
+      213: -1077297362466154568
+    second: dracocompleto2k_52
+  - first:
+      213: -7127259100097918321
+    second: dracocompleto2k_53
+  - first:
+      213: 7495910163876263498
+    second: dracocompleto2k_54
+  - first:
+      213: 999730299581178104
+    second: dracocompleto2k_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 230
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dracocompleto2k_0
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 3655
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2ac9289ace942d0800000000000000
+      internalID: -3293841439659875639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_1
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 3639
+        width: 130
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4934956cc8359ff0800000000000000
+      internalID: -30055371979343541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_2
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 3647
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c98f3709bd30830800000000000000
+      internalID: 4036311104521542739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_3
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 3639
+        width: 122
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaf53b516ec82770800000000000000
+      internalID: 8586339607119264482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_4
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 3655
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd35808e95e0e6b0800000000000000
+      internalID: -5268959095099671085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_5
+      rect:
+        serializedVersion: 2
+        x: 2647
+        y: 3655
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484b9a864fcd2b7a0800000000000000
+      internalID: -6362780381235006332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_6
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 3639
+        width: 122
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c565111a47b2d47f0800000000000000
+      internalID: -626796993216162212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_7
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 3671
+        width: 146
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf04ae606636420a0800000000000000
+      internalID: -6907286638625668869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_8
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 3791
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3945a8a3282bf90800000000000000
+      internalID: -6939340887884000270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3159
+        width: 114
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77add723bfa892b0800000000000000
+      internalID: -5577514954495514755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_10
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 3151
+        width: 130
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e9d744ff3986160800000000000000
+      internalID: 7019022743831944768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_11
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 3159
+        width: 122
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d305cc4edee835840800000000000000
+      internalID: 5211666346194784317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_12
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 3159
+        width: 130
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d36c24cae169d450800000000000000
+      internalID: 6114025630073643984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_13
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 3151
+        width: 122
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e664b4a6cadac7bb0800000000000000
+      internalID: -4936880135475607954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_14
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 3159
+        width: 162
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadc48e30c0f67b50800000000000000
+      internalID: 6590719813176577454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_15
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 3119
+        width: 154
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ed9c008fee6b090800000000000000
+      internalID: -8018959337554059695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_16
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 3159
+        width: 138
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fedcd08d05377ac30800000000000000
+      internalID: 4370588754445716975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_17
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 2663
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01ba8679df1df9a0800000000000000
+      internalID: -6197762493334769393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_18
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 2487
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3477dcf405144e310800000000000000
+      internalID: 1433342394602714947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_19
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 2491
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4916659ddc83dec90800000000000000
+      internalID: -7138987377546600044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_20
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 2499
+        width: 122
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6cbdc1ffa460ae0800000000000000
+      internalID: -1583495759412869427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_21
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 2503
+        width: 122
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5707e3ae26c5f4040800000000000000
+      internalID: 4634024121494040693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_22
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 2503
+        width: 122
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccb6ee5bbf473f60800000000000000
+      internalID: 8013961728098745542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_23
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 2503
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109b3989fe21f3f90800000000000000
+      internalID: -6971832877879936767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_24
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 2623
+        width: 138
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea03147a7da79980800000000000000
+      internalID: -8532160227585094932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_25
+      rect:
+        serializedVersion: 2
+        x: 3703
+        y: 2663
+        width: 130
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c9ee05526358980800000000000000
+      internalID: -8537357984711402343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_26
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1655
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e972b87e1abe92e30800000000000000
+      internalID: 4479370385003587486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_27
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1655
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fde8b98df9ae78a0800000000000000
+      internalID: -6305415521869697549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_28
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1655
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d198c34fc8e9970800000000000000
+      internalID: 8763596905525091693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_29
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1655
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903b4a7edcc509900800000000000000
+      internalID: 689152782412067593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_30
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 1655
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5274ed3cd6beb0050800000000000000
+      internalID: 5767962604448139045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_31
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1655
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51467ccb0b15977b0800000000000000
+      internalID: -5226056073063472107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_32
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 1703
+        width: 138
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969775e88315ad4a0800000000000000
+      internalID: -6567847803218331287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_33
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 1703
+        width: 146
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3ae15c510c91e00800000000000000
+      internalID: 1016054390682723280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_34
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1663
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69591e79dc976820800000000000000
+      internalID: 2911468142055741802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_35
+      rect:
+        serializedVersion: 2
+        x: 3703
+        y: 1663
+        width: 82
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7eeb691768aeb70800000000000000
+      internalID: 8929097033633949668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_36
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1151
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca13e6f295d45c000800000000000000
+      internalID: 55535615855178156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_37
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1159
+        width: 138
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4869ad9ed5d887040800000000000000
+      internalID: 4645618450127558276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_38
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1159
+        width: 138
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00c41a92dc484200800000000000000
+      internalID: 164465853810917387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_39
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1151
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04f24fc1e36f6c20800000000000000
+      internalID: 3201887681579774991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_40
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 1159
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61ed788eacd74610800000000000000
+      internalID: 1605494434353242474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_41
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 1159
+        width: 138
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68d70eed3e070920800000000000000
+      internalID: 2956347339541305450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_42
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 1191
+        width: 138
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d14cd8e25567e30800000000000000
+      internalID: 4500878536038686085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_43
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 1191
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ddf9abccae2b480800000000000000
+      internalID: -8884780949823300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_44
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1159
+        width: 74
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b95ccb6ae5c7bf40800000000000000
+      internalID: 5744277460355930553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_45
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1159
+        width: 74
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31751eacd40da2080800000000000000
+      internalID: -9211321055298103533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_46
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 663
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4212f38860c7f80800000000000000
+      internalID: -8107598046929279796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_47
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 655
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46368e3ec18d398e0800000000000000
+      internalID: -1687767816739462300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_48
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 655
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07afcad44ca231c0800000000000000
+      internalID: -4525365263825131762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_49
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 663
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8d7f851f5400160800000000000000
+      internalID: 6989663524561082578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_50
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 671
+        width: 130
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700c52c8361e41de0800000000000000
+      internalID: -1363216969517121529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_51
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 671
+        width: 138
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ac84b86b1078630800000000000000
+      internalID: 3929111083436526117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_52
+      rect:
+        serializedVersion: 2
+        x: 3143
+        y: 719
+        width: 162
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b75db0b1cbac01f0800000000000000
+      internalID: -1077297362466154568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_53
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 711
+        width: 162
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a4e7c3c93e61d90800000000000000
+      internalID: -7127259100097918321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_54
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 671
+        width: 90
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46b51a3492d60860800000000000000
+      internalID: 7495910163876263498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dracocompleto2k_55
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 671
+        width: 98
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f02bb12961cfdd00800000000000000
+      internalID: 999730299581178104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dracocompleto2k_0: -3293841439659875639
+      dracocompleto2k_1: -30055371979343541
+      dracocompleto2k_10: 7019022743831944768
+      dracocompleto2k_11: 5211666346194784317
+      dracocompleto2k_12: 6114025630073643984
+      dracocompleto2k_13: -4936880135475607954
+      dracocompleto2k_14: 6590719813176577454
+      dracocompleto2k_15: -8018959337554059695
+      dracocompleto2k_16: 4370588754445716975
+      dracocompleto2k_17: -6197762493334769393
+      dracocompleto2k_18: 1433342394602714947
+      dracocompleto2k_19: -7138987377546600044
+      dracocompleto2k_2: 4036311104521542739
+      dracocompleto2k_20: -1583495759412869427
+      dracocompleto2k_21: 4634024121494040693
+      dracocompleto2k_22: 8013961728098745542
+      dracocompleto2k_23: -6971832877879936767
+      dracocompleto2k_24: -8532160227585094932
+      dracocompleto2k_25: -8537357984711402343
+      dracocompleto2k_26: 4479370385003587486
+      dracocompleto2k_27: -6305415521869697549
+      dracocompleto2k_28: 8763596905525091693
+      dracocompleto2k_29: 689152782412067593
+      dracocompleto2k_3: 8586339607119264482
+      dracocompleto2k_30: 5767962604448139045
+      dracocompleto2k_31: -5226056073063472107
+      dracocompleto2k_32: -6567847803218331287
+      dracocompleto2k_33: 1016054390682723280
+      dracocompleto2k_34: 2911468142055741802
+      dracocompleto2k_35: 8929097033633949668
+      dracocompleto2k_36: 55535615855178156
+      dracocompleto2k_37: 4645618450127558276
+      dracocompleto2k_38: 164465853810917387
+      dracocompleto2k_39: 3201887681579774991
+      dracocompleto2k_4: -5268959095099671085
+      dracocompleto2k_40: 1605494434353242474
+      dracocompleto2k_41: 2956347339541305450
+      dracocompleto2k_42: 4500878536038686085
+      dracocompleto2k_43: -8884780949823300244
+      dracocompleto2k_44: 5744277460355930553
+      dracocompleto2k_45: -9211321055298103533
+      dracocompleto2k_46: -8107598046929279796
+      dracocompleto2k_47: -1687767816739462300
+      dracocompleto2k_48: -4525365263825131762
+      dracocompleto2k_49: 6989663524561082578
+      dracocompleto2k_5: -6362780381235006332
+      dracocompleto2k_50: -1363216969517121529
+      dracocompleto2k_51: 3929111083436526117
+      dracocompleto2k_52: -1077297362466154568
+      dracocompleto2k_53: -7127259100097918321
+      dracocompleto2k_54: 7495910163876263498
+      dracocompleto2k_55: 999730299581178104
+      dracocompleto2k_6: -626796993216162212
+      dracocompleto2k_7: -6907286638625668869
+      dracocompleto2k_8: -6939340887884000270
+      dracocompleto2k_9: -5577514954495514755
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

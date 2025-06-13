@@ -1,0 +1,5295 @@
+fileFormatVersion: 2
+guid: f1a4ddbf22fa6cf44910247d38de1ee7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -71569819299271718
+    second: cyberpunk_tilemap_16x16_purple_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb2708e0abb10ff0800000000000000
+      internalID: -71569819299271718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0999ec9cc2ac95646b21a521b88c22d9
+      internalID: 56868665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b70873d983604408f12cf15e768b1d
+      internalID: 122581890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7232349cdd38aa4cbdff6184ca31174
+      internalID: 2010167191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5948b2b501ae6e546ab7b5311f0a641b
+      internalID: 1178329950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0704072c8861648931589abce11525
+      internalID: 2006175741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9fb420dea7b724290e1b2154b29915
+      internalID: -57661608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7950b27b76fd66048968a55989974f36
+      internalID: -753056276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ab342e157671441abae7e9c461df99
+      internalID: -1180048971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88a263ac00b7984989db1c0bb1ae3a9
+      internalID: 979600569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3111d8e4dc9ae47b7efae9e8cf2303
+      internalID: -41397798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf28a193f23a55744aeb2571de963c9c
+      internalID: -1095930871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff81269ad43f084492ed622d97c3a90
+      internalID: -2036708765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb916fade4d2c244b47c10c531fee53
+      internalID: -1634518180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 936
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4828803ad4fd1634285ca2bd7c9aeaec
+      internalID: -621046468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535908efa3fe0774a98e047e53a12279
+      internalID: -1996197340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac040a59b6272848bfc897a0961da1e
+      internalID: 528906407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4b2e4a925c52f4db374f3a39226b9a
+      internalID: -948233399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1607578fa56322a4ca6286d4fcddbe9a
+      internalID: 653357300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cc7fc611f8e5a46829e7d56de47fb5
+      internalID: -1249317097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45842e1c5aa953d46af9d29a29f889b7
+      internalID: -1611193123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711d73df8195b20448d0e2e69d4b9134
+      internalID: -888718162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_22
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3e2791687364046806f632081c3a29
+      internalID: 2058251806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_23
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0298e5fb8fc3441a27f5f9f3ee1b26
+      internalID: 174306463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc94b052e52d39b44b9701423ca02b4c
+      internalID: -1505863318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c548706a6e804cc4d915617aeb220313
+      internalID: 1156716269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_26
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f221d41214acc8449f203804962837c
+      internalID: 713110855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e66c4eedf8a644baac2dab2e53395a
+      internalID: -353123418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f554672018d0ae48b7bf8025686daab
+      internalID: 1400230451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_29
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f9063aba50a964ba9e5fa64064891c
+      internalID: -570830163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5044cf6e795056545949962bdab7813a
+      internalID: -2078255518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0fe28a420cdd54aac04914b7069bb6
+      internalID: 353536706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340d206f97f4e2b479d1e61bf7a38eea
+      internalID: -1784493406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f919048e4798b41a44c15ba22827d7
+      internalID: -638770503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266950ef49387774da7c7792ae62e241
+      internalID: -340584299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801ebea948f3d5642a0ca67ba3c7e044
+      internalID: -948638468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_36
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7962e11671758ae4ebbf1131a49f43eb
+      internalID: -1984280000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_37
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337a651532275b442a17ae950df1f972
+      internalID: -1999105634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_38
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ad658c3d27b704aaa69707da5acd34
+      internalID: 125034427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_39
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c825f14fc9604439a2fe8d3a0981ed
+      internalID: 1773988534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_40
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4866df1fbabe8c749aa361edf33b24c7
+      internalID: 1241077837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_41
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea0ebb3cdf296740984edeba821354a
+      internalID: -905896928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad8d2a2da83e904ca068a0d83530b59
+      internalID: 751790801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_43
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbc2a823440c704fa8ecd0182ca3ecc
+      internalID: -590235215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_44
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 808
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3919df513e480ce4db3e6cb605e11020
+      internalID: 476500149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344c303a2916c1c44a852b8a0a49556d
+      internalID: -1094833679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c2fcb48f72d9748b9ca58cba02fad3
+      internalID: 272918008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd28442b0377f07469d56182a62aa73c
+      internalID: 279815579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d224433613f2745b6c9900f4a35c5b
+      internalID: -211096196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cececbacf18daa54ea951586fe65800f
+      internalID: 1454566650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_50
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90665c7ef8b09d489bfbc3ed5f801cb
+      internalID: -1740285056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ee77dd6c9493541ad836977636dffa
+      internalID: 1448942855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8b8f1d62313b64ca6ddfa9bb67b278
+      internalID: 1547676595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_53
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7936a0e209a5530428a7927e97fc0104
+      internalID: -120214368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_54
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d1e050877f66447926e4ed8139731a
+      internalID: 1618323707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611bacb85993d874c87be1c99f03dfa0
+      internalID: -952009122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_56
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e46e4b765a3d44c809245d8461d249
+      internalID: 1077290709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_57
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f9d334e38b5054fbe48510a7e29406
+      internalID: -286754981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_58
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41c3deabc4c3c744a735500184694d1
+      internalID: 2057057671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_59
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 744
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a15d48ff4e9ca34ea1901a77fd1d415
+      internalID: 418518011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6bede0794bb9c41aa236e45c0b1422
+      internalID: -214664520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595017a80e122eb46a060a6987700cba
+      internalID: 1581657255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_62
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ba9d2f10ad44446ac38287aa0d62aa
+      internalID: 1034774394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea04977e309bf44a9d91889fd7b00f1
+      internalID: -1434202467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c882de2300be73459a2c13a6cf34933
+      internalID: -1616853174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_65
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b374ee987e75ba04ca9ecdc26a3d5066
+      internalID: -46067806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_66
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f24aa587df7cb4cb078f56655fd0ee
+      internalID: 1664233309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_67
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d25a9c2525cf54ab558f9cdfa07bcb
+      internalID: -1893495060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e385e4dac55525d49afecef14c03ac37
+      internalID: 1121867163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_69
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c923b308a6f706439b3b96ec2146c57
+      internalID: -340168613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_70
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b597565b9a1d2dd49839eadc2a62a08c
+      internalID: -300088471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_71
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ac9d7bccf2c254494410c5de7a9b96
+      internalID: -1776798651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_72
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036ae62da3aac02478fed116e798e2f2
+      internalID: 2120911743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_73
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468ffcf0b53582c479a88bd64dd67af7
+      internalID: -869219632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_74
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 680
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30a3cf8df24e5e4b8966aeae98e2a58
+      internalID: 1220574106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136b473cad8896f4c8aad6643b27b40b
+      internalID: 488862904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9603eac481fa7458a3e8da3a599a54
+      internalID: -94770759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_77
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4ef287592335c4e8dbe25bb86eb4cb
+      internalID: -534099385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_78
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c0edc49a3e4b341b525b7de5fc1cc8
+      internalID: -1014993368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_79
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120e3ddcbff342e4fa3bf799277da3d0
+      internalID: 1936852047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_80
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01858cf1ce6034d48985ba2707bd1c52
+      internalID: -692029452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_81
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e8efd4575d34a48a7fc50137df3004
+      internalID: -1513087889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_82
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fbc60c5aec10849a4183d402159201
+      internalID: -462366675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_83
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c6b6c18b381a7449ecfd4fb33c644a
+      internalID: -326383948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_84
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eceea79e464364794cfee273ccf0a2
+      internalID: 1425623709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_85
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cd5b0a21b489a48af69ddacda5b079
+      internalID: -889906508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_86
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fc032d2ce3cd144b1c3c57f6b0dc88
+      internalID: -145865141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_87
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbf8d64216f9b144bfa4aa2ba0eca91
+      internalID: -745684754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_88
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c481e5c485e3cf6418b6b39b9c07dc33
+      internalID: 1239788280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_89
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 616
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e365b92eb9f40443a9b895496600db3
+      internalID: -301845963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3c73a711145654bba45ed9d67448bb
+      internalID: -1687787910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_91
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8453bad69c99a94691d3792feb5bb9f
+      internalID: 903924568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddb7f215601f5f4c8e715618c40c52a
+      internalID: -142420172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_93
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff74c7d24d937a14788d260ca688a6e1
+      internalID: -1737514714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_94
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b8c011766a8c144ab82e0b4f061e40
+      internalID: -1336286976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_95
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26c122c48ab6b442a2f3e5a8e0435fd
+      internalID: 2102750810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_96
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ee6753c36720d4e9376a466eb7ab57
+      internalID: 1508780530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_97
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9547e0ace527c4f8b5ad39f1555092
+      internalID: -1709745172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_98
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dabc84f544a101468b87cb124486ed0
+      internalID: -1070239272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_99
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3b00c7d9dfc67438fb1bca9aac8c14
+      internalID: -1263549642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_100
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db012a5b80886946afb54b9100d43d6
+      internalID: -668937263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_101
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a48ebe2f9b5ca749839e4e14f2943d7
+      internalID: -1715023226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_102
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31ce146b6094cf4d942e6f9444d2645
+      internalID: -929379808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_103
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfc7fb43d6030c4cbba90eac3cc5c0a
+      internalID: -2097386364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_104
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018cf6202ca275d4ea50754c871fd079
+      internalID: -672239604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae3b211709fb2a4faeb8f849865d9dd
+      internalID: -1800468609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860f4f6bc64e967458a445b8d1cf4846
+      internalID: 588303232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_107
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5e89dea953b964c86a1bf123fff5f5
+      internalID: 1744046702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_108
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91887e7c6e67dde49bd06aab42301525
+      internalID: -1643809854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_109
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce72da1942fb214a92774eadce3111d
+      internalID: -819042881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_110
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e451cad9ff0b74cafac07feb9f79b0
+      internalID: -1465493502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_111
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63999a70dcc9ded429bc51db07f8b4c3
+      internalID: 1469674993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_112
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b1f78e88afd9542826aa1e3685dcfc
+      internalID: -1894199698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_113
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6407a9e9357a7054da69ca30dc85d626
+      internalID: -239739191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_114
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78deb5a4368036d43a2700ec38314357
+      internalID: -1610409156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_115
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ff4dbcddaa0884a888a69e3a360445
+      internalID: 1787060786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_116
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445e5ba8a025e454f8718e031f9e30cd
+      internalID: 1610796196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_117
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85e3328ac816434f8668f972df06500
+      internalID: 1449753056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_118
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8083d59393cc84ab16121260b772de
+      internalID: 684257467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_119
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 488
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9a5ec410d59134ab2711daf4931ca7
+      internalID: 273907919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6ca2ed0c9139649b84266cb2bb9056
+      internalID: 502641272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_121
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542a708b04c3810468ddb3e07ecbf1ea
+      internalID: 1345578152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4287bf987cbfb4e46a45980036cc82a0
+      internalID: 1669405054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586cb34162c593c43a31ae4bdcd983b9
+      internalID: -660185867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_124
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7852f2de523c341aece3cf850fe79b
+      internalID: -495251596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_125
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355869db9b9837a4f8b26d2e485a6ee3
+      internalID: 1271550945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_126
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d694009b599def429cd51c4f53fdc8e
+      internalID: 182961254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafe129f7a2c311489eb7e387280da7a
+      internalID: 1278466065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abc74c2120f6dd4792ec003f306cfe8
+      internalID: 1188884144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392a7e9a3773cb84d98d747fe647249c
+      internalID: -818116101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_130
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327f84ddb9e25f342b68ec93c0ee016f
+      internalID: 1591686410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_131
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2900f294e9f758349a1ae04f1417d0fb
+      internalID: -21948760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_132
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaec524d50c09774f9e7570413e3888e
+      internalID: -745122267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_133
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f107c856b92e0694a97b848352d502c1
+      internalID: -1044540689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_134
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 424
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3836a79d022b04e9276bf35fd39ff7
+      internalID: 7698299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216e2fce0d6101d40ba0c4016021b8d5
+      internalID: -1298381220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_136
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4eeb890ca8c53242bb86ea5d3f4c510
+      internalID: 1413278697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_137
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd722e6f287b6aa429f48f9dcb9b312c
+      internalID: -1216250424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_138
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa4e7b2ffbc7424cb8e28c8d2a14833
+      internalID: 502266551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_139
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147853a4b4e26c44387f1a609f739688
+      internalID: 186163600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_140
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8602493a580192d458451d26da66894f
+      internalID: 201636817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_141
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33439e69c2ead5549ad9fdf869ac2574
+      internalID: -2075620792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_142
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec6f3132f7589c4fab286e5f806c4c7
+      internalID: 1625634690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_143
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395c894b44364764fb5f267e06fbf96f
+      internalID: 549535848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_144
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164bdedc17747ef46a48ce511a945dd6
+      internalID: 1599172835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_145
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75868438ae806434b99168ada37fd68c
+      internalID: 171947812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_146
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248598cb61d60dd43a40dee3ba3a0519
+      internalID: -607678632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_147
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802e8bb6dca39b849af2b53c0b7f7365
+      internalID: 641545240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_148
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13478c91aed3b19419a9038e43ac7519
+      internalID: 554847942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_149
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 360
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30a75f0acf1e3b4b8ff5b5fac665ebf
+      internalID: -1083957621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd67193cdf820a48af545dc9a239c25
+      internalID: 194049322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_151
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d91a766af409cb4bb6dd489cdfb5d9d
+      internalID: 1493681524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_152
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec45e1bbd3173144797fe6f3f48d8fe9
+      internalID: -1181393993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_153
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8251ee3428d5efc4d98c841b6f27aade
+      internalID: -2028950427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_154
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8512df02755682e4c88540c7be558897
+      internalID: -105285176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_155
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac6382e2c0f71f41a192d5493dfb58b
+      internalID: -2035090821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_156
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9715f9946fc964688883501d7a4181
+      internalID: -96087990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_157
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842e837e1fa420c46bf2d61c756ffa6d
+      internalID: -2003857984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_158
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2039f2b65c35047984a625ca4473a0
+      internalID: 1438814915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_159
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9d4dff965e1bf4aaddfea7967e01d0
+      internalID: -1379306328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_160
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1549b6ce21fb10b4d91944b2c0c78afe
+      internalID: 802621386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_161
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec236fc39c9021e4daf80401bf6e5610
+      internalID: -562735363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_162
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c791bd6a32eb54f9ffaf594f13ce98
+      internalID: 1171036693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_163
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0279b8619e7b89449002e1b1a458f33
+      internalID: 2045627558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_164
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 296
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df5b37c74c5d0942b7dd8e96542fa7a
+      internalID: 229006121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_165
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcd530b2726a354d8e5293e1b711ff7
+      internalID: 72410643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_166
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94fc832853cc6642a6f6d45224fceaa
+      internalID: -1572643103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_167
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d901462d23af241a0b5eb9bce55028
+      internalID: -870002087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_168
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bc647b9c52d604b8572eb900a6c55a
+      internalID: 1730217075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_169
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3b021831f51f94390abb438b754aae
+      internalID: -592733000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_170
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a7cc4433a0ced4cbd975f4c60ea157
+      internalID: 1481880476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_171
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080e8b9ff25a8034ca3c566a113e10fa
+      internalID: 1427624210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_172
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903b4e0343ad0354c8868a78aae92348
+      internalID: -2063413529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_173
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f20abc79e31665428551dde8a306512
+      internalID: -1090014672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_174
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea96548f8172aa42ba72f9c35073e69
+      internalID: -1398543879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_175
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aade597906d2af047b04d9d11dbac7ba
+      internalID: 39633368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_176
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61199ca1d4ddeed41b6264197f11e3c8
+      internalID: -1341430599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_177
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afed2e54884562418f0f18e35f359e7
+      internalID: 1393558274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_178
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26b9960eb52831408e8b7f9b7ad10a8
+      internalID: 1695596243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_179
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 232
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9749e2c9fed1f1541b422e5fefe7fcb2
+      internalID: -388209495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5996fae748e6c4dbb5b18d7304a1a4
+      internalID: -2063863729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_181
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a024163d53b2840826e270c6643893
+      internalID: -576120064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_182
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f4788cade37c340b6a0d28eb94752a
+      internalID: 1742238088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_183
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f6044eb2d161e4eb7c43bae087f2c4
+      internalID: -318476682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_184
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde45410223860443aa7a4bb89cf6735
+      internalID: -1119492630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_185
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24951da19483d8a4ea95ecb512c5915f
+      internalID: -1823562332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_186
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0455d0de6a013942b5cab2f92f06835
+      internalID: 902832561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_187
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3584b4d388299048b35f44b671a27d5
+      internalID: 680012692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_188
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d42dbca362ab1640bd6177a853dae07
+      internalID: -221710951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_189
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9896ead446a0cab46b86f53b2c1a24ee
+      internalID: 1593655469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_190
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a8a5e6cbcf094439cc9cd0594fb5ec
+      internalID: -1762947804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_191
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1752c04437eccc144992f464df193f32
+      internalID: -570928377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_192
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb07b44ab0515d43bdf898991677997
+      internalID: -1829235180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_193
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0a6634509efa243b2d553d71b7d261
+      internalID: 1127873332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_194
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 168
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994d54b5a62562b4b80fb8ffe87c0b96
+      internalID: -626846778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_195
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d00f1d61d7084041b4bd6ca47e32f55
+      internalID: 696446914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_196
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a490cfc9b7914b34bb02fe0e4056fc57
+      internalID: -1268743998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_197
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2639fb31aa43ac2489b1ab50997737aa
+      internalID: -177163151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_198
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f195643e410f1442a312a40f60419a7
+      internalID: 1864582834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_199
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d4376d4e116ff4eb7ab04cc2eade9d
+      internalID: 666982932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_200
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c3b988f3b6e0e4c8e396f62eda4f02
+      internalID: -1308100849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_201
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8425e61a3c6af94fa7d8803de4b7979
+      internalID: -650526688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_202
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf172f356fd87c546b5de2713154e7fb
+      internalID: -578453913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_203
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9cfc13cf69baf4fa4fdabf70d79ebf
+      internalID: 193355871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_204
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc46ef3c21295824faee0589357ae969
+      internalID: -1643990698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_205
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d201ce4b2d52b41887156c61db6d21
+      internalID: 898539107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_206
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e847f1fa78e7b146a14693c0825b4ab
+      internalID: -1166315152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_207
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6044f71319127be4993ac96f8fba492b
+      internalID: -1306768582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_208
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0008fcaae359628429a6c25b831cd27e
+      internalID: -1866877156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_209
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 104
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8c7c63366ec8e4c8f66f80868c1a44
+      internalID: 684377226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5142399612ad2c248a2cec7812992ed5
+      internalID: -1528674983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_211
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3161b418907e64fae4bcceaaf81ec5
+      internalID: 876576692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_212
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5786adf70a8acf3488f68966d0eca019
+      internalID: -771434724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_213
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1272a98d2594440be23b6eab86954d
+      internalID: 2558196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_214
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db2900e3ba074949afbbd762409d207
+      internalID: -2056407828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_215
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdac645a408d77040940c41e2a5eb6f1
+      internalID: 111648673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_216
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48cb5b36a3070049b5933ec3463fa74
+      internalID: -803113793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_217
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35208bdac0aaf04592b15673cc8c3aa
+      internalID: 185627548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_218
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4083aca898b558640a1f2191ea37bc9d
+      internalID: -1137296821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_219
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8e1b36e3556ba44aa16bb3a416f0f6
+      internalID: -77713942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_220
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464ddc43495bf5c409af275eadf227b5
+      internalID: -1967166198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_221
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b981dd28febdd524ead982c9ab1d5c28
+      internalID: 335090300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_222
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97c7b550a7187f46a13172a429c0e95
+      internalID: 736753164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_223
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a35e2fa3082ce4182386c76487f4a0
+      internalID: 1600262753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyberpunk_tilemap_16x16_purple_224
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 40
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebfa75e6d56d7e418955fe14909ed21
+      internalID: 609094925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3847d87c1e7fd0c40b982b71af395a18
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cyberpunk_tilemap_16x16_purple_0: -71569819299271718
+      cyberpunk_tilemap_16x16_purple_1: 56868665
+      cyberpunk_tilemap_16x16_purple_10: -41397798
+      cyberpunk_tilemap_16x16_purple_100: -668937263
+      cyberpunk_tilemap_16x16_purple_101: -1715023226
+      cyberpunk_tilemap_16x16_purple_102: -929379808
+      cyberpunk_tilemap_16x16_purple_103: -2097386364
+      cyberpunk_tilemap_16x16_purple_104: -672239604
+      cyberpunk_tilemap_16x16_purple_105: -1800468609
+      cyberpunk_tilemap_16x16_purple_106: 588303232
+      cyberpunk_tilemap_16x16_purple_107: 1744046702
+      cyberpunk_tilemap_16x16_purple_108: -1643809854
+      cyberpunk_tilemap_16x16_purple_109: -819042881
+      cyberpunk_tilemap_16x16_purple_11: -1095930871
+      cyberpunk_tilemap_16x16_purple_110: -1465493502
+      cyberpunk_tilemap_16x16_purple_111: 1469674993
+      cyberpunk_tilemap_16x16_purple_112: -1894199698
+      cyberpunk_tilemap_16x16_purple_113: -239739191
+      cyberpunk_tilemap_16x16_purple_114: -1610409156
+      cyberpunk_tilemap_16x16_purple_115: 1787060786
+      cyberpunk_tilemap_16x16_purple_116: 1610796196
+      cyberpunk_tilemap_16x16_purple_117: 1449753056
+      cyberpunk_tilemap_16x16_purple_118: 684257467
+      cyberpunk_tilemap_16x16_purple_119: 273907919
+      cyberpunk_tilemap_16x16_purple_12: -2036708765
+      cyberpunk_tilemap_16x16_purple_120: 502641272
+      cyberpunk_tilemap_16x16_purple_121: 1345578152
+      cyberpunk_tilemap_16x16_purple_122: 1669405054
+      cyberpunk_tilemap_16x16_purple_123: -660185867
+      cyberpunk_tilemap_16x16_purple_124: -495251596
+      cyberpunk_tilemap_16x16_purple_125: 1271550945
+      cyberpunk_tilemap_16x16_purple_126: 182961254
+      cyberpunk_tilemap_16x16_purple_127: 1278466065
+      cyberpunk_tilemap_16x16_purple_128: 1188884144
+      cyberpunk_tilemap_16x16_purple_129: -818116101
+      cyberpunk_tilemap_16x16_purple_13: -1634518180
+      cyberpunk_tilemap_16x16_purple_130: 1591686410
+      cyberpunk_tilemap_16x16_purple_131: -21948760
+      cyberpunk_tilemap_16x16_purple_132: -745122267
+      cyberpunk_tilemap_16x16_purple_133: -1044540689
+      cyberpunk_tilemap_16x16_purple_134: 7698299
+      cyberpunk_tilemap_16x16_purple_135: -1298381220
+      cyberpunk_tilemap_16x16_purple_136: 1413278697
+      cyberpunk_tilemap_16x16_purple_137: -1216250424
+      cyberpunk_tilemap_16x16_purple_138: 502266551
+      cyberpunk_tilemap_16x16_purple_139: 186163600
+      cyberpunk_tilemap_16x16_purple_14: -621046468
+      cyberpunk_tilemap_16x16_purple_140: 201636817
+      cyberpunk_tilemap_16x16_purple_141: -2075620792
+      cyberpunk_tilemap_16x16_purple_142: 1625634690
+      cyberpunk_tilemap_16x16_purple_143: 549535848
+      cyberpunk_tilemap_16x16_purple_144: 1599172835
+      cyberpunk_tilemap_16x16_purple_145: 171947812
+      cyberpunk_tilemap_16x16_purple_146: -607678632
+      cyberpunk_tilemap_16x16_purple_147: 641545240
+      cyberpunk_tilemap_16x16_purple_148: 554847942
+      cyberpunk_tilemap_16x16_purple_149: -1083957621
+      cyberpunk_tilemap_16x16_purple_15: -1996197340
+      cyberpunk_tilemap_16x16_purple_150: 194049322
+      cyberpunk_tilemap_16x16_purple_151: 1493681524
+      cyberpunk_tilemap_16x16_purple_152: -1181393993
+      cyberpunk_tilemap_16x16_purple_153: -2028950427
+      cyberpunk_tilemap_16x16_purple_154: -105285176
+      cyberpunk_tilemap_16x16_purple_155: -2035090821
+      cyberpunk_tilemap_16x16_purple_156: -96087990
+      cyberpunk_tilemap_16x16_purple_157: -2003857984
+      cyberpunk_tilemap_16x16_purple_158: 1438814915
+      cyberpunk_tilemap_16x16_purple_159: -1379306328
+      cyberpunk_tilemap_16x16_purple_16: 528906407
+      cyberpunk_tilemap_16x16_purple_160: 802621386
+      cyberpunk_tilemap_16x16_purple_161: -562735363
+      cyberpunk_tilemap_16x16_purple_162: 1171036693
+      cyberpunk_tilemap_16x16_purple_163: 2045627558
+      cyberpunk_tilemap_16x16_purple_164: 229006121
+      cyberpunk_tilemap_16x16_purple_165: 72410643
+      cyberpunk_tilemap_16x16_purple_166: -1572643103
+      cyberpunk_tilemap_16x16_purple_167: -870002087
+      cyberpunk_tilemap_16x16_purple_168: 1730217075
+      cyberpunk_tilemap_16x16_purple_169: -592733000
+      cyberpunk_tilemap_16x16_purple_17: -948233399
+      cyberpunk_tilemap_16x16_purple_170: 1481880476
+      cyberpunk_tilemap_16x16_purple_171: 1427624210
+      cyberpunk_tilemap_16x16_purple_172: -2063413529
+      cyberpunk_tilemap_16x16_purple_173: -1090014672
+      cyberpunk_tilemap_16x16_purple_174: -1398543879
+      cyberpunk_tilemap_16x16_purple_175: 39633368
+      cyberpunk_tilemap_16x16_purple_176: -1341430599
+      cyberpunk_tilemap_16x16_purple_177: 1393558274
+      cyberpunk_tilemap_16x16_purple_178: 1695596243
+      cyberpunk_tilemap_16x16_purple_179: -388209495
+      cyberpunk_tilemap_16x16_purple_18: 653357300
+      cyberpunk_tilemap_16x16_purple_180: -2063863729
+      cyberpunk_tilemap_16x16_purple_181: -576120064
+      cyberpunk_tilemap_16x16_purple_182: 1742238088
+      cyberpunk_tilemap_16x16_purple_183: -318476682
+      cyberpunk_tilemap_16x16_purple_184: -1119492630
+      cyberpunk_tilemap_16x16_purple_185: -1823562332
+      cyberpunk_tilemap_16x16_purple_186: 902832561
+      cyberpunk_tilemap_16x16_purple_187: 680012692
+      cyberpunk_tilemap_16x16_purple_188: -221710951
+      cyberpunk_tilemap_16x16_purple_189: 1593655469
+      cyberpunk_tilemap_16x16_purple_19: -1249317097
+      cyberpunk_tilemap_16x16_purple_190: -1762947804
+      cyberpunk_tilemap_16x16_purple_191: -570928377
+      cyberpunk_tilemap_16x16_purple_192: -1829235180
+      cyberpunk_tilemap_16x16_purple_193: 1127873332
+      cyberpunk_tilemap_16x16_purple_194: -626846778
+      cyberpunk_tilemap_16x16_purple_195: 696446914
+      cyberpunk_tilemap_16x16_purple_196: -1268743998
+      cyberpunk_tilemap_16x16_purple_197: -177163151
+      cyberpunk_tilemap_16x16_purple_198: 1864582834
+      cyberpunk_tilemap_16x16_purple_199: 666982932
+      cyberpunk_tilemap_16x16_purple_2: 122581890
+      cyberpunk_tilemap_16x16_purple_20: -1611193123
+      cyberpunk_tilemap_16x16_purple_200: -1308100849
+      cyberpunk_tilemap_16x16_purple_201: -650526688
+      cyberpunk_tilemap_16x16_purple_202: -578453913
+      cyberpunk_tilemap_16x16_purple_203: 193355871
+      cyberpunk_tilemap_16x16_purple_204: -1643990698
+      cyberpunk_tilemap_16x16_purple_205: 898539107
+      cyberpunk_tilemap_16x16_purple_206: -1166315152
+      cyberpunk_tilemap_16x16_purple_207: -1306768582
+      cyberpunk_tilemap_16x16_purple_208: -1866877156
+      cyberpunk_tilemap_16x16_purple_209: 684377226
+      cyberpunk_tilemap_16x16_purple_21: -888718162
+      cyberpunk_tilemap_16x16_purple_210: -1528674983
+      cyberpunk_tilemap_16x16_purple_211: 876576692
+      cyberpunk_tilemap_16x16_purple_212: -771434724
+      cyberpunk_tilemap_16x16_purple_213: 2558196
+      cyberpunk_tilemap_16x16_purple_214: -2056407828
+      cyberpunk_tilemap_16x16_purple_215: 111648673
+      cyberpunk_tilemap_16x16_purple_216: -803113793
+      cyberpunk_tilemap_16x16_purple_217: 185627548
+      cyberpunk_tilemap_16x16_purple_218: -1137296821
+      cyberpunk_tilemap_16x16_purple_219: -77713942
+      cyberpunk_tilemap_16x16_purple_22: 2058251806
+      cyberpunk_tilemap_16x16_purple_220: -1967166198
+      cyberpunk_tilemap_16x16_purple_221: 335090300
+      cyberpunk_tilemap_16x16_purple_222: 736753164
+      cyberpunk_tilemap_16x16_purple_223: 1600262753
+      cyberpunk_tilemap_16x16_purple_224: 609094925
+      cyberpunk_tilemap_16x16_purple_23: 174306463
+      cyberpunk_tilemap_16x16_purple_24: -1505863318
+      cyberpunk_tilemap_16x16_purple_25: 1156716269
+      cyberpunk_tilemap_16x16_purple_26: 713110855
+      cyberpunk_tilemap_16x16_purple_27: -353123418
+      cyberpunk_tilemap_16x16_purple_28: 1400230451
+      cyberpunk_tilemap_16x16_purple_29: -570830163
+      cyberpunk_tilemap_16x16_purple_3: 2010167191
+      cyberpunk_tilemap_16x16_purple_30: -2078255518
+      cyberpunk_tilemap_16x16_purple_31: 353536706
+      cyberpunk_tilemap_16x16_purple_32: -1784493406
+      cyberpunk_tilemap_16x16_purple_33: -638770503
+      cyberpunk_tilemap_16x16_purple_34: -340584299
+      cyberpunk_tilemap_16x16_purple_35: -948638468
+      cyberpunk_tilemap_16x16_purple_36: -1984280000
+      cyberpunk_tilemap_16x16_purple_37: -1999105634
+      cyberpunk_tilemap_16x16_purple_38: 125034427
+      cyberpunk_tilemap_16x16_purple_39: 1773988534
+      cyberpunk_tilemap_16x16_purple_4: 1178329950
+      cyberpunk_tilemap_16x16_purple_40: 1241077837
+      cyberpunk_tilemap_16x16_purple_41: -905896928
+      cyberpunk_tilemap_16x16_purple_42: 751790801
+      cyberpunk_tilemap_16x16_purple_43: -590235215
+      cyberpunk_tilemap_16x16_purple_44: 476500149
+      cyberpunk_tilemap_16x16_purple_45: -1094833679
+      cyberpunk_tilemap_16x16_purple_46: 272918008
+      cyberpunk_tilemap_16x16_purple_47: 279815579
+      cyberpunk_tilemap_16x16_purple_48: -211096196
+      cyberpunk_tilemap_16x16_purple_49: 1454566650
+      cyberpunk_tilemap_16x16_purple_5: 2006175741
+      cyberpunk_tilemap_16x16_purple_50: -1740285056
+      cyberpunk_tilemap_16x16_purple_51: 1448942855
+      cyberpunk_tilemap_16x16_purple_52: 1547676595
+      cyberpunk_tilemap_16x16_purple_53: -120214368
+      cyberpunk_tilemap_16x16_purple_54: 1618323707
+      cyberpunk_tilemap_16x16_purple_55: -952009122
+      cyberpunk_tilemap_16x16_purple_56: 1077290709
+      cyberpunk_tilemap_16x16_purple_57: -286754981
+      cyberpunk_tilemap_16x16_purple_58: 2057057671
+      cyberpunk_tilemap_16x16_purple_59: 418518011
+      cyberpunk_tilemap_16x16_purple_6: -57661608
+      cyberpunk_tilemap_16x16_purple_60: -214664520
+      cyberpunk_tilemap_16x16_purple_61: 1581657255
+      cyberpunk_tilemap_16x16_purple_62: 1034774394
+      cyberpunk_tilemap_16x16_purple_63: -1434202467
+      cyberpunk_tilemap_16x16_purple_64: -1616853174
+      cyberpunk_tilemap_16x16_purple_65: -46067806
+      cyberpunk_tilemap_16x16_purple_66: 1664233309
+      cyberpunk_tilemap_16x16_purple_67: -1893495060
+      cyberpunk_tilemap_16x16_purple_68: 1121867163
+      cyberpunk_tilemap_16x16_purple_69: -340168613
+      cyberpunk_tilemap_16x16_purple_7: -753056276
+      cyberpunk_tilemap_16x16_purple_70: -300088471
+      cyberpunk_tilemap_16x16_purple_71: -1776798651
+      cyberpunk_tilemap_16x16_purple_72: 2120911743
+      cyberpunk_tilemap_16x16_purple_73: -869219632
+      cyberpunk_tilemap_16x16_purple_74: 1220574106
+      cyberpunk_tilemap_16x16_purple_75: 488862904
+      cyberpunk_tilemap_16x16_purple_76: -94770759
+      cyberpunk_tilemap_16x16_purple_77: -534099385
+      cyberpunk_tilemap_16x16_purple_78: -1014993368
+      cyberpunk_tilemap_16x16_purple_79: 1936852047
+      cyberpunk_tilemap_16x16_purple_8: -1180048971
+      cyberpunk_tilemap_16x16_purple_80: -692029452
+      cyberpunk_tilemap_16x16_purple_81: -1513087889
+      cyberpunk_tilemap_16x16_purple_82: -462366675
+      cyberpunk_tilemap_16x16_purple_83: -326383948
+      cyberpunk_tilemap_16x16_purple_84: 1425623709
+      cyberpunk_tilemap_16x16_purple_85: -889906508
+      cyberpunk_tilemap_16x16_purple_86: -145865141
+      cyberpunk_tilemap_16x16_purple_87: -745684754
+      cyberpunk_tilemap_16x16_purple_88: 1239788280
+      cyberpunk_tilemap_16x16_purple_89: -301845963
+      cyberpunk_tilemap_16x16_purple_9: 979600569
+      cyberpunk_tilemap_16x16_purple_90: -1687787910
+      cyberpunk_tilemap_16x16_purple_91: 903924568
+      cyberpunk_tilemap_16x16_purple_92: -142420172
+      cyberpunk_tilemap_16x16_purple_93: -1737514714
+      cyberpunk_tilemap_16x16_purple_94: -1336286976
+      cyberpunk_tilemap_16x16_purple_95: 2102750810
+      cyberpunk_tilemap_16x16_purple_96: 1508780530
+      cyberpunk_tilemap_16x16_purple_97: -1709745172
+      cyberpunk_tilemap_16x16_purple_98: -1070239272
+      cyberpunk_tilemap_16x16_purple_99: -1263549642
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
